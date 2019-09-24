@@ -18,7 +18,7 @@ frameNum = 0
 imgName = "frame" + str(frameNum) + ".png"
 
 # Create VideoCapture object for frame iteration and find frame dimensions
-cap = cv2.VideoCapture('raw_video_feed.mp4')
+cap = cv2.VideoCapture('src/enph353_ros_lab/media/video/raw_video_feed.mp4')
 w = cap.get(3)  # Width in pixels, float
 h = cap.get(4)  # Height in pixels, float
 
@@ -51,6 +51,9 @@ while cap.isOpened():
     status = cv2.imwrite("Frames/" + imgName, frame)
     imgName = imgName.replace(str(frameNum), str(frameNum + 1))
     frameNum += 1
+
+# To see image matrix format
+print(frame)
 
 # End video capture and playback
 cap.release()
