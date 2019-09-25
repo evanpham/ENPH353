@@ -1,0 +1,8 @@
+prefix=/home/gabriel/ENPH353/devel
+
+Name: enph353_ros_lab
+Description: Description of enph353_ros_lab
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/gabriel/ENPH353/devel/lib 
+Requires: 

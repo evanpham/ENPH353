@@ -7,7 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/fizzer/enph353_ws/devel:$CMAKE_PREFIX_PATH"
-export PWD="/home/fizzer/enph353_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/fizzer/enph353_ws/devel/share/common-lisp"
-export ROS_PACKAGE_PATH="/home/fizzer/enph353_ws/src:$ROS_PACKAGE_PATH"
+export PWD="/home/gabriel/ENPH353/build"
+export ROS_PACKAGE_PATH="/home/gabriel/ENPH353/src:/opt/ros/melodic/share"
