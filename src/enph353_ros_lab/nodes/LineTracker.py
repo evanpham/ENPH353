@@ -9,6 +9,7 @@ import numpy as np
 
 def findLine(image, height, width):
     # Convert to binary image, and find all black pixels (the line)
+    # Only looks at bottom 25 rows of pixels
     # Blurring and re-binarying helps remove false black pixels
     bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
     bw = cv2.blur(bw, (10, 10))
@@ -16,7 +17,7 @@ def findLine(image, height, width):
 
     pixels = []
     for x in range(width):
-        for y in range(height):
+        for y in range(height-25, height):
             if (bw[y, x, :] == [0, 0, 0]).all():
                 pixels.append([x, y])
     pixels = np.array(pixels)

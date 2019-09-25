@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/pham/enph353_ws/build/gtest/googlemock/gtest/src -Wl,-rpath,/home/pham/enph353_ws/build/gtest/googlemock/gtest/src -lpthread 
+=======
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/gabriel/ENPH353/build/gtest/googlemock/gtest/src -Wl,-rpath,/home/gabriel/ENPH353/build/gtest/googlemock/gtest/src -lpthread 
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2

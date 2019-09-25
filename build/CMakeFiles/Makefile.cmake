@@ -16,9 +16,15 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
   "enph353_ros_lab/catkin_generated/package.cmake"
+<<<<<<< HEAD
   "/home/pham/enph353_ws/src/CMakeLists.txt"
   "/home/pham/enph353_ws/src/enph353_ros_lab/CMakeLists.txt"
   "/home/pham/enph353_ws/src/enph353_ros_lab/package.xml"
+=======
+  "/home/gabriel/ENPH353/src/CMakeLists.txt"
+  "/home/gabriel/ENPH353/src/enph353_ros_lab/CMakeLists.txt"
+  "/home/gabriel/ENPH353/src/enph353_ros_lab/package.xml"
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"

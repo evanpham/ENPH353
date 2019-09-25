@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
+=======
+CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +144,24 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/enph353_ros_lab/CMakeFiles/progress.marks
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+=======
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles /home/gabriel/ENPH353/build/enph353_ros_lab/CMakeFiles/progress.marks
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : all
 
 # The main clean target
 clean:
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/clean
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/clean
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +171,38 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/preinstall
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/preinstall
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/preinstall
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/preinstall
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : depend
 
 # Convenience name for target.
 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule:
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -179,7 +212,11 @@ _catkin_empty_exported_target: enph353_ros_lab/CMakeFiles/_catkin_empty_exported
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build.make enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build.make enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -207,6 +244,10 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
 .PHONY : cmake_check_build_system
 
