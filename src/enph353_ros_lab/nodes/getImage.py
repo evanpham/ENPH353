@@ -5,13 +5,19 @@ import cv2
 import numpy as np
 
 
-def findLine(image):
+def findLine(image, height, width):
     # Convert to binary image, and find all black pixels (the line)
     # Blurring and re-binarying helps remove false black pixels
     bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
     bw = cv2.blur(bw, (10, 10))
     bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
-    pixels = np.argwhere(bw == 0)
+
+    pixels = []
+    for x in range(width):
+        for y in range(height):
+            if (bw[y, x, :] == [0, 0, 0]).all():
+                pixels.append([x, y])
+    pixels = np.array(pixels)
 
     return pixels
 
@@ -28,15 +34,15 @@ def callback(data):
     img = np.fromstring(data.data, dtype='uint8').reshape((h, w, 3))
 
     # Returns coordinates of the pixels in the line
-    pixels = findLine(img)
+    pixels = findLine(img, h, w)
 
     # Get all black pixels in the bottom 100 rows
-    pixels = pixels[pixels[:, 1] < 100]
+    pixels = pixels[pixels[:, 1] > h-100]
     xPos = np.mean(pixels[:, 0])
-    yPos = np.mean(pixels[:, 1])
 
     # Place green circle on center of line at bottom and show the frame
-    cv2.circle(img, (int(w-xPos), int(h-yPos)), 10, (0, 200, 0), -1)
+    cv2.circle(img, (int(xPos), int(h-20)), 10, (0, 200, 0), -1)
+    cv2.imshow('frame', img)
 
     # For debugging
     print(img)
