@@ -1,3 +1,8 @@
+# This is now mostly a reference document for code which
+# may be useful for the major ROS project
+# Likely fineLine is useful, along with the code
+# which saves video images to Frames directory
+
 import cv2
 import numpy as np
 
