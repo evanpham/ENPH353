@@ -7,13 +7,19 @@ import cv2
 import numpy as np
 
 
-def findLine(image):
+def findLine(image, height, width):
     # Convert to binary image, and find all black pixels (the line)
     # Blurring and re-binarying helps remove false black pixels
     bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
     bw = cv2.blur(bw, (10, 10))
     bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
-    pixels = np.argwhere(bw == 0)
+
+    pixels = []
+    for x in range(width):
+        for y in range(height):
+            if (bw[y, x, :] == [0, 0, 0]).all():
+                pixels.append([x, y])
+    pixels = np.array(pixels)
 
     return pixels
 
@@ -24,8 +30,8 @@ imgName = "frame" + str(frameNum) + ".png"
 
 # Create VideoCapture object for frame iteration and find frame dimensions
 cap = cv2.VideoCapture('src/enph353_ros_lab/media/video/raw_video_feed.mp4')
-w = cap.get(3)  # Width in pixels, float
-h = cap.get(4)  # Height in pixels, float
+w = int(cap.get(3))  # Width in pixels, float
+h = int(cap.get(4))  # Height in pixels, float
 
 # Iterate on frames
 while cap.isOpened():
@@ -37,15 +43,15 @@ while cap.isOpened():
         break
 
     # Find coordinates of pixels on line
-    pixels = findLine(frame)
+    pixels = findLine(frame, h, w)
 
     # Get all black pixels in the bottom 100 rows
-    pixels = pixels[pixels[:, 1] < 100]
+    pixels = pixels[pixels[:, 1] > h-100]
     xPos = np.mean(pixels[:, 0])
     yPos = np.mean(pixels[:, 1])
 
     # Place white circle on center of line at bottom and show the frame
-    cv2.circle(frame, (int(w-xPos), int(h-20)), 10, (0, 200, 0), -1)
+    cv2.circle(frame, (int(xPos), int(h-20)), 10, (0, 200, 0), -1)
     cv2.imshow('frame', frame)
 
     # Can quit playback with q
@@ -58,6 +64,7 @@ while cap.isOpened():
     frameNum += 1
 
 # To see image matrix format
+print("frame")
 print(frame)
 
 # End video capture and playback
