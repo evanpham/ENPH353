@@ -55,16 +55,28 @@ EQUALS = =
 
 # The top-level source directory on which CMake was run.
 <<<<<<< HEAD
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
 =======
+=======
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
+<<<<<<< HEAD
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+=======
+CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 #=============================================================================
 # Target rules for target CMakeFiles/tests.dir
@@ -74,14 +86,22 @@ CMakeFiles/tests.dir/all:
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/depend
 	$(MAKE) -f CMakeFiles/tests.dir/build.make CMakeFiles/tests.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target tests"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target tests"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target tests"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target tests"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/tests.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
@@ -91,6 +111,16 @@ CMakeFiles/tests.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
@@ -116,14 +146,22 @@ CMakeFiles/download_extra_data.dir/all:
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/depend
 	$(MAKE) -f CMakeFiles/download_extra_data.dir/build.make CMakeFiles/download_extra_data.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target download_extra_data"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target download_extra_data"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target download_extra_data"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/download_extra_data.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
@@ -133,6 +171,16 @@ CMakeFiles/download_extra_data.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/download_extra_data.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/download_extra_data.dir/rule
 
 # Convenience name for target.
@@ -158,14 +206,22 @@ CMakeFiles/run_tests.dir/all:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/depend
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target run_tests"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target run_tests"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target run_tests"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target run_tests"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/run_tests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/run_tests.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
@@ -175,6 +231,16 @@ CMakeFiles/run_tests.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/run_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/run_tests.dir/rule
 
 # Convenience name for target.
@@ -200,14 +266,22 @@ CMakeFiles/clean_test_results.dir/all:
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/depend
 	$(MAKE) -f CMakeFiles/clean_test_results.dir/build.make CMakeFiles/clean_test_results.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target clean_test_results"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target clean_test_results"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target clean_test_results"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/clean_test_results.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
@@ -217,6 +291,16 @@ CMakeFiles/clean_test_results.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clean_test_results.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/clean_test_results.dir/rule
 
 # Convenience name for target.
@@ -242,14 +326,22 @@ CMakeFiles/doxygen.dir/all:
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/depend
 	$(MAKE) -f CMakeFiles/doxygen.dir/build.make CMakeFiles/doxygen.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target doxygen"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target doxygen"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target doxygen"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target doxygen"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/doxygen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/doxygen.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
@@ -259,6 +351,16 @@ CMakeFiles/doxygen.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/doxygen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : CMakeFiles/doxygen.dir/rule
 
 # Convenience name for target.
@@ -322,14 +424,22 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
@@ -339,6 +449,16 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -364,14 +484,22 @@ gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=1,2,3 "Built target gmock"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=1,2,3 "Built target gmock"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=1,2,3 "Built target gmock"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=1,2,3 "Built target gmock"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
@@ -381,6 +509,16 @@ gtest/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/CMakeFiles/gmock.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -425,14 +563,22 @@ gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMa
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
@@ -442,6 +588,16 @@ gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -467,14 +623,22 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=8,9 "Built target gtest"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=8,9 "Built target gtest"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=8,9 "Built target gtest"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=8,9 "Built target gtest"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
@@ -484,6 +648,16 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
 	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -527,14 +701,22 @@ enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/all:
 	$(MAKE) -f enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build.make enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/depend
 	$(MAKE) -f enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build.make enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/all
@@ -544,6 +726,16 @@ enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_b
 	$(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.

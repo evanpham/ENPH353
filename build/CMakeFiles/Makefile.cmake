@@ -17,6 +17,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "catkin_generated/order_packages.cmake"
   "enph353_ros_lab/catkin_generated/package.cmake"
 <<<<<<< HEAD
+<<<<<<< HEAD
   "/home/pham/enph353_ws/src/CMakeLists.txt"
   "/home/pham/enph353_ws/src/enph353_ros_lab/CMakeLists.txt"
   "/home/pham/enph353_ws/src/enph353_ros_lab/package.xml"
@@ -25,6 +26,16 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/gabriel/ENPH353/src/enph353_ros_lab/CMakeLists.txt"
   "/home/gabriel/ENPH353/src/enph353_ros_lab/package.xml"
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+  "/home/gabriel/ENPH353/src/CMakeLists.txt"
+  "/home/gabriel/ENPH353/src/enph353_ros_lab/CMakeLists.txt"
+  "/home/gabriel/ENPH353/src/enph353_ros_lab/package.xml"
+=======
+  "/home/pham/enph353_ws/src/CMakeLists.txt"
+  "/home/pham/enph353_ws/src/enph353_ros_lab/CMakeLists.txt"
+  "/home/pham/enph353_ws/src/enph353_ros_lab/package.xml"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
   "/opt/ros/melodic/share/catkin/cmake/../package.xml"
   "/opt/ros/melodic/share/catkin/cmake/all.cmake"
   "/opt/ros/melodic/share/catkin/cmake/assert.cmake"

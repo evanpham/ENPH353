@@ -4,25 +4,27 @@
 # which saves video images to Frames directory
 
 import cv2
-import numpy as np
-
 
 def findLine(image, height, width):
-    # Convert to binary image, and find all black pixels (the line)
-    # Only looks at bottom 25 rows of pixels
-    # Blurring and re-binarying helps remove false black pixels
-    bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
-    bw = cv2.blur(bw, (10, 10))
-    bw = cv2.threshold(image, 125, 255, cv2.THRESH_BINARY)[1]
+    crop_img = image[height-100:height, 0:width]
+    # Grayscale
+    gray = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
+    # Gaussian blur
+    blur = cv2.GaussianBlur(gray, (5, 5), 0)
+    # Colour thresh
+    ret, thresh = cv2.threshold(blur, 100, 255, cv2.THRESH_BINARY_INV)
+    
+    # Get center of mass
+    M = cv2.moments(thresh)
+    try:
+        cX = int(M["m10"]/M["m00"])
+        cY = int(M["m01"]/M["m00"])
+    except:
+        print("ahhhhhhhh")
+        cX = 0
+        cY = 0
 
-    pixels = []
-    for x in range(width):
-        for y in range(height-25, height):
-            if (bw[y, x, :] == [0, 0, 0]).all():
-                pixels.append([x, y])
-    pixels = np.array(pixels)
-
-    return pixels
+    return (cX, cY)
 
 
 # Set an image name for each frame and an frame number
@@ -43,13 +45,10 @@ while cap.isOpened():
         print("Can't receive frame (stream end?). Exiting ...")
         break
 
-    # Find coordinates of pixels on line
-    pixels = findLine(frame, h, w)
-
-    # Get all black pixels in the bottom 100 rows
-    pixels = pixels[pixels[:, 1] > h-100]
-    xPos = np.mean(pixels[:, 0])
-    yPos = np.mean(pixels[:, 1])
+    # Find coordinates of center of line
+    center = findLine(frame, h, w)
+    xPos = center[0]
+    yPos = center[1]
 
     # Place white circle on center of line at bottom and show the frame
     cv2.circle(frame, (int(xPos), int(h-20)), 10, (0, 200, 0), -1)

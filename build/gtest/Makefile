@@ -49,16 +49,28 @@ EQUALS = =
 
 # The top-level source directory on which CMake was run.
 <<<<<<< HEAD
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
 =======
+=======
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
+<<<<<<< HEAD
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+=======
+CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -145,6 +157,7 @@ install/fast: preinstall/fast
 # The main all target
 all: cmake_check_build_system
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/gtest/CMakeFiles/progress.marks
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
@@ -153,15 +166,32 @@ all: cmake_check_build_system
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles /home/gabriel/ENPH353/build/gtest/CMakeFiles/progress.marks
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
+=======
+	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/gtest/CMakeFiles/progress.marks
+	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : all
 
 # The main clean target
 clean:
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
 =======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
+=======
+	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/clean
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : clean
 
 # The main clean target
@@ -172,28 +202,49 @@ clean/fast: clean
 # Prepare targets for installation.
 preinstall: all
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
 =======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+=======
+	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
 =======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+=======
+	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/preinstall
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 =======
 	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+=======
+	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : depend
 
 # Help Target
@@ -221,9 +272,16 @@ help:
 # because they might be regenerated.
 cmake_check_build_system:
 <<<<<<< HEAD
+<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 =======
 	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+=======
+	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : cmake_check_build_system
 

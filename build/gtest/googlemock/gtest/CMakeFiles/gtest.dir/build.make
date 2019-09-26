@@ -44,16 +44,28 @@ EQUALS = =
 
 # The top-level source directory on which CMake was run.
 <<<<<<< HEAD
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
 =======
+=======
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
+<<<<<<< HEAD
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+=======
+CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 # Include any dependencies generated for this target.
 include gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend.make
@@ -67,19 +79,13 @@ include gtest/googlemock/gtest/CMakeFiles/gtest.dir/flags.make
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: gtest/googlemock/gtest/CMakeFiles/gtest.dir/flags.make
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: /usr/src/googletest/googletest/src/gtest-all.cc
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
 	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc
-
-gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
-	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/googletest/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
-
-gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
-	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
 	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
@@ -87,8 +93,31 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
 
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
+<<<<<<< HEAD
+	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc
+=======
+	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /usr/src/googletest/googletest/src/gtest-all.cc
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
+
+gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtest.dir/src/gtest-all.cc.i"
+	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /usr/src/googletest/googletest/src/gtest-all.cc > CMakeFiles/gtest.dir/src/gtest-all.cc.i
+
+gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtest.dir/src/gtest-all.cc.s"
+<<<<<<< HEAD
 	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /usr/src/googletest/googletest/src/gtest-all.cc -o CMakeFiles/gtest.dir/src/gtest-all.cc.s
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.requires:
 
@@ -112,12 +141,21 @@ gtest/googlemock/gtest/libgtest.so: gtest/googlemock/gtest/CMakeFiles/gtest.dir/
 gtest/googlemock/gtest/libgtest.so: gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make
 gtest/googlemock/gtest/libgtest.so: gtest/googlemock/gtest/CMakeFiles/gtest.dir/link.txt
 <<<<<<< HEAD
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libgtest.so"
 	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
 =======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libgtest.so"
 	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gabriel/ENPH353/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libgtest.so"
+	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pham/enph353_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libgtest.so"
+	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gtest.dir/link.txt --verbose=$(VERBOSE)
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 # Rule to build all files generated by this target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/build: gtest/googlemock/gtest/libgtest.so
@@ -129,6 +167,7 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/requires: gtest/googlemock/gtest/CMa
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/requires
 
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
+<<<<<<< HEAD
 <<<<<<< HEAD
 	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
@@ -142,5 +181,19 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend:
 	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabriel/ENPH353/src /usr/src/googletest/googletest /home/gabriel/ENPH353/build /home/gabriel/ENPH353/build/gtest/googlemock/gtest /home/gabriel/ENPH353/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
 >>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
+=======
+	cd /home/gabriel/ENPH353/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
+.PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
+
+gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend:
+	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabriel/ENPH353/src /usr/src/googletest/googletest /home/gabriel/ENPH353/build /home/gabriel/ENPH353/build/gtest/googlemock/gtest /home/gabriel/ENPH353/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/pham/enph353_ws/build/gtest/googlemock/gtest && $(CMAKE_COMMAND) -P CMakeFiles/gtest.dir/cmake_clean.cmake
+.PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
+
+gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend:
+	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pham/enph353_ws/src /usr/src/googletest/googletest /home/pham/enph353_ws/build /home/pham/enph353_ws/build/gtest/googlemock/gtest /home/pham/enph353_ws/build/gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
+>>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 
