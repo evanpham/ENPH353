@@ -1,2 +1,6 @@
 - setup-file:
+<<<<<<< HEAD
     local-name: /home/gabriel/ENPH353/devel/setup.sh
+=======
+    local-name: /home/pham/enph353_ws/devel/setup.sh
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106

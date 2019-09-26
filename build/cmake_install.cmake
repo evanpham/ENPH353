@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: /home/gabriel/ENPH353/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "/home/gabriel/ENPH353/install")
+=======
+# Install script for directory: /home/pham/enph353_ws/src
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/pham/enph353_ws/install")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,89 +57,148 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/gabriel/ENPH353/install/_setup_util.py")
+=======
+   "/home/pham/enph353_ws/install/_setup_util.py")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
+<<<<<<< HEAD
 file(INSTALL DESTINATION "/home/gabriel/ENPH353/install" TYPE PROGRAM FILES "/home/gabriel/ENPH353/build/catkin_generated/installspace/_setup_util.py")
+=======
+file(INSTALL DESTINATION "/home/pham/enph353_ws/install" TYPE PROGRAM FILES "/home/pham/enph353_ws/build/catkin_generated/installspace/_setup_util.py")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/gabriel/ENPH353/install/env.sh")
+=======
+   "/home/pham/enph353_ws/install/env.sh")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
+<<<<<<< HEAD
 file(INSTALL DESTINATION "/home/gabriel/ENPH353/install" TYPE PROGRAM FILES "/home/gabriel/ENPH353/build/catkin_generated/installspace/env.sh")
+=======
+file(INSTALL DESTINATION "/home/pham/enph353_ws/install" TYPE PROGRAM FILES "/home/pham/enph353_ws/build/catkin_generated/installspace/env.sh")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/gabriel/ENPH353/install/setup.bash;/home/gabriel/ENPH353/install/local_setup.bash")
+=======
+   "/home/pham/enph353_ws/install/setup.bash;/home/pham/enph353_ws/install/local_setup.bash")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
+<<<<<<< HEAD
 file(INSTALL DESTINATION "/home/gabriel/ENPH353/install" TYPE FILE FILES
     "/home/gabriel/ENPH353/build/catkin_generated/installspace/setup.bash"
     "/home/gabriel/ENPH353/build/catkin_generated/installspace/local_setup.bash"
+=======
+file(INSTALL DESTINATION "/home/pham/enph353_ws/install" TYPE FILE FILES
+    "/home/pham/enph353_ws/build/catkin_generated/installspace/setup.bash"
+    "/home/pham/enph353_ws/build/catkin_generated/installspace/local_setup.bash"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/gabriel/ENPH353/install/setup.sh;/home/gabriel/ENPH353/install/local_setup.sh")
+=======
+   "/home/pham/enph353_ws/install/setup.sh;/home/pham/enph353_ws/install/local_setup.sh")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
+<<<<<<< HEAD
 file(INSTALL DESTINATION "/home/gabriel/ENPH353/install" TYPE FILE FILES
     "/home/gabriel/ENPH353/build/catkin_generated/installspace/setup.sh"
     "/home/gabriel/ENPH353/build/catkin_generated/installspace/local_setup.sh"
+=======
+file(INSTALL DESTINATION "/home/pham/enph353_ws/install" TYPE FILE FILES
+    "/home/pham/enph353_ws/build/catkin_generated/installspace/setup.sh"
+    "/home/pham/enph353_ws/build/catkin_generated/installspace/local_setup.sh"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/gabriel/ENPH353/install/setup.zsh;/home/gabriel/ENPH353/install/local_setup.zsh")
+=======
+   "/home/pham/enph353_ws/install/setup.zsh;/home/pham/enph353_ws/install/local_setup.zsh")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
+<<<<<<< HEAD
 file(INSTALL DESTINATION "/home/gabriel/ENPH353/install" TYPE FILE FILES
     "/home/gabriel/ENPH353/build/catkin_generated/installspace/setup.zsh"
     "/home/gabriel/ENPH353/build/catkin_generated/installspace/local_setup.zsh"
+=======
+file(INSTALL DESTINATION "/home/pham/enph353_ws/install" TYPE FILE FILES
+    "/home/pham/enph353_ws/build/catkin_generated/installspace/setup.zsh"
+    "/home/pham/enph353_ws/build/catkin_generated/installspace/local_setup.zsh"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
+<<<<<<< HEAD
    "/home/gabriel/ENPH353/install/.rosinstall")
+=======
+   "/home/pham/enph353_ws/install/.rosinstall")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
+<<<<<<< HEAD
 file(INSTALL DESTINATION "/home/gabriel/ENPH353/install" TYPE FILE FILES "/home/gabriel/ENPH353/build/catkin_generated/installspace/.rosinstall")
+=======
+file(INSTALL DESTINATION "/home/pham/enph353_ws/install" TYPE FILE FILES "/home/pham/enph353_ws/build/catkin_generated/installspace/.rosinstall")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/home/gabriel/ENPH353/build/gtest/cmake_install.cmake")
   include("/home/gabriel/ENPH353/build/enph353_ros_lab/cmake_install.cmake")
+=======
+  include("/home/pham/enph353_ws/build/gtest/cmake_install.cmake")
+  include("/home/pham/enph353_ws/build/enph353_ros_lab/cmake_install.cmake")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 
 endif()
 
@@ -143,5 +210,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/gabriel/ENPH353/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/pham/enph353_ws/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

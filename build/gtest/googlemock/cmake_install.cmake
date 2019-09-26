@@ -2,7 +2,11 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+<<<<<<< HEAD
   set(CMAKE_INSTALL_PREFIX "/home/gabriel/ENPH353/install")
+=======
+  set(CMAKE_INSTALL_PREFIX "/home/pham/enph353_ws/install")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +43,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+<<<<<<< HEAD
   include("/home/gabriel/ENPH353/build/gtest/googlemock/gtest/cmake_install.cmake")
+=======
+  include("/home/pham/enph353_ws/build/gtest/googlemock/gtest/cmake_install.cmake")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 
 endif()
 

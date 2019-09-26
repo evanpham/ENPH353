@@ -67,14 +67,23 @@ set(enph353_ros_lab_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
+<<<<<<< HEAD
   set(enph353_ros_lab_SOURCE_PREFIX /home/gabriel/ENPH353/src/enph353_ros_lab)
   set(enph353_ros_lab_DEVEL_PREFIX /home/gabriel/ENPH353/devel)
+=======
+  set(enph353_ros_lab_SOURCE_PREFIX /home/pham/enph353_ws/src/enph353_ros_lab)
+  set(enph353_ros_lab_DEVEL_PREFIX /home/pham/enph353_ws/devel)
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   set(enph353_ros_lab_INSTALL_PREFIX "")
   set(enph353_ros_lab_PREFIX ${enph353_ros_lab_DEVEL_PREFIX})
 else()
   set(enph353_ros_lab_SOURCE_PREFIX "")
   set(enph353_ros_lab_DEVEL_PREFIX "")
+<<<<<<< HEAD
   set(enph353_ros_lab_INSTALL_PREFIX /home/gabriel/ENPH353/install)
+=======
+  set(enph353_ros_lab_INSTALL_PREFIX /home/pham/enph353_ws/install)
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
   set(enph353_ros_lab_PREFIX ${enph353_ros_lab_INSTALL_PREFIX})
 endif()
 
@@ -110,7 +119,11 @@ if(NOT " " STREQUAL " ")
         message(FATAL_ERROR "Project 'enph353_ros_lab' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
+<<<<<<< HEAD
       message(FATAL_ERROR "Project 'enph353_ros_lab' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/gabriel/ENPH353/install/${idir}'.  ${_report}")
+=======
+      message(FATAL_ERROR "Project 'enph353_ros_lab' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/pham/enph353_ws/install/${idir}'.  ${_report}")
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
     endif()
     _list_append_unique(enph353_ros_lab_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +144,11 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
+<<<<<<< HEAD
     foreach(path /home/gabriel/ENPH353/install/lib;/home/gabriel/ENPH353/devel/lib;/opt/ros/melodic/lib)
+=======
+    foreach(path /home/pham/enph353_ws/install/lib;/home/pham/enph353_ws/devel/lib;/opt/ros/melodic/lib)
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

@@ -1,2 +1,6 @@
 enph353_ros_lab
+<<<<<<< HEAD
 -DCATKIN_DEVEL_PREFIX=/home/gabriel/ENPH353/devel -DCMAKE_INSTALL_PREFIX=/home/gabriel/ENPH353/install -G Unix Makefiles
+=======
+-DCATKIN_DEVEL_PREFIX=/home/pham/enph353_ws/devel -DCMAKE_INSTALL_PREFIX=/home/pham/enph353_ws/install -G Unix Makefiles
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106

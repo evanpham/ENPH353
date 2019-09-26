@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 prefix=/home/gabriel/ENPH353/install
+=======
+prefix=/home/pham/enph353_ws/install
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 
 Name: enph353_ros_lab
 Description: Description of enph353_ros_lab
 Version: 0.0.0
 Cflags: 
+<<<<<<< HEAD
 Libs: -L/home/gabriel/ENPH353/install/lib 
+=======
+Libs: -L/home/pham/enph353_ws/install/lib 
+>>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
 Requires: 
