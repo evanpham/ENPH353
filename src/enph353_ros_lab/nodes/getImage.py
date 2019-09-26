@@ -5,10 +5,7 @@ from geometry_msgs.msg import Twist
 import cv2
 import numpy as np
 
-def lineFollower(cX):
-    int kp = .05
-	return (cX-500)*kp
-	
+
 
 
 def callback(data):
@@ -40,13 +37,13 @@ def callback(data):
 		cY = int(M["m01"]/M["m00"])
 	except:
 		print("ahhhhhhhh")
-		cX = 0
+		cX = 100000
 		cY = 0
 	cv2.circle(img, (cX, cY+250), 10, (255, 255, 0), -1)
     # Display the resulting frame
 	cv2.imshow('img', img)
 	cv2.waitKey(25)
-	talker()
+	talker(cX)
 
 
 
@@ -59,7 +56,10 @@ def listener():
 	rospy.spin()
 
 
-def talker():
+def talker(x):
+
+	kp = -.003
+
 	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
 	rate = rospy.Rate(10) # 10hz
 	if not rospy.is_shutdown():
@@ -69,7 +69,7 @@ def talker():
 		vel_msg.linear.z = 0
 		vel_msg.angular.x = 0
 		vel_msg.angular.y = 0
-		vel_msg.angular.z = 0
+		vel_msg.angular.z = (x-500)*kp
 		rate.sleep()
 		pub.publish(vel_msg)
 
