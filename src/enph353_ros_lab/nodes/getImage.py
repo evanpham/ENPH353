@@ -5,6 +5,7 @@ from geometry_msgs.msg import Twist
 import cv2
 import numpy as np
 
+xLast = 0
 
 def getCenter(image):
 	# Crop image
@@ -18,13 +19,12 @@ def getCenter(image):
 
 	# Find center
 	M = cv2.moments(thresh)
+	cX, cY = -1, -1
 	try:
 		cX = int(M["m10"]/M["m00"])
 		cY = int(M["m01"]/M["m00"])
 	except:
 		print("ahhhhhhhh")
-		cX = 100000
-		cY = 0
 
 	return (cX, cY)
 
@@ -46,7 +46,13 @@ def callback(data):
 	# Display the resulting frame
 	cv2.imshow('img', img)
 	cv2.waitKey(25)
-	talker(center[0], w)
+
+	if (center[0] == -1):
+		talker(xLast, w)
+
+	else:
+		xLast = center[0]
+		talker(xLast, w)
 
 
 def listener():

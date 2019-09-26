@@ -5,6 +5,7 @@
 
 import cv2
 
+
 def findLine(image, height, width):
     crop_img = image[height-100:height, 0:width]
     # Grayscale
