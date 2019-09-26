@@ -5,11 +5,12 @@ from geometry_msgs.msg import Twist
 import cv2
 import numpy as np
 
-xLast = 0
+global xLast = 0
 
-def getCenter(image):
+
+def getCenter(image, width, height):
 	# Crop image
-	crop_img = image[500:1000, 0:1000]
+	crop_img = image[height-100:height, 0:width]
 	# Grayscale
 	gray = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
 	# Gaussian blur
@@ -40,9 +41,9 @@ def callback(data):
 	# Find image matrix
 	img = np.fromstring(data.data, dtype='uint8').reshape((h, w, 3))
 
-	center = getCenter(img)
+	center = getCenter(img, w, h)
+	cv2.circle(img, (xLast, center[1]+250), 10, (255, 255, 0), -1)
 
-	cv2.circle(img, (center[0], center[1]+250), 10, (255, 255, 0), -1)
 	# Display the resulting frame
 	cv2.imshow('img', img)
 	cv2.waitKey(25)
@@ -66,18 +67,20 @@ def listener():
 
 def talker(x, width):
 
-	kp = -.003
+	kp = 0.005
+	kd = 0.002
+	derivative = xLast - x
 
 	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-	rate = rospy.Rate(10) # 10hz
+	rate = rospy.Rate(10)  # 10hz
 	if not rospy.is_shutdown():
 		vel_msg = Twist()
-		vel_msg.linear.x = .05
+		vel_msg.linear.x = .20
 		vel_msg.linear.y = 0
 		vel_msg.linear.z = 0
 		vel_msg.angular.x = 0
 		vel_msg.angular.y = 0
-		vel_msg.angular.z = (x-width/2)*kp
+		vel_msg.angular.z += (width/2-x)*kp + derivative*kd
 		rate.sleep()
 		pub.publish(vel_msg)
 
