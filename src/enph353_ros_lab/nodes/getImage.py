@@ -5,84 +5,92 @@ from geometry_msgs.msg import Twist
 import cv2
 import numpy as np
 
-global xLast = 0
 
+class Robot:
 
-def getCenter(image, width, height):
-	# Crop image
-	crop_img = image[height-100:height, 0:width]
-	# Grayscale
-	gray = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
-	# Gaussian blur
-	blur = cv2.GaussianBlur(gray, (5, 5), 0)
-	# Colour thresh
-	ret, thresh = cv2.threshold(blur, 100, 255, cv2.THRESH_BINARY_INV)
+    def __init__(self):
+        rospy.init_node('robot', anonymous=True)
 
-	# Find center
-	M = cv2.moments(thresh)
-	cX, cY = -1, -1
-	try:
-		cX = int(M["m10"]/M["m00"])
-		cY = int(M["m01"]/M["m00"])
-	except:
-		print("ahhhhhhhh")
+        self.camera_subscriber = rospy.Subscriber('/rrbot/camera1/image_raw', Image, self.callback)
+        self.vel_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+        self.error = 0
+        self.error_prev = 0
+        self.w = 0
+        self.h = 0
+        self.camera_img = Image()
+        self.kp = 0.003
+        self.kd = 0.0001
 
-	return (cX, cY)
+    def getCenter(self):
+        # Crop image
+        crop_img = self.camera_img[self.h-100:self.h, 0:self.w]
+        # Grayscale
+        gray = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)
+        # Gaussian blur
+        blur = cv2.GaussianBlur(gray, (5, 5), 0)
+        # Colour thresh
+        ret, thresh = cv2.threshold(blur, 100, 255, cv2.THRESH_BINARY_INV)
 
+        # Find center
+        M = cv2.moments(thresh)
+        cX, cY = -1, -1
+        try:
+            cX = int(M["m10"]/M["m00"])
+            cY = int(M["m01"]/M["m00"])
+        except:
+            print("ahhhhhhhh")
 
-def callback(data):
-	# Get image dimensions
-	h = data.height
-	w = data.width
+        return (cX, cY)
 
-	# Report dimensions to log
-	rospy.loginfo("height: %s  width: %s", h, w)
+    def callback(self, data):
+        # Get image dimensions
+        if (self.h, self.w == 0):
+            self.h = data.height
+            self.w = data.width
 
-	# Find image matrix
-	img = np.fromstring(data.data, dtype='uint8').reshape((h, w, 3))
+        # Find image matrix
+        self.camera_img = np.fromstring(data.data, dtype='uint8').reshape((self.h, self.w, 3))
 
-	center = getCenter(img, w, h)
-	cv2.circle(img, (xLast, center[1]+250), 10, (255, 255, 0), -1)
+        center = self.getCenter()
+        self.error = self.w/2 - center[0]
+        cv2.circle(self.camera_img, (self.error, center[1]+250), 10, (255, 255, 0), -1)
 
-	# Display the resulting frame
-	cv2.imshow('img', img)
-	cv2.waitKey(25)
+        # Display the resulting frame
+        cv2.imshow('img', self.camera_img)
+        cv2.waitKey(25)
 
-	if (center[0] == -1):
-		talker(xLast, w)
+        if (center[0] == -1):
+            self.talker(self.error_prev)
 
-	else:
-		xLast = center[0]
-		talker(xLast, w)
+        else:
+            self.error_prev = center[0]
+            self.talker(self.error)
 
+    def listener(self):
+        # This node subscribes to the camera image feed
+        rospy.spin()
 
-def listener():
-	# Initialize this ros node
-	rospy.init_node('vidFeed', anonymous=True)
+    def talker(self, error):
 
-	# This node subscribes to the camera image feed
-	rospy.Subscriber('/rrbot/camera1/image_raw', Image, callback)
-	rospy.spin()
+        derivative = self.error_prev - self.error
 
+        rate = rospy.Rate(10)  # 10hz
+        if not rospy.is_shutdown():
+            vel_msg = Twist()
+            vel_msg.linear.x = .20
+            vel_msg.linear.y = 0
+            vel_msg.linear.z = 0
+            vel_msg.angular.x = 0
+            vel_msg.angular.y = 0
+            vel_msg.angular.z += error*self.kp + derivative*self.kd
+            rate.sleep()
+            self.vel_publisher.publish(vel_msg)
 
-def talker(x, width):
-
-	kp = 0.005
-	kd = 0.002
-	derivative = xLast - x
-
-	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
-	rate = rospy.Rate(10)  # 10hz
-	if not rospy.is_shutdown():
-		vel_msg = Twist()
-		vel_msg.linear.x = .20
-		vel_msg.linear.y = 0
-		vel_msg.linear.z = 0
-		vel_msg.angular.x = 0
-		vel_msg.angular.y = 0
-		vel_msg.angular.z += (width/2-x)*kp + derivative*kd
-		rate.sleep()
-		pub.publish(vel_msg)
 
 if __name__ == '__main__':
-	listener()
+    try:
+        print("STARTING")
+        bot = Robot()
+        bot.listener()
+    except rospy.ROSInterruptException:
+        pass
