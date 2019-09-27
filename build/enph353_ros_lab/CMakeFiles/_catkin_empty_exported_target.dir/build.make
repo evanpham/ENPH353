@@ -43,29 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
-=======
-=======
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
-CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
-<<<<<<< HEAD
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-=======
-CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -82,33 +63,10 @@ enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build: _catkin_empt
 .PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-<<<<<<< HEAD
-<<<<<<< HEAD
 	cd /home/pham/enph353_ws/build/enph353_ros_lab && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/depend:
 	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pham/enph353_ws/src /home/pham/enph353_ws/src/enph353_ros_lab /home/pham/enph353_ws/build /home/pham/enph353_ws/build/enph353_ros_lab /home/pham/enph353_ws/build/enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/gabriel/ENPH353/build/enph353_ros_lab && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
-.PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabriel/ENPH353/src /home/gabriel/ENPH353/src/enph353_ros_lab /home/gabriel/ENPH353/build /home/gabriel/ENPH353/build/enph353_ros_lab /home/gabriel/ENPH353/build/enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build/enph353_ros_lab && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
-.PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gabriel/ENPH353/src /home/gabriel/ENPH353/src/enph353_ros_lab /home/gabriel/ENPH353/build /home/gabriel/ENPH353/build/enph353_ros_lab /home/gabriel/ENPH353/build/enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/pham/enph353_ws/build/enph353_ros_lab && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
-.PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/clean
-
-enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pham/enph353_ws/src /home/pham/enph353_ws/src/enph353_ros_lab /home/pham/enph353_ws/build /home/pham/enph353_ws/build/enph353_ros_lab /home/pham/enph353_ws/build/enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : enph353_ros_lab/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

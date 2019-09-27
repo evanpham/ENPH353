@@ -1,75 +1,24 @@
 Determining if the pthread_create exist failed with the following output:
-<<<<<<< HEAD
-<<<<<<< HEAD
 Change Dir: /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3886f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3886f.dir/build.make CMakeFiles/cmTC_3886f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_85d0d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85d0d.dir/build.make CMakeFiles/cmTC_85d0d.dir/build
 make[1]: Entering directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o   -c /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_3886f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3886f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o  -o cmTC_3886f 
-CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_85d0d.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_85d0d.dir/CheckSymbolExists.c.o   -c /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_85d0d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85d0d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_85d0d.dir/CheckSymbolExists.c.o  -o cmTC_85d0d 
+CMakeFiles/cmTC_85d0d.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_3886f.dir/build.make:97: recipe for target 'cmTC_3886f' failed
-make[1]: *** [cmTC_3886f] Error 1
+CMakeFiles/cmTC_85d0d.dir/build.make:97: recipe for target 'cmTC_85d0d' failed
+make[1]: *** [cmTC_85d0d] Error 1
 make[1]: Leaving directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_3886f/fast' failed
-make: *** [cmTC_3886f/fast] Error 2
+Makefile:126: recipe for target 'cmTC_85d0d/fast' failed
+make: *** [cmTC_85d0d/fast] Error 2
 
 File /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-=======
-=======
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
-Change Dir: /home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_0b405/fast"
-/usr/bin/make -f CMakeFiles/cmTC_0b405.dir/build.make CMakeFiles/cmTC_0b405.dir/build
-make[1]: Entering directory '/home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0b405.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_0b405.dir/CheckSymbolExists.c.o   -c /home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_0b405
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0b405.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0b405.dir/CheckSymbolExists.c.o  -o cmTC_0b405 
-CMakeFiles/cmTC_0b405.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_0b405.dir/build.make:97: recipe for target 'cmTC_0b405' failed
-make[1]: *** [cmTC_0b405] Error 1
-make[1]: Leaving directory '/home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_0b405/fast' failed
-make: *** [cmTC_0b405/fast] Error 2
-
-File /home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
-<<<<<<< HEAD
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-=======
-Change Dir: /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_3886f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3886f.dir/build.make CMakeFiles/cmTC_3886f.dir/build
-make[1]: Entering directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o   -c /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_3886f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3886f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o  -o cmTC_3886f 
-CMakeFiles/cmTC_3886f.dir/CheckSymbolExists.c.o: In function `main':
-CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_3886f.dir/build.make:97: recipe for target 'cmTC_3886f' failed
-make[1]: *** [cmTC_3886f] Error 1
-make[1]: Leaving directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_3886f/fast' failed
-make: *** [cmTC_3886f/fast] Error 2
-
-File /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 /* */
 #include <pthread.h>
 
@@ -85,67 +34,22 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-<<<<<<< HEAD
-<<<<<<< HEAD
 Change Dir: /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6a15e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6a15e.dir/build.make CMakeFiles/cmTC_6a15e.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_38c6f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_38c6f.dir/build.make CMakeFiles/cmTC_38c6f.dir/build
 make[1]: Entering directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6a15e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6a15e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6a15e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a15e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_6a15e.dir/CheckFunctionExists.c.o  -o cmTC_6a15e -lpthreads 
+Building C object CMakeFiles/cmTC_38c6f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_38c6f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_38c6f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_38c6f.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_38c6f.dir/CheckFunctionExists.c.o  -o cmTC_38c6f -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_6a15e.dir/build.make:97: recipe for target 'cmTC_6a15e' failed
-make[1]: *** [cmTC_6a15e] Error 1
+CMakeFiles/cmTC_38c6f.dir/build.make:97: recipe for target 'cmTC_38c6f' failed
+make[1]: *** [cmTC_38c6f] Error 1
 make[1]: Leaving directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_6a15e/fast' failed
-make: *** [cmTC_6a15e/fast] Error 2
-=======
-=======
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
-Change Dir: /home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_9bce5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_9bce5.dir/build.make CMakeFiles/cmTC_9bce5.dir/build
-make[1]: Entering directory '/home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9bce5.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_9bce5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_9bce5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9bce5.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_9bce5.dir/CheckFunctionExists.c.o  -o cmTC_9bce5 -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_9bce5.dir/build.make:97: recipe for target 'cmTC_9bce5' failed
-make[1]: *** [cmTC_9bce5] Error 1
-make[1]: Leaving directory '/home/gabriel/ENPH353/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_9bce5/fast' failed
-make: *** [cmTC_9bce5/fast] Error 2
-<<<<<<< HEAD
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-=======
-Change Dir: /home/pham/enph353_ws/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/make" "cmTC_6a15e/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6a15e.dir/build.make CMakeFiles/cmTC_6a15e.dir/build
-make[1]: Entering directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6a15e.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6a15e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_6a15e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a15e.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_6a15e.dir/CheckFunctionExists.c.o  -o cmTC_6a15e -lpthreads 
-/usr/bin/ld: cannot find -lpthreads
-collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_6a15e.dir/build.make:97: recipe for target 'cmTC_6a15e' failed
-make[1]: *** [cmTC_6a15e] Error 1
-make[1]: Leaving directory '/home/pham/enph353_ws/build/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_6a15e/fast' failed
-make: *** [cmTC_6a15e/fast] Error 2
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
+Makefile:126: recipe for target 'cmTC_38c6f/fast' failed
+make: *** [cmTC_38c6f/fast] Error 2
 
 

@@ -2,6 +2,7 @@
 import rospy
 from sensor_msgs.msg import Image
 from geometry_msgs.msg import Twist
+from std_msgs.msg import Float64
 import cv2
 import numpy as np
 
@@ -11,7 +12,8 @@ class Robot:
     def __init__(self):
         rospy.init_node('robot', anonymous=True)
 
-        self.camera_subscriber = rospy.Subscriber('/rrbot/camera1/image_raw', Image, self.callback)
+        self.camera_subscriber = rospy.Subscriber('/rrbot/camera1/image_raw',
+                                                  Image, self.callback)
         self.vel_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
         self.error = 0
         self.error_prev = 0
@@ -20,6 +22,9 @@ class Robot:
         self.camera_img = Image()
         self.kp = 0.003
         self.kd = 0.0001
+
+        self.rate = rospy.Rate(10)
+
 
     def getCenter(self):
         # Crop image
@@ -38,7 +43,7 @@ class Robot:
             cX = int(M["m10"]/M["m00"])
             cY = int(M["m01"]/M["m00"])
         except:
-            print("ahhhhhhhh")
+            print("No Line Found")
 
         return (cX, cY)
 
@@ -50,47 +55,41 @@ class Robot:
 
         # Find image matrix
         self.camera_img = np.fromstring(data.data, dtype='uint8').reshape((self.h, self.w, 3))
-
         center = self.getCenter()
-        self.error = self.w/2 - center[0]
-        cv2.circle(self.camera_img, (self.error, center[1]+250), 10, (255, 255, 0), -1)
+        cv2.circle(self.camera_img,
+                   (self.error, center[1]+250), 10, (255, 255, 0), -1)
 
         # Display the resulting frame
         cv2.imshow('img', self.camera_img)
         cv2.waitKey(25)
 
-        if (center[0] == -1):
-            self.talker(self.error_prev)
+        if (center[0] != -1):
+            self.error_prev = self.error
+            self.error = self.w/2 - center[0]
 
-        else:
-            self.error_prev = center[0]
-            self.talker(self.error)
-
-    def listener(self):
-        # This node subscribes to the camera image feed
-        rospy.spin()
-
-    def talker(self, error):
-
-        derivative = self.error_prev - self.error
+    def followLine(self):
+        # derivative = self.error_prev - self.error
 
         rate = rospy.Rate(10)  # 10hz
-        if not rospy.is_shutdown():
+        while not rospy.is_shutdown():
             vel_msg = Twist()
             vel_msg.linear.x = .20
             vel_msg.linear.y = 0
             vel_msg.linear.z = 0
             vel_msg.angular.x = 0
             vel_msg.angular.y = 0
-            vel_msg.angular.z += error*self.kp + derivative*self.kd
+            vel_msg.angular.z += self.error*self.kp
             rate.sleep()
             self.vel_publisher.publish(vel_msg)
+            self.rate.sleep()
+
+        rospy.spin()
 
 
 if __name__ == '__main__':
     try:
         print("STARTING")
         bot = Robot()
-        bot.listener()
+        bot.followLine()
     except rospy.ROSInterruptException:
         pass
