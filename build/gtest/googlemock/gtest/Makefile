@@ -48,29 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
-=======
-=======
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
-<<<<<<< HEAD
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-=======
-CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -156,42 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/gtest/googlemock/gtest/CMakeFiles/progress.marks
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
-=======
 	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles /home/gabriel/ENPH353/build/gtest/googlemock/gtest/CMakeFiles/progress.marks
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles /home/gabriel/ENPH353/build/gtest/googlemock/gtest/CMakeFiles/progress.marks
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
-=======
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/gtest/googlemock/gtest/CMakeFiles/progress.marks
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : all
 
 # The main clean target
 clean:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/clean
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/clean
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/clean
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/clean
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : clean
 
 # The main clean target
@@ -201,66 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/preinstall
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
 	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
-=======
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : depend
 
 # Convenience name for target.
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -270,34 +179,12 @@ gtest_main: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # fast build rule for target.
 gtest_main/fast:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest_main/fast
 
 # Convenience name for target.
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f CMakeFiles/Makefile2 gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -307,18 +194,7 @@ gtest: gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # fast build rule for target.
 gtest/fast:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : gtest/fast
 
 src/gtest-all.o: src/gtest-all.cc.o
@@ -327,18 +203,7 @@ src/gtest-all.o: src/gtest-all.cc.o
 
 # target to build an object file
 src/gtest-all.cc.o:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : src/gtest-all.cc.o
 
 src/gtest-all.i: src/gtest-all.cc.i
@@ -347,18 +212,7 @@ src/gtest-all.i: src/gtest-all.cc.i
 
 # target to preprocess a source file
 src/gtest-all.cc.i:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.i
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : src/gtest-all.cc.i
 
 src/gtest-all.s: src/gtest-all.cc.s
@@ -367,18 +221,7 @@ src/gtest-all.s: src/gtest-all.cc.s
 
 # target to generate assembly for a file
 src/gtest-all.cc.s:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.s
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : src/gtest-all.cc.s
 
 src/gtest_main.o: src/gtest_main.cc.o
@@ -387,18 +230,7 @@ src/gtest_main.o: src/gtest_main.cc.o
 
 # target to build an object file
 src/gtest_main.cc.o:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : src/gtest_main.cc.o
 
 src/gtest_main.i: src/gtest_main.cc.i
@@ -407,18 +239,7 @@ src/gtest_main.i: src/gtest_main.cc.i
 
 # target to preprocess a source file
 src/gtest_main.cc.i:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.i
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : src/gtest_main.cc.i
 
 src/gtest_main.s: src/gtest_main.cc.s
@@ -427,18 +248,7 @@ src/gtest_main.s: src/gtest_main.cc.s
 
 # target to generate assembly for a file
 src/gtest_main.cc.s:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
-=======
 	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
-=======
-	cd /home/pham/enph353_ws/build && $(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.s
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : src/gtest_main.cc.s
 
 # Help Target
@@ -473,17 +283,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-<<<<<<< HEAD
-<<<<<<< HEAD
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
 	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	cd /home/gabriel/ENPH353/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
-=======
-	cd /home/pham/enph353_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : cmake_check_build_system
 

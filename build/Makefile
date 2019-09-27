@@ -48,29 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
-<<<<<<< HEAD
-CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
-=======
-=======
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 CMAKE_SOURCE_DIR = /home/gabriel/ENPH353/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/gabriel/ENPH353/build
-<<<<<<< HEAD
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-=======
-CMAKE_SOURCE_DIR = /home/pham/enph353_ws/src
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pham/enph353_ws/build
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -156,26 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-<<<<<<< HEAD
-<<<<<<< HEAD
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
-=======
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles /home/gabriel/ENPH353/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles /home/gabriel/ENPH353/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gabriel/ENPH353/build/CMakeFiles 0
-=======
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles /home/pham/enph353_ws/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pham/enph353_ws/build/CMakeFiles 0
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
 .PHONY : all
 
 # The main clean target

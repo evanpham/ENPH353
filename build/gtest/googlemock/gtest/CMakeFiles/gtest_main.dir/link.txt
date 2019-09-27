@@ -1,12 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/pham/enph353_ws/build/gtest/googlemock/gtest/src -Wl,-rpath,/home/pham/enph353_ws/build/gtest/googlemock/gtest/src:/home/pham/enph353_ws/build/gtest/googlemock/gtest -lpthread libgtest.so -lpthread 
-=======
 /usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/gabriel/ENPH353/build/gtest/googlemock/gtest/src -Wl,-rpath,/home/gabriel/ENPH353/build/gtest/googlemock/gtest/src:/home/gabriel/ENPH353/build/gtest/googlemock/gtest -lpthread libgtest.so -lpthread 
->>>>>>> cc9906bc7e8abb9ac618fd1f8b6235d2629eebb2
-=======
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/gabriel/ENPH353/build/gtest/googlemock/gtest/src -Wl,-rpath,/home/gabriel/ENPH353/build/gtest/googlemock/gtest/src:/home/gabriel/ENPH353/build/gtest/googlemock/gtest -lpthread libgtest.so -lpthread 
-=======
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgtest_main.so -o libgtest_main.so CMakeFiles/gtest_main.dir/src/gtest_main.cc.o  -L/home/pham/enph353_ws/build/gtest/googlemock/gtest/src -Wl,-rpath,/home/pham/enph353_ws/build/gtest/googlemock/gtest/src:/home/pham/enph353_ws/build/gtest/googlemock/gtest -lpthread libgtest.so -lpthread 
->>>>>>> f88bb8e013b83310b4c210ccd19fd9b85fadc106
->>>>>>> e67f4e1086cfd9c4820dcf6ce86b0931c9d58938
