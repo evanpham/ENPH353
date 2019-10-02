@@ -12,19 +12,21 @@ class Robot:
     def __init__(self):
         rospy.init_node('robot', anonymous=True)
 
-        self.camera_subscriber = rospy.Subscriber('/rrbot/camera1/image_raw',
-                                                  Image, self.callback)
-        self.vel_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+        self.camera_sub = rospy.Subscriber('/rrbot/camera1/image_raw',
+                                           Image, self.callback)
+        self.ctrl_sub = rospy.Subscriber('control_effort', Float64, self.ctrlEffort)
+        self.vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
+        self.setpt_pub = rospy.Publisher('/setpoint', Float64, queue_size=10)
+        self.state_pub = rospy.Publisher('/state', Float64, queue_size=10)
         self.error = 0
         self.error_prev = 0
         self.w = 0
         self.h = 0
         self.camera_img = Image()
-        self.kp = 0.003
-        self.kd = 0.0001
-
+        self.state = Float64()
+        self.effort = 0
         self.rate = rospy.Rate(10)
-
+        self.setpoint()
 
     def getCenter(self):
         # Crop image
@@ -39,12 +41,16 @@ class Robot:
         # Find center
         M = cv2.moments(thresh)
         cX, cY = -1, -1
+
         try:
             cX = int(M["m10"]/M["m00"])
             cY = int(M["m01"]/M["m00"])
-        except:
+            print("Line Found")
+            print(cX, cY)
+        except ZeroDivisionError:
             print("No Line Found")
 
+        self.update_state(cX)
         return (cX, cY)
 
     def callback(self, data):
@@ -68,22 +74,40 @@ class Robot:
             self.error = self.w/2 - center[0]
 
     def followLine(self):
-        # derivative = self.error_prev - self.error
-
-        rate = rospy.Rate(10)  # 10hz
         while not rospy.is_shutdown():
+            self.ctrl_sub
+            self.state_pub.publish(self.state)
             vel_msg = Twist()
-            vel_msg.linear.x = .20
+            vel_msg.linear.x = .05
             vel_msg.linear.y = 0
             vel_msg.linear.z = 0
             vel_msg.angular.x = 0
             vel_msg.angular.y = 0
-            vel_msg.angular.z += self.error*self.kp
-            rate.sleep()
-            self.vel_publisher.publish(vel_msg)
+            vel_msg.angular.z += 0.01*self.effort
+            self.vel_pub.publish(vel_msg)
             self.rate.sleep()
+            print("spinnin")
+            rospy.spin()
 
-        rospy.spin()
+    def setpoint(self):
+        """ This bit of code continuosly sends our desired state to be 
+            in the middle of the screen """
+        print("SETTING POINT\n\n\n\n")
+        setpoint = Float64()
+        setpoint.data = float(self.w/2)
+        self.setpt_pub.publish(setpoint)
+
+    def update_state(self, x):
+        print("UPDATING STATE\n\n\n\n")
+        # This code will send the current state to pid
+        if x != -1:
+            self.state.data = self.effort
+            print(self.state.data)
+            self.state_pub.publish(self.state)
+
+    def ctrlEffort(self, val):
+        print("CHECKIN CONTROL\n\n\n\n")
+        self.effort = val.data
 
 
 if __name__ == '__main__':
