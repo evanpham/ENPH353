@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import math
+import subprocess
 import numpy as np
 import re
 import cv2
@@ -21,7 +22,10 @@ from scipy import stats
 from keras.utils import plot_model
 from keras import backend
 
-PATH = "../media/plates/pictures/"
+from ipywidgets import interact
+import ipywidgets as ipywidgets
+
+PATH = "../media/plates/pictures"
 
 
 def filename_parser(name):
@@ -43,8 +47,11 @@ def files_in_folder(folder_path):
 	
 	folder_path : str
 		A string to folder for which the file listing is returned.
-	'''
-	files_A = !ls "{folder_path}"
+	# '''
+	# files_A = !ls "{folder_path}"
+	process = subprocess.Popen("ls " + folder_path, stdout=subprocess.PIPE, shell=True)
+	files_A = process.communicate()[0]
+
 	# The files when listed from Google Drive have a particular format. They are
 	# grouped in sets of 4 and have spaces and tabs as delimiters.
 	
