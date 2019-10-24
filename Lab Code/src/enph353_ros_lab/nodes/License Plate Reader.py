@@ -25,7 +25,7 @@ from keras import backend
 from ipywidgets import interact
 import ipywidgets as ipywidgets
 
-PATH = "../media/plates/pictures"
+PATH = "../media/plates/pictures/"
 
 
 def filename_parser(name):
@@ -48,25 +48,11 @@ def files_in_folder(folder_path):
 	folder_path : str
 		A string to folder for which the file listing is returned.
 	# '''
-	# files_A = !ls "{folder_path}"
 	process = subprocess.Popen("ls " + folder_path, stdout=subprocess.PIPE, shell=True)
 	files_A = process.communicate()[0]
-
-	# The files when listed from Google Drive have a particular format. They are
-	# grouped in sets of 4 and have spaces and tabs as delimiters.
-	
-	# Split the string listing sets of 4 files by tab and space and remove any 
-	# empty splits.
-	files_B = [list(filter(None, re.split('\t|\s', files))) for files in files_A]
-	
-	# Concatenate all splits into a single sorted list
-	files_C = []
-	for element in files_B:
-		files_C = files_C + element
-		
-	files_C.sort()
-	
-	return files_C
+	files_A = list(files_A.split())
+	print("LEN of files " + str(len(files_A)))
+	return files_A
 
 
 def random_skew(image):
@@ -92,12 +78,10 @@ def random_skew(image):
 
 	# Create a random destination array for the corners of the image
 	dst = np.array([tl_skew, tr_skew, br_skew, bl_skew], dtype = "float32")
- 
+
 	# compute the perspective transform matrix and then apply it
 	M = cv2.getPerspectiveTransform(rect, dst)
 	mode = tuple(map(int, stats.mode(image)[0][0][0]))
-	print("most common pixels")
-	print(np.unique(image.reshape(-1, image.shape[2]), axis=0, return_counts=True))
 	warped = cv2.warpPerspective(image, M, (width, height), cv2.INTER_LINEAR, cv2.BORDER_CONSTANT, borderValue=mode)
 
 	# return the warped image
@@ -156,9 +140,10 @@ def crop_plate_chars(img_path):
 	for i, ctr in enumerate(sorted_ctrs):
 		# Get bounding box
 		x, y, w, h = cv2.boundingRect(ctr)
+		cv2.rectangle(image,(x,y),(x+w,y+h),(0,255,0),2)
 
 		# Filter to contours containing the plate characters
-		if (120 < h and 140 > h):
+		if (115 < h):
 			# Getting ROI and resizing to fit neural net inputs
 			roi = cv2.resize(image[y:y + h, x:x + w], (102,150))
 			cropped_chars.append(roi)
@@ -188,13 +173,13 @@ def split_image(path, img_file):
 	'''
 	# Get array of plate character images
 	cropped_chars = crop_plate_chars(path + img_file)
-
+	
 	# Use parser to find characters in plate from file name
 	characters = filename_parser(img_file)
  
 	# Put into answer key array
 	ans_key = np.vstack(([cropped_chars[i], characters[i]] for i in range(len(characters))))
-		
+
 	return ans_key
 
 
@@ -279,7 +264,7 @@ def get_datasets(files):
 	print(test_imgs.shape)
 	return (train_imgs, train_labels, test_imgs, test_labels)
 
-(model, history, train_imgs, train_labels, test_imgs, test_labels) = train_nn(1)
+(model, history, train_imgs, train_labels, test_imgs, test_labels) = train_nn(900)
 
 for i in range(8):
 	displayImage(train_imgs[i], train_labels[i])
