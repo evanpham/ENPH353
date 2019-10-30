@@ -1,0 +1,8 @@
+prefix=/home/pham/enph353_ws/install
+
+Name: enph353_gazebo
+Description: Description of enph353_gazebo
+Version: 0.0.0
+Cflags: -I/home/pham/enph353_ws/install/include
+Libs: -L/home/pham/enph353_ws/install/lib 
+Requires: roscpp gazebo_ros
