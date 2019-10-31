@@ -23,7 +23,8 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
     def __init__(self):
         # Launch the simulation with the given launchfile name
-        LAUNCH_FILE = '/home/pham/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06/launch/lab06_world.launch'
+        # LAUNCH_FILE = '/home/pham/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06/launch/lab06_world.launch'
+        LAUNCH_FILE = '/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_utils/launch/sim.launch'
         gazebo_env.GazeboEnv.__init__(self, LAUNCH_FILE)
         self.vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
         self.unpause = rospy.ServiceProxy('/gazebo/unpause_physics', Empty)
@@ -56,9 +57,6 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         except CvBridgeError as e:
             print(e)
 
-        # cv2.imshow("raw", cv_image)
-        # cv2.waitKey(25)
-
         done = False
         state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         im_slices = []
@@ -79,8 +77,6 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
                 state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
                 state[i] = 1
 
-        print(min)
-        print(250*width*height/40)
         # If no line found increment lost_time
         if min > 250*width*height/40:
             print("Off line")
