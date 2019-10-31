@@ -8,7 +8,7 @@ import numpy as np
 
 from cv_bridge import CvBridge, CvBridgeError
 from gym import utils, spaces
-from gym_gazebo.envs import gazebo_env
+import gazebo_env
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Empty
 
@@ -18,11 +18,11 @@ from time import sleep
 from gym.utils import seeding
 
 
-class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
+class Nav_Training_Env(gazebo_env.GazeboEnv):
 
     def __init__(self):
         # Launch the simulation with the given launchfile name
-        LAUNCH_FILE = '/home/pham/enph353_gym-gazebo/gym_gazebo/envs/enph353/src/enph353_lab06/launch/lab06_world.launch'
+        LAUNCH_FILE = '~/enph353_ws/src/2019F_competition_students/src/enph353/enph353_utils/launch/sim.launch'
         gazebo_env.GazeboEnv.__init__(self, LAUNCH_FILE)
         self.vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
         self.unpause = rospy.ServiceProxy('/gazebo/unpause_physics', Empty)
@@ -37,7 +37,7 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         self._seed()
 
         self.bridge = CvBridge()
-        self.timeout = 0  # Used to keep track of images with no line detected
+        self.timeout = 1  # Used to keep track of images with no line detected
 
         self.lower_blue = np.array([97,  0,   0])
         self.upper_blue = np.array([150, 255, 255])
@@ -50,37 +50,40 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
             @retval (state, done)
         '''
         try:
-            cv_image = self.bridge.imgmsg_to_cv2(data, "bgr8")
+            self.frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
             print(e)
 
-        done = False
-        state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-        im_slices = []
-        height, width = cv_image.shape[0:2]
-        gray = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)
-        bw = cv2.threshold(gray, 128, 255, cv2.THRESH_BINARY)[1]
-        min = 1000000
+        # Get image dimensions
+        h = data.height
+        w = data.width
 
-        for i in range(10):
-            # Make binary slice and add to image slice array
-            bw_slice = bw[:, i*width/10:(i+1)*width/10]
-            im_slices.append(bw_slice)
-
-            line_strength = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-            line_strength[i] = (np.sum(bw_slice[3*height/4:height, :]))
-            if line_strength[i] < min:
-                min = line_strength[i]
-                state = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        # Turn image black and white and slice into thin images
+        # Find which slice contains right curb
+        gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
+        bw = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY)[1]
+        slice_num = 10
+        slices = []*slice_num
+        state = [0]*slice_num
+        line_strength = state
+        max = 0
+        for i in range(slice_num):
+            s = bw[2*h/3:h, i*w/slice_num:(i+1)*w/slice_num]
+            slices.append(s)
+            line_strength[i] = np.sum(s)
+            if line_strength[i] > max:
+                state = [0]*slice_num
                 state[i] = 1
 
-        # If no line found increment lost_time
-        if min > 250*width*height/40:
-            print("Off line")
+        # Check if the right curb is "lost" (more than halfway across view)
+        # If lost for too long, reset
+        if np.argwhere(state) < slice_num/2:
             self.lost_time = self.lost_time + 1
-
-        if self.lost_time >= 30:
+        done = False
+        if self.lost_time >= self.timeout:
+            done = True
             self.reset()
+
         return state, done
 
     def _seed(self, seed=None):
@@ -121,7 +124,6 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
 
         rospy.wait_for_service('/gazebo/pause_physics')
         try:
-            # resp_pause = pause.call()
             self.pause()
         except (rospy.ServiceException) as e:
             print ("/gazebo/pause_physics service call failed")
@@ -183,4 +185,3 @@ class Gazebo_Lab06_Env(gazebo_env.GazeboEnv):
         state, done = self.process_image(data)
 
         return state
-

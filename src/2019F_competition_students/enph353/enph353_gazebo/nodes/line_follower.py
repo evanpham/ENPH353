@@ -18,6 +18,7 @@ class LineFollower:
         self.initial_move()
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
+        self.slice_num = 30
         self.frame = Image()
         self.bridge = CvBridge()
 
@@ -25,18 +26,21 @@ class LineFollower:
 
     def initial_move(self):
         print("first moves")
-        self.move("F")
-        time.sleep(4)
         self.move("L")
-        time.sleep(4)
+        time.sleep(.5)
+        self.move("F")
+        time.sleep(.25)
+        self.move("L")
+        time.sleep(1)
         print("moved")
         self.stop()
 
     def move(self, action):
         vel_cmd = Twist()
-
         if action == "F":  # FORWARD
             vel_cmd.linear.x = 0.4
+            vel_cmd.linear.y = 0
+            vel_cmd.linear.z = 0
             vel_cmd.angular.z = 0.0
         elif action == "L":  # LEFT
             vel_cmd.linear.x = 0.0
@@ -68,32 +72,31 @@ class LineFollower:
         # Find which slice contains right curb
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
         bw = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY)[1]
-        slice_num = 10
-        slices = []*slice_num
-        state = [0]*slice_num
+        slices = []*self.slice_num
+        state = [0]*self.slice_num
         line_strength = state
         state_num = 0
         max = 0
 
-        for i in range(slice_num):
-            s = bw[2*h/3:h, i*w/slice_num:(i+1)*w/slice_num]
+        for i in range(self.slice_num):
+            s = bw[2*h/3:h, i*w/self.slice_num:(i+1)*w/self.slice_num]
             slices.append(s)
             line_strength[i] = np.sum(s)
             if line_strength[i] > max:
-                state = [0]*slice_num
+                state = [0]*self.slice_num
                 state[i] = 1
                 state_num = i
 
-        cv2.circle(self.frame, (w*state_num/slice_num, h-10), 10, (0, 255, 0), -1)
+        cv2.circle(self.frame, (w*state_num/self.slice_num, h-10), 10, (0, 255, 0), -1)
         print(state_num)
         # cv2.imshow("frame", bw)
         # cv2.waitKey(25)
         self.follow(state_num)
 
     def follow(self, state):
-        if state < 7:
+        if state < 15*self.slice_num/20:
             self.move("L")
-        elif state > 8:
+        elif state > 18*self.slice_num/20:
             self.move("R")
         else:
             self.move("F")
