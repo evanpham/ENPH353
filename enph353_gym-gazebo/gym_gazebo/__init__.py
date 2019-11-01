@@ -20,7 +20,7 @@ register(
 
 
 register(
-    id='Nav_Training_Env',
+    id='Nav_Training_Env-v0',
     entry_point='gym_gazebo.envs.Nav_Training:Nav_Training_Env',
     max_episode_steps=3000,
 )
