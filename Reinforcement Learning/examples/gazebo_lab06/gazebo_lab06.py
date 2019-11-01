@@ -26,7 +26,7 @@ def render():
 
 
 if __name__ == '__main__':
-    env = gym.make('Gazebo_Lab06-v0')
+    env = gym.make('Nav_Training_Env')
     outdir = '/tmp/gazebo_gym_experiments'
     env = gym.wrappers.Monitor(env, outdir, force=True)
     plotter = liveplot.LivePlot(outdir)
