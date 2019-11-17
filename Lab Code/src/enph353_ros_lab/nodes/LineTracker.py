@@ -14,7 +14,7 @@ def findLine(image, height, width):
     blur = cv2.GaussianBlur(gray, (5, 5), 0)
     # Colour thresh
     ret, thresh = cv2.threshold(blur, 100, 255, cv2.THRESH_BINARY_INV)
-    
+
     # Get center of mass
     M = cv2.moments(thresh)
     try:
