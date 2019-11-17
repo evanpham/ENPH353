@@ -25,6 +25,7 @@ class LineFollower:
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
         self.lastCross = time.time()
+        self.lastCar = time.time()
         self.slice_num = 30
         self.frame = Image()
         self.bridge = CvBridge()
@@ -113,15 +114,39 @@ class LineFollower:
                 state_num = i
 
         cv2.circle(self.frame, (w*state_num/self.slice_num, h-10), 10, (0, 255, 0), -1)
-        # if (self.atCrosswalk(self.frame) and time.time()-self.lastCross > 5):
+        # if (self.atCrosswalk() and time.time()-self.lastCross > 5):
         #     self.stop()
         #     self.dontKillThePedestrian(gray)
-        # else:
-        #     self.follow(state_num)
-        # cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-        cv2.imshow("frame", self.frame)
+        if (self.atCar() and time.time()-self.lastCar > 15):
+            self.stop()
+        else:
+            self.follow(state_num)
+        cv2.imshow("frame", self.blue_filter())
         cv2.waitKey(25)
         # self.follow(state_num)
+
+    def atCar(self):
+        image = self.frame
+        blue = self.blue_filter()
+        blueness = np.sum(blue)
+
+        if blueness > 14000000:
+            print("atCAR")
+            self.lastCar = time.time()
+            return True
+        return False
+
+    def blue_filter(self):
+        hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)
+
+        # define range of blue color in HSV
+        lower_blue = np.array([110, 125, 30])
+        upper_blue = np.array([130, 255, 255])
+        mask = cv2.inRange(hsv, lower_blue, upper_blue)
+        # mask = cv2.blur(mask, (0, 10))
+        #15-10
+        # print(np.sum(mask))
+        return mask
 
     def dontKillThePedestrian(self, image):
         bw = cv2.threshold(image, 220, 255, cv2.THRESH_BINARY)[1]
@@ -136,7 +161,8 @@ class LineFollower:
         else:
             self.lastCross = time.time()
 
-    def atCrosswalk(self, image):
+    def atCrosswalk(self):
+        image = self.frame
         h, w = image.shape[0:2]
 
         for i in range(8, 10):
