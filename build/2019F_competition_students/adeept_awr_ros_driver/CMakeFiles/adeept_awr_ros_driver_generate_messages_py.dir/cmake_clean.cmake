@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/adeept_awr_ros_driver_generate_messages_py"
-  "/home/pham/enph353_ws/devel/lib/python2.7/dist-packages/adeept_awr_ros_driver/msg/_ArrayIR.py"
-  "/home/pham/enph353_ws/devel/lib/python2.7/dist-packages/adeept_awr_ros_driver/msg/__init__.py"
+  "/home/gabriel/ENPH353/devel/lib/python2.7/dist-packages/adeept_awr_ros_driver/msg/_ArrayIR.py"
+  "/home/gabriel/ENPH353/devel/lib/python2.7/dist-packages/adeept_awr_ros_driver/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

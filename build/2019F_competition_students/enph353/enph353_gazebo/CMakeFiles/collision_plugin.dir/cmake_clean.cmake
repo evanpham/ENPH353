@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/collision_plugin.dir/src/collision_plugin.cpp.o"
-  "/home/pham/enph353_ws/devel/lib/libcollision_plugin.pdb"
-  "/home/pham/enph353_ws/devel/lib/libcollision_plugin.so"
+  "/home/gabriel/ENPH353/devel/lib/libcollision_plugin.pdb"
+  "/home/gabriel/ENPH353/devel/lib/libcollision_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

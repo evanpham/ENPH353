@@ -1,8 +1,8 @@
-prefix=/home/pham/enph353_ws/devel
+prefix=/home/gabriel/ENPH353/devel
 
 Name: enph353_npcs
 Description: Description of enph353_npcs
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/pham/enph353_ws/devel/lib 
+Libs: -L/home/gabriel/ENPH353/devel/lib 
 Requires: 

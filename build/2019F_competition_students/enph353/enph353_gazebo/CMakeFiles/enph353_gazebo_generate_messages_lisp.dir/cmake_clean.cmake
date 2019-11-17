@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/enph353_gazebo_generate_messages_lisp"
-  "/home/pham/enph353_ws/devel/share/common-lisp/ros/enph353_gazebo/srv/SubmitPlate.lisp"
-  "/home/pham/enph353_ws/devel/share/common-lisp/ros/enph353_gazebo/srv/GetLegalPlates.lisp"
+  "/home/gabriel/ENPH353/devel/share/common-lisp/ros/enph353_gazebo/srv/SubmitPlate.lisp"
+  "/home/gabriel/ENPH353/devel/share/common-lisp/ros/enph353_gazebo/srv/GetLegalPlates.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

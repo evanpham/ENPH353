@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/enph353_gazebo_generate_messages_eus"
-  "/home/pham/enph353_ws/devel/share/roseus/ros/enph353_gazebo/srv/SubmitPlate.l"
-  "/home/pham/enph353_ws/devel/share/roseus/ros/enph353_gazebo/srv/GetLegalPlates.l"
-  "/home/pham/enph353_ws/devel/share/roseus/ros/enph353_gazebo/manifest.l"
+  "/home/gabriel/ENPH353/devel/share/roseus/ros/enph353_gazebo/srv/SubmitPlate.l"
+  "/home/gabriel/ENPH353/devel/share/roseus/ros/enph353_gazebo/srv/GetLegalPlates.l"
+  "/home/gabriel/ENPH353/devel/share/roseus/ros/enph353_gazebo/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

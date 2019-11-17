@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "adeept_awr_description"
-PROJECT_SPACE_DIR = "/home/pham/enph353_ws/install"
+PROJECT_SPACE_DIR = "/home/gabriel/ENPH353/install"
 PROJECT_VERSION = "0.0.0"
