@@ -86,14 +86,15 @@ class LineFollower:
         self.bw = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY)[1]
         self.hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)
 
-        if not self.initialized:
+        # If the camera is running working and the car hasnt moved, make initial moves
+        if (not self.initialized and np.sum(self.bw) > 10000000):
             # Get image dimensions
             self.h = data.height
             self.w = data.width
 
             # Pull out of parking spot and turn to face road
             self.initial_move()
-        else:
+        elif self.initialized:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
 
@@ -150,7 +151,6 @@ class LineFollower:
         blueness = self.getBlueness()
 
         if blueness > 6000000:
-            print("atCAR")
             return True
         return False
 
@@ -177,11 +177,9 @@ class LineFollower:
         # cv2.imshow("dontkill", corner)
         # cv2.imshow("dontkill2", cornerG)
         # cv2.waitKey(25)
-        print(np.sum(corner))
         if (np.sum(corner) < 500):
             self.stop()
         else:
-            print("ZUM")
             self.notKillin = False
         self.lastCross = time.time()
 
@@ -193,7 +191,6 @@ class LineFollower:
             # check how red the slice is
             if np.sum(s) > 10000:
                 cv2.circle(self.frame, (self.w/2, i*self.h/10), 20, (255, 0, 0), -1)
-                print("at cross")
                 return True
         return False
 
