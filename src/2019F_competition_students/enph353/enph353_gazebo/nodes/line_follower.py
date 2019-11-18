@@ -14,13 +14,11 @@ import numpy as np
 class LineFollower:
 
     def __init__(self):
-        self.team = "123"
-        self.password = '456'
+        self.teamAndPass = "123,456"
         self.cam_path = '/R1/pi_camera/image_raw'
         self.vel_pub = rospy.Publisher('/R1/cmd_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
         self.car_pub = rospy.Publisher("/car_pics", Image, queue_size=1)
-        self.register()
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
         self.h = 0
@@ -38,9 +36,9 @@ class LineFollower:
         self.bridge = CvBridge()
 
     def register(self):
-        registration = self.team + ',' + self.password + ',0,AB12'
+        registration = self.teamAndPass + ',0,AB12'
         print(registration)
-        self.plate_pub.publish(registration)
+        self.plate_pub.publish(String(registration))
 
     def initial_move(self):
         if np.sum(self.bw[8*self.h/10:9*self.h/10, :]) < 5500000:
@@ -50,6 +48,7 @@ class LineFollower:
             time.sleep(.5)
             print("moved")
             self.stop()
+            self.register()
             self.initialized = True
 
     def move(self, action):
