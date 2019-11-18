@@ -21,18 +21,16 @@ class LineFollower:
         self.vel_pub = rospy.Publisher('/R1/skid_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
         self.register()
-        self.initial_move()
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
         self.lastCross = time.time()
         self.lastCar = time.time()
         self.gettinLicense = False
         self.notKillin = False
+        self.initialized = False
         self.slice_num = 30
         self.frame = Image()
         self.bridge = CvBridge()
-
-        time.sleep(5)
 
     def register(self):
         registration = self.team + ',' + self.password + ',0,AB12'
@@ -40,7 +38,6 @@ class LineFollower:
         self.plate_pub.publish(registration)
 
     def initial_move(self):
-        print("first moves")
         # self.move("LL")
         # time.sleep(.5)
         # self.move("F")
@@ -57,6 +54,7 @@ class LineFollower:
         time.sleep(2)
         print("moved")
         self.stop()
+        self.initialized = True
 
     def move(self, action):
         vel_cmd = Twist()
@@ -99,6 +97,9 @@ class LineFollower:
         h = data.height
         w = data.width
 
+        if not self.initialized:
+            self.initial_move()
+
         # Turn image black and white and slice into thin images
         # Find which slice contains right curb
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
@@ -133,7 +134,6 @@ class LineFollower:
         elif self.gettinLicense:
             self.getLicense()
         else:
-            print("FLWIN")
             self.follow(state_num)
 
         # cv2.imshow("frame", self.red_filter())
@@ -146,6 +146,8 @@ class LineFollower:
         if self.getBlueness() > 10000000:
             self.move("B")
         else:
+            filename = "../media/cars/" + str(time.time()) + ".png"
+            cv2.imwrite(filename, self.frame)
             self.gettinLicense = False
             self.lastCar = time.time()
 
