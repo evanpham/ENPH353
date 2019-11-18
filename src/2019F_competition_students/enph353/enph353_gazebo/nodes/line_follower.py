@@ -18,11 +18,13 @@ class LineFollower:
         self.team = "123"
         self.password = '456'
         self.cam_path = '/R1/pi_camera/image_raw'
-        self.vel_pub = rospy.Publisher('/R1/skid_vel', Twist, queue_size=1)
+        self.vel_pub = rospy.Publisher('/R1/cmd_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
         self.register()
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
+        self.h = 0
+        self.w = 0
         self.lastCross = time.time()
         self.lastCar = time.time()
         self.gettinLicense = False
@@ -30,6 +32,7 @@ class LineFollower:
         self.initialized = False
         self.slice_num = 30
         self.frame = Image()
+        self.bw = Image()
         self.bridge = CvBridge()
 
     def register(self):
@@ -46,15 +49,19 @@ class LineFollower:
         # time.sleep(1)
         # print("moved")
         # self.stop()
-        self.move("LL")
-        time.sleep(.5)
-        self.move("F")
-        time.sleep(.5)
-        self.move("LL")
-        time.sleep(2)
-        print("moved")
-        self.stop()
-        self.initialized = True
+        # self.move("LL")
+        # time.sleep(.1)
+        cv2.imshow("bw", self.bw)
+        cv2.waitKey(25)
+        if np.sum(self.bw[3*self.h/5:4*self.h/5, :]) < 8000000:
+            print(np.sum(self.bw[3*self.h/5:4*self.h/5, :]))
+            self.move("F")
+        else:
+            self.move("L")
+            time.sleep(.5)
+            print("moved")
+            self.stop()
+            self.initialized = True
 
     def move(self, action):
         vel_cmd = Twist()
@@ -64,26 +71,20 @@ class LineFollower:
             vel_cmd.linear.z = 0
             vel_cmd.angular.z = 0.0
         elif action == "L":  # LEFT
-            vel_cmd.linear.x = 0.2
-            vel_cmd.angular.z = 0.5
-        elif action == "R":  # RIGHT
-            vel_cmd.linear.x = 0.2
-            vel_cmd.angular.z = -0.5
-        elif action == "LL":  # LEFT
             vel_cmd.linear.x = 0.0
             vel_cmd.angular.z = 0.5
-        elif action == "RR":  # RIGHT
+        elif action == "R":  # RIGHT
             vel_cmd.linear.x = 0.0
             vel_cmd.angular.z = -0.5
         elif action == "B":  # BACKWARDS
-            vel_cmd.linear.x = -0.2
+            vel_cmd.linear.x = -0.4
             vel_cmd.angular.z = 0.0
         self.vel_pub.publish(vel_cmd)
 
     def stop(self):
         vel_cmd = Twist()
-        vel_cmd.linear.x = 0
-        vel_cmd.angular.z = 0
+        vel_cmd.linear.x = 0.0
+        vel_cmd.angular.z = 0.0
 
         self.vel_pub.publish(vel_cmd)
 
@@ -93,17 +94,21 @@ class LineFollower:
         except CvBridgeError as e:
             print(e)
 
-        # Get image dimensions
-        h = data.height
-        w = data.width
-
-        if not self.initialized:
-            self.initial_move()
-
         # Turn image black and white and slice into thin images
         # Find which slice contains right curb
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
-        bw = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY)[1]
+        self.bw = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY)[1]
+
+        if not self.initialized:
+            # Get image dimensions
+            self.h = data.height
+            self.w = data.width
+
+            self.initial_move()
+        else:
+            self.gogogo()
+
+    def gogogo(self):
         slices = []*self.slice_num
         state = [0]*self.slice_num
         line_strength = state
@@ -111,7 +116,7 @@ class LineFollower:
         max = 0
 
         for i in range(self.slice_num):
-            s = bw[2*h/3:h, i*w/self.slice_num:(i+1)*w/self.slice_num]
+            s = self.bw[2*self.h/3:self.h, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
             slices.append(s)
             line_strength[i] = np.sum(s)
             if line_strength[i] > max:
@@ -119,15 +124,15 @@ class LineFollower:
                 state[i] = 1
                 state_num = i
 
-        cv2.circle(self.frame, (w*state_num/self.slice_num, h-10), 10, (0, 255, 0), -1)
+        cv2.circle(self.frame, (self.w*state_num/self.slice_num, self.h-10), 10, (0, 255, 0), -1)
 
-        # if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
-        #     self.notKillin = True
-        #     self.stop()
-        #     self.lastCross = time.time()
-        # elif self.notKillin:
-        #     self.dontKillThePedestrian(gray)
-        if ((time.time()-self.lastCar > 2) and self.atCar()):
+        if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
+            self.notKillin = True
+            self.stop()
+            self.lastCross = time.time()
+        elif self.notKillin:
+            self.dontKillThePedestrian()
+        elif ((time.time()-self.lastCar > 4) and self.atCar()):
             self.gettinLicense = True
             self.stop()
             self.lastCar = time.time()
@@ -183,9 +188,9 @@ class LineFollower:
 
         return mask
 
-    def dontKillThePedestrian(self, image):
-        bw = cv2.threshold(image, 225, 255, cv2.THRESH_BINARY)[1]
-        corner = bw[300:400, 750:850]
+    def dontKillThePedestrian(self):
+        # bw = cv2.threshold(image, 225, 255, cv2.THRESH_BINARY)[1]
+        corner = self.bw[300:400, 750:850]
         # cornerG = image[300:400, 750:850]
         # cv2.imshow("dontkill", corner)
         # cv2.imshow("dontkill2", cornerG)
@@ -200,26 +205,25 @@ class LineFollower:
 
     def atCrosswalk(self):
         red = self.red_filter()
-        h, w = red.shape[0:2]
 
         for i in range(8, 10):
-            s = red[i*h/10, w/4:3*w/4]
+            s = red[i*self.h/10, self.w/4:3*self.w/4]
             # check how red the slice is
             if np.sum(s) > 10000:
-                cv2.circle(red, (w/2, i*h/10), 20, (255, 0, 0), -1)
+                cv2.circle(red, (self.w/2, i*self.h/10), 20, (255, 0, 0), -1)
                 print("at cross")
                 return True
         return False
 
     def follow(self, state):
         if state < 25*self.slice_num/30:
-            self.move("LL")
-        elif state < 26*self.slice_num/30:
             self.move("L")
+        # elif state < 26*self.slice_num/30:
+        #     self.move("L")
         elif state > 28*self.slice_num/30:
             self.move("R")
-        elif state > 29*self.slice_num/30:
-            self.move("RR")
+        # elif state > 29*self.slice_num/30:
+        #     self.move("RR")
         else:
             self.move("F")
 
