@@ -109,8 +109,9 @@ class LineFollower:
 
         # # Show where curb is on frame
         # cv2.circle(self.frame, (self.w*state_num/self.slice_num, self.h-10), 10, (0, 255, 0), -1)
-        # cv2.imshow("frame", self.frame)
+        # cv2.imshow("bl", self.blue_filter())
         # cv2.waitKey(25)
+        # print(self.getBlueness())
 
         # If at a crosswalk, stop and set notKillin boolean true
         if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
@@ -135,6 +136,9 @@ class LineFollower:
         if self.car_pic_count < 5:
             # filename = "../media/cars/" + str(time.time()) + ".png"
             # cv2.imwrite(filename, self.frame)
+            self.move("L")
+            time.sleep(0.05)
+            self.stop()
             self.car_pub.publish(self.data)
             self.car_pic_count = self.car_pic_count + 1
         else:
@@ -194,7 +198,7 @@ class LineFollower:
         return False
 
     def follow(self, state):
-        if state <= 25*self.slice_num/30:
+        if state <= 26*self.slice_num/30:
             self.move("L")
         elif state >= 29*self.slice_num/30:
             self.move("R")
