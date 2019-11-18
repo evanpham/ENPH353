@@ -12,6 +12,55 @@ from matplotlib import pyplot as plt
 from numpy import loadtxt
 from keras.models import load_model
 
+def roi(image, orig):
+    gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY) 
+    # cv2.imshow('gray', gray) 
+    # cv2.waitKey(0) 
+
+    #binary 
+    ret,thresh = cv2.threshold(gray,100,255,cv2.THRESH_BINARY) 
+    # cv2.imshow('second', thresh) 
+    # cv2.waitKey(0) 
+
+    #dilation 
+    kernel = np.ones((1,1), np.uint8) 
+    img_dilation = cv2.dilate(thresh, kernel, iterations=1) 
+    # cv2.imshow('dilated', img_dilation) 
+    # cv2.waitKey(0)
+    # find contours
+    # cv2.findCountours() function changed from OpenCV3 to OpenCV4: now it have only two parameters instead of 3
+    cv2MajorVersion = cv2.__version__.split(".")[0]
+    # check for contours on thresh
+    if int(cv2MajorVersion) >= 4:
+        ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    else:
+        im2, ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+
+    # sort contours
+
+    sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
+    # print(len(sorted_ctrs))
+    # orig = cv2.cvtColor(orig,cv2.COLOR_BGR2RGB)
+    imgs = []
+
+    for i, ctr in enumerate(sorted_ctrs):
+        # Get bounding box
+        x, y, w, h = cv2.boundingRect(ctr)
+        # Getting ROI
+        roi = orig[y:y + h, x:x + w]
+        
+        # show ROI
+        if (w*h>40 and w*h<300 and (w/h>.5 and w/h<2)):
+            roi = cv2.resize(roi, (102,150))
+            cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+            imgs.append(roi)
+            # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+            # cv2.imshow('segment no:'+str(i),roi)
+            # cv2.waitKey()
+    cv2.imshow('segment no:'+str(i),gray)
+    cv2.waitKey()
+    return imgs
+
 def order_points(pts):
     # initialzie a list of coordinates that will be ordered
     # such that the first entry in the list is the top-left,
@@ -156,7 +205,8 @@ dict['33'] = 'x'
 dict['34'] = 'y'
 dict['35'] = 'z'
 
-image = cv2.imread('test2.png')
+
+image = cv2.imread('4.png')
 # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 height = image.shape[0]
 width = image.shape[1]
@@ -189,16 +239,21 @@ mask = cv2.inRange(hsv, lower_blue, upper_blue)
 # Bitwise-AND mask and original image
 res = cv2.bitwise_and(frame, frame, mask=mask)
 
-cv2.imshow('frame', frame)
-cv2.imshow('mask', mask)
-cv2.imshow('res', res)
+# cv2.imshow('frame', frame)
+# cv2.imshow('mask', mask)
+# cv2.imshow('res', res)
 # cv2.imshow('hsv', hsv)
-cv2.waitKey()
+hued = cv2.cvtColor(res,cv2.COLOR_BGR2HSV)
+imgs = []
+imgs = roi(hued,orig)
+# cv2.waitKey()
 
 # gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
-gray = cv2.GaussianBlur(res, (3, 3), 0)
-edged = cv2.Canny(gray, 55, 255)
-
+gray = cv2.GaussianBlur(res, (7,7), 0)
+edged = cv2.Canny(gray, 0, 255)
+# cv2.imshow('gray',gray)
+# cv2.imshow('edged',edged)
+# cv2.waitKey()
 # convert image to grayscale image
 gray_image = cv2.cvtColor(gray, cv2.COLOR_BGR2GRAY)
  
@@ -216,9 +271,6 @@ if cX>width/2.0:
     right = True
 else:
     right = False
-# cv2.imshow('edged',edged)
-# cv2.imshow('gray', gray)
-# cv2.waitKey()
 
 # find the contours in the edged image, keeping only the
 # largest ones, and initialize the screen contour
@@ -308,50 +360,8 @@ print("STEP 3: Apply perspective transform")
 #grayscale 
 hued = cv2.cvtColor(warped,cv2.COLOR_BGR2HSV)
 # cv2.imshow('warpeeedd',hued)
-gray = cv2.cvtColor(hued,cv2.COLOR_BGR2GRAY) 
-# cv2.imshow('gray', gray) 
-# cv2.waitKey(0) 
 
-#binary 
-ret,thresh = cv2.threshold(gray,80,255,cv2.THRESH_BINARY) 
-# cv2.imshow('second', thresh) 
-# cv2.waitKey(0) 
-
-#dilation 
-kernel = np.ones((1,1), np.uint8) 
-img_dilation = cv2.dilate(thresh, kernel, iterations=1) 
-# cv2.imshow('dilated', img_dilation) 
-# cv2.waitKey(0)
-# find contours
-# cv2.findCountours() function changed from OpenCV3 to OpenCV4: now it have only two parameters instead of 3
-cv2MajorVersion = cv2.__version__.split(".")[0]
-# check for contours on thresh
-if int(cv2MajorVersion) >= 4:
-    ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-else:
-    im2, ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-# sort contours
-
-sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
-# print(len(sorted_ctrs))
-
-imgs = []
-
-for i, ctr in enumerate(sorted_ctrs):
-    # Get bounding box
-    x, y, w, h = cv2.boundingRect(ctr)
-
-    # Getting ROI
-    roi = warped[y:y + h, x:x + w]
-    # show ROI
-    if (w*h>40 and (w/h>.5 and w/h<2)):
-        roi = cv2.resize(roi, (102,150))
-
-        imgs.append(roi)
-        # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
-        # cv2.imshow('segment no:'+str(i),roi)
-        # cv2.waitKey()
+# imgs = roi(hued)
 
 
 
@@ -361,23 +371,8 @@ for i, ctr in enumerate(sorted_ctrs):
 # cv2.imshow('3',imgs[2])
 # cv2.imshow('4', imgs[3])
 # cv2.waitKey()
-image = cv2.imread('0.png')
-roi = cv2.resize(image, (102,150))
-imgs.append(roi)
-image = cv2.imread('3.png')
-roi = cv2.resize(image, (102,150))
-imgs.append(roi)
-image = cv2.imread('b.png')
-roi = cv2.resize(image, (102,150))
-imgs.append(roi)
-image = cv2.imread('y.png')
-roi = cv2.resize(image, (102,150))
-imgs.append(roi)
-image = cv2.imread('c.png')
-roi = cv2.resize(image, (102,150))
-imgs.append(roi)
 # load model
-model = load_model('model.h5')
+model = load_model('model_new.h5')
 # summarize model.
 # model.summary()
 yp = np.array(imgs)
