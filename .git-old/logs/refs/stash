@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 5a6eef37cd82884934af1a97732c802bdfe5a18a Evan Pham <pham@enph353.JoDo> 1569451945 -0700	WIP on master: bd40f57 Fixed video filepath for new directory
+5a6eef37cd82884934af1a97732c802bdfe5a18a 31bd8fcc44fcab91a7c4f180314356a05528886b Evan Pham <pham@enph353.JoDo> 1569455761 -0700	WIP on master: f88bb8e Moved line tracking modifcations into getImage
+31bd8fcc44fcab91a7c4f180314356a05528886b fc25f8325d943cb733fba6653d3c356bb2ceaeeb Evan Pham <pham@enph353.JoDo> 1569458514 -0700	WIP on master: 8835a10 Style cleanup

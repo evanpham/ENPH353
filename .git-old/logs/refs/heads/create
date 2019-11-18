@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 981c66b00eb3d41832ece5e791a357db82655601 Evan Pham <pham@enph353.JoDo> 1569462975 -0700	branch: Created from master
+981c66b00eb3d41832ece5e791a357db82655601 31f8e5b2b1d7425477117d626539b3194493190c Evan Pham <pham@enph353.JoDo> 1569465351 -0700	commit: moved to class structure
+31f8e5b2b1d7425477117d626539b3194493190c 7f2a66e37fea64c9cf0e93015687e1a7bb9c882f Evan Pham <pham@enph353.JoDo> 1569559746 -0700	commit: Class structure now works for line following. Intergrating PID sliders from master branch
+7f2a66e37fea64c9cf0e93015687e1a7bb9c882f 7197e9a5a8f4150c29f9002ad3f1c855ec4b2d9e Evan Pham <pham@enph353.JoDo> 1570055876 -0700	commit: Incomplete work on integrating PID sliders into class
