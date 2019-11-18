@@ -9,6 +9,7 @@ import time
 import sys
 import cv2
 import numpy as np
+from darkflow.net.build import TFNet
 
 
 class LineFollower:
@@ -34,6 +35,8 @@ class LineFollower:
         self.bw = Image()
         self.hsv = Image()
         self.bridge = CvBridge()
+        self.options = {"model":"cfg/tiny-yolo-voc.cfg", "load": "tiny-yolo-voc.weights"}
+        self.tfnet = TFNet(options)
 
     def register(self):
         registration = self.teamAndPass + ',0,AB12'
@@ -113,24 +116,24 @@ class LineFollower:
         # cv2.waitKey(25)
         # print(self.getBlueness())
 
-        # If at a crosswalk, stop and set notKillin boolean true
-        if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
-            self.notKillin = True
-            self.stop()
-            self.lastCross = time.time()
-        # If notKillin, dont kill
-        elif self.notKillin:
-            self.dontKillThePedestrian()
-        # If at a car, stop and set gettinLicense boolean true
-        elif ((time.time()-self.lastCar > 4) and self.atCar()):
-            self.gettinLicense = True
-            self.lastCar = time.time()
-        # If gettinLicense, get license
-        elif self.gettinLicense:
-            self.getLicense()
-        # Otherwise, follow the line my dude
-        else:
-            self.follow(state_num)
+        # # If at a crosswalk, stop and set notKillin boolean true
+        # if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
+        #     self.notKillin = True
+        #     self.stop()
+        #     self.lastCross = time.time()
+        # # If notKillin, dont kill
+        # elif self.notKillin:
+        #     self.dontKillThePedestrian()
+        # # If at a car, stop and set gettinLicense boolean true
+        # elif ((time.time()-self.lastCar > 4) and self.atCar()):
+        #     self.gettinLicense = True
+        #     self.lastCar = time.time()
+        # # If gettinLicense, get license
+        # elif self.gettinLicense:
+        #     self.getLicense()
+        # # Otherwise, follow the line my dude
+        # else:
+        #     self.follow(state_num)
 
     def getLicense(self):
         if self.car_pic_count < 5:
