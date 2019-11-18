@@ -121,13 +121,13 @@ class LineFollower:
 
         cv2.circle(self.frame, (w*state_num/self.slice_num, h-10), 10, (0, 255, 0), -1)
 
-        if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
-            self.notKillin = True
-            self.stop()
-            self.lastCross = time.time()
-        elif self.notKillin:
-            self.dontKillThePedestrian(gray)
-        elif ((time.time()-self.lastCar > 2) and self.atCar()):
+        # if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
+        #     self.notKillin = True
+        #     self.stop()
+        #     self.lastCross = time.time()
+        # elif self.notKillin:
+        #     self.dontKillThePedestrian(gray)
+        if ((time.time()-self.lastCar > 2) and self.atCar()):
             self.gettinLicense = True
             self.stop()
             self.lastCar = time.time()
