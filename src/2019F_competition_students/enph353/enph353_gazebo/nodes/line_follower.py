@@ -19,11 +19,13 @@ class LineFollower:
         self.cam_path = '/R1/pi_camera/image_raw'
         self.vel_pub = rospy.Publisher('/R1/cmd_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
+        self.car_pub = rospy.Publisher("/car_pics", Image, queue_size=1)
         self.register()
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
         self.h = 0
         self.w = 0
+        self.car_pic_count = 0
         self.lastCross = time.time()
         self.lastCar = time.time()
         self.gettinLicense = False
@@ -73,6 +75,7 @@ class LineFollower:
         self.vel_pub.publish(vel_cmd)
 
     def callback(self, data):
+        self.data = data
         try:
             self.frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
@@ -120,7 +123,6 @@ class LineFollower:
         # If at a car, stop and set gettinLicense boolean true
         elif ((time.time()-self.lastCar > 4) and self.atCar()):
             self.gettinLicense = True
-            self.stop()
             self.lastCar = time.time()
         # If gettinLicense, get license
         elif self.gettinLicense:
@@ -130,17 +132,15 @@ class LineFollower:
             self.follow(state_num)
 
     def getLicense(self):
-
-        cv2.imshow("frame", self.frame)
-        cv2.waitKey(25)
-        # if self.getBlueness() > 10000000:
-        #     self.move("B")
-        # else:
-        self.stop()
-        filename = "../media/cars/" + str(time.time()) + ".png"
-        cv2.imwrite(filename, self.frame)
-        self.gettinLicense = False
-        self.lastCar = time.time()
+        if self.car_pic_count < 5:
+            # filename = "../media/cars/" + str(time.time()) + ".png"
+            # cv2.imwrite(filename, self.frame)
+            self.car_pub.publish(self.data)
+            self.car_pic_count = self.car_pic_count + 1
+        else:
+            self.gettinLicense = False
+            self.lastCar = time.time()
+            self.car_pic_count = 0
 
     def getBlueness(self):
         blue = self.blue_filter()
@@ -149,7 +149,7 @@ class LineFollower:
     def atCar(self):
         blueness = self.getBlueness()
 
-        if blueness > 7000000:
+        if blueness > 6000000:
             print("atCAR")
             return True
         return False
@@ -172,7 +172,7 @@ class LineFollower:
 
     def dontKillThePedestrian(self):
         # bw = cv2.threshold(image, 225, 255, cv2.THRESH_BINARY)[1]
-        corner = self.bw[300:400, 750:850]
+        corner = self.bw[300:400, 740:840]
         # cornerG = image[300:400, 750:850]
         # cv2.imshow("dontkill", corner)
         # cv2.imshow("dontkill2", cornerG)
