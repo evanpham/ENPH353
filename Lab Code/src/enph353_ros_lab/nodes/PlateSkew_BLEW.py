@@ -156,11 +156,16 @@ dict['33'] = 'x'
 dict['34'] = 'y'
 dict['35'] = 'z'
 
-image = cv2.imread('test3.png')
+image = cv2.imread('test2.png')
 # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-ratio = image.shape[0] / 500.0
+height = image.shape[0]
 width = image.shape[1]
 half = image.shape[0]/2
+
+for h in range(height-half):
+    for w in range(width):
+        image[h,w] = [0,0,0]
+
 
 # cv2.imshow('i',image)
 # cv2.waitKey()
@@ -348,14 +353,29 @@ for i, ctr in enumerate(sorted_ctrs):
         # cv2.imshow('segment no:'+str(i),roi)
         # cv2.waitKey()
 
+
+
 # cv2.imshow('hay',gray)  
 # cv2.imshow('1',imgs[0])
 # cv2.imshow('2',imgs[1])
 # cv2.imshow('3',imgs[2])
 # cv2.imshow('4', imgs[3])
 # cv2.waitKey()
-
-
+image = cv2.imread('0.png')
+roi = cv2.resize(image, (102,150))
+imgs.append(roi)
+image = cv2.imread('3.png')
+roi = cv2.resize(image, (102,150))
+imgs.append(roi)
+image = cv2.imread('b.png')
+roi = cv2.resize(image, (102,150))
+imgs.append(roi)
+image = cv2.imread('y.png')
+roi = cv2.resize(image, (102,150))
+imgs.append(roi)
+image = cv2.imread('c.png')
+roi = cv2.resize(image, (102,150))
+imgs.append(roi)
 # load model
 model = load_model('model.h5')
 # summarize model.
