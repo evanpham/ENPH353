@@ -10,7 +10,10 @@ import sys
 import cv2
 import numpy as np
 from darkflow.net.build import TFNet
+import json
 
+options = {"model": "/home/pham/darkflow/cfg/tiny-yolo-voc.cfg", "load": "/home/pham/darkflow/tiny-yolo-voc.weights", "threshold": 0.1}
+tfnet = TFNet(options)
 
 class LineFollower:
 
@@ -35,8 +38,6 @@ class LineFollower:
         self.bw = Image()
         self.hsv = Image()
         self.bridge = CvBridge()
-        self.options = {"model":"cfg/tiny-yolo-voc.cfg", "load": "tiny-yolo-voc.weights"}
-        self.tfnet = TFNet(options)
 
     def register(self):
         registration = self.teamAndPass + ',0,AB12'
@@ -82,6 +83,17 @@ class LineFollower:
             self.frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
             print(e)
+
+        result = tfnet.return_predict(self.frame)
+        for bbox in result:
+            if bbox["confidence"] > .1:
+                print(bbox["label"])
+                p1 = (bbox["topleft"]["x"], bbox["topleft"]["y"])
+                p2 = (bbox["bottomright"]["x"], bbox["bottomright"]["y"])
+                cv2.rectangle(self.frame, p1, p2, (255, 0, 0))
+
+        cv2.imshow("frame", self.frame)
+        cv2.waitKey(25)
 
         # Turn image black and white
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
