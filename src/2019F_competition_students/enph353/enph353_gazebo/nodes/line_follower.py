@@ -133,14 +133,14 @@ class LineFollower:
 
         cv2.imshow("frame", self.frame)
         cv2.waitKey(25)
-        if self.getBlueness() > 10000000:
-            self.move("B")
-        else:
-            self.stop()
-            filename = "../media/cars/" + str(time.time()) + ".png"
-            cv2.imwrite(filename, self.frame)
-            self.gettinLicense = False
-            self.lastCar = time.time()
+        # if self.getBlueness() > 10000000:
+        #     self.move("B")
+        # else:
+        self.stop()
+        filename = "../media/cars/" + str(time.time()) + ".png"
+        cv2.imwrite(filename, self.frame)
+        self.gettinLicense = False
+        self.lastCar = time.time()
 
     def getBlueness(self):
         blue = self.blue_filter()
@@ -149,7 +149,7 @@ class LineFollower:
     def atCar(self):
         blueness = self.getBlueness()
 
-        if blueness > 14000000:
+        if blueness > 7000000:
             print("atCAR")
             return True
         return False
@@ -198,9 +198,9 @@ class LineFollower:
         return False
 
     def follow(self, state):
-        if state <= 24*self.slice_num/30:
+        if state <= 25*self.slice_num/30:
             self.move("L")
-        elif state >= 28*self.slice_num/30:
+        elif state >= 29*self.slice_num/30:
             self.move("R")
         else:
             self.move("F")
