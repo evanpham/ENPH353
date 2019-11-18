@@ -21,16 +21,16 @@ class LineFollower:
         self.vel_pub = rospy.Publisher('/R1/skid_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
         self.register()
-        self.initial_move()
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
         self.lastCross = time.time()
         self.lastCar = time.time()
+        self.gettinLicense = False
+        self.notKillin = False
+        self.initialized = False
         self.slice_num = 30
         self.frame = Image()
         self.bridge = CvBridge()
-
-        time.sleep(5)
 
     def register(self):
         registration = self.team + ',' + self.password + ',0,AB12'
@@ -38,7 +38,6 @@ class LineFollower:
         self.plate_pub.publish(registration)
 
     def initial_move(self):
-        print("first moves")
         # self.move("LL")
         # time.sleep(.5)
         # self.move("F")
@@ -55,6 +54,7 @@ class LineFollower:
         time.sleep(2)
         print("moved")
         self.stop()
+        self.initialized = True
 
     def move(self, action):
         vel_cmd = Twist()
@@ -75,6 +75,9 @@ class LineFollower:
         elif action == "RR":  # RIGHT
             vel_cmd.linear.x = 0.0
             vel_cmd.angular.z = -0.5
+        elif action == "B":  # BACKWARDS
+            vel_cmd.linear.x = -0.2
+            vel_cmd.angular.z = 0.0
         self.vel_pub.publish(vel_cmd)
 
     def stop(self):
@@ -93,6 +96,9 @@ class LineFollower:
         # Get image dimensions
         h = data.height
         w = data.width
+
+        if not self.initialized:
+            self.initial_move()
 
         # Turn image black and white and slice into thin images
         # Find which slice contains right curb
@@ -114,25 +120,46 @@ class LineFollower:
                 state_num = i
 
         cv2.circle(self.frame, (w*state_num/self.slice_num, h-10), 10, (0, 255, 0), -1)
-        # if (self.atCrosswalk() and time.time()-self.lastCross > 5):
+
+        # if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
+        #     self.notKillin = True
         #     self.stop()
+        #     self.lastCross = time.time()
+        # elif self.notKillin:
         #     self.dontKillThePedestrian(gray)
-        if (self.atCar() and time.time()-self.lastCar > 15):
+        if ((time.time()-self.lastCar > 2) and self.atCar()):
+            self.gettinLicense = True
             self.stop()
+            self.lastCar = time.time()
+        elif self.gettinLicense:
+            self.getLicense()
         else:
             self.follow(state_num)
-        cv2.imshow("frame", self.blue_filter())
-        cv2.waitKey(25)
+
+        # cv2.imshow("frame", self.red_filter())
+        # cv2.waitKey(25)
         # self.follow(state_num)
 
-    def atCar(self):
-        image = self.frame
+    def getLicense(self):
+        cv2.imshow("frame", self.frame)
+        cv2.waitKey(25)
+        if self.getBlueness() > 10000000:
+            self.move("B")
+        else:
+            filename = "../media/cars/" + str(time.time()) + ".png"
+            cv2.imwrite(filename, self.frame)
+            self.gettinLicense = False
+            self.lastCar = time.time()
+
+    def getBlueness(self):
         blue = self.blue_filter()
-        blueness = np.sum(blue)
+        return np.sum(blue)
+
+    def atCar(self):
+        blueness = self.getBlueness()
 
         if blueness > 14000000:
             print("atCAR")
-            self.lastCar = time.time()
             return True
         return False
 
@@ -143,33 +170,44 @@ class LineFollower:
         lower_blue = np.array([110, 125, 30])
         upper_blue = np.array([130, 255, 255])
         mask = cv2.inRange(hsv, lower_blue, upper_blue)
-        # mask = cv2.blur(mask, (0, 10))
-        #15-10
-        # print(np.sum(mask))
+
+        return mask
+
+    def red_filter(self):
+        hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)
+
+        # define range of blue color in HSV
+        lower_red = np.array([0,150,0])
+        upper_red = np.array([5,255,255])
+        mask = cv2.inRange(hsv, lower_red, upper_red)
+
         return mask
 
     def dontKillThePedestrian(self, image):
-        bw = cv2.threshold(image, 220, 255, cv2.THRESH_BINARY)[1]
+        bw = cv2.threshold(image, 225, 255, cv2.THRESH_BINARY)[1]
         corner = bw[300:400, 750:850]
         # cornerG = image[300:400, 750:850]
         # cv2.imshow("dontkill", corner)
         # cv2.imshow("dontkill2", cornerG)
-        cv2.waitKey(25)
+        # cv2.waitKey(25)
         print(np.sum(corner))
         if (np.sum(corner) < 500):
             self.stop()
         else:
-            self.lastCross = time.time()
+            print("ZUM")
+            self.notKillin = False
+        self.lastCross = time.time()
 
     def atCrosswalk(self):
-        image = self.frame
-        h, w = image.shape[0:2]
+        red = self.red_filter()
+        h, w = red.shape[0:2]
 
         for i in range(8, 10):
-            s = image[i*h/10, w/4:3*w/4, :]
+            s = red[i*h/10, w/4:3*w/4]
             # check how red the slice is
-            if np.sum(s[:, 2]) > 80000 and np.sum(s[:, 1]) < 80000:
-                cv2.circle(image, (w/2, i*h/10), 20, (255, 0, 0), -1)
+            if np.sum(s) > 10000:
+                cv2.circle(red, (w/2, i*h/10), 20, (255, 0, 0), -1)
+                print("at cross")
                 return True
         return False
 
