@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/adeept_awr_ros_driver_generate_messages_lisp"
-  "/home/pham/enph353_ws/devel/share/common-lisp/ros/adeept_awr_ros_driver/msg/ArrayIR.lisp"
+  "/home/gabriel/ENPH353/devel/share/common-lisp/ros/adeept_awr_ros_driver/msg/ArrayIR.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

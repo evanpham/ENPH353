@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/enph353_gazebo_generate_messages_cpp"
-  "/home/pham/enph353_ws/devel/include/enph353_gazebo/SubmitPlate.h"
-  "/home/pham/enph353_ws/devel/include/enph353_gazebo/GetLegalPlates.h"
+  "/home/gabriel/ENPH353/devel/include/enph353_gazebo/SubmitPlate.h"
+  "/home/gabriel/ENPH353/devel/include/enph353_gazebo/GetLegalPlates.h"
 )
 
 # Per-language clean rules from dependency scanning.

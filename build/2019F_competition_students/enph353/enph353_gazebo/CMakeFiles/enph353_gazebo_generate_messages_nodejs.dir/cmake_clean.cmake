@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/enph353_gazebo_generate_messages_nodejs"
-  "/home/pham/enph353_ws/devel/share/gennodejs/ros/enph353_gazebo/srv/SubmitPlate.js"
-  "/home/pham/enph353_ws/devel/share/gennodejs/ros/enph353_gazebo/srv/GetLegalPlates.js"
+  "/home/gabriel/ENPH353/devel/share/gennodejs/ros/enph353_gazebo/srv/SubmitPlate.js"
+  "/home/gabriel/ENPH353/devel/share/gennodejs/ros/enph353_gazebo/srv/GetLegalPlates.js"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
-# Install script for directory: /home/pham/enph353_ws/src/2019F_competition_students/adeept_awr/adeept_awr_gazebo
+# Install script for directory: /home/gabriel/ENPH353/src/2019F_competition_students/adeept_awr/adeept_awr_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pham/enph353_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/gabriel/ENPH353/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/pham/enph353_ws/build/2019F_competition_students/adeept_awr/adeept_awr_gazebo/catkin_generated/installspace/adeept_awr_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/gabriel/ENPH353/build/2019F_competition_students/adeept_awr/adeept_awr_gazebo/catkin_generated/installspace/adeept_awr_gazebo.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/adeept_awr_gazebo/cmake" TYPE FILE FILES
-    "/home/pham/enph353_ws/build/2019F_competition_students/adeept_awr/adeept_awr_gazebo/catkin_generated/installspace/adeept_awr_gazeboConfig.cmake"
-    "/home/pham/enph353_ws/build/2019F_competition_students/adeept_awr/adeept_awr_gazebo/catkin_generated/installspace/adeept_awr_gazeboConfig-version.cmake"
+    "/home/gabriel/ENPH353/build/2019F_competition_students/adeept_awr/adeept_awr_gazebo/catkin_generated/installspace/adeept_awr_gazeboConfig.cmake"
+    "/home/gabriel/ENPH353/build/2019F_competition_students/adeept_awr/adeept_awr_gazebo/catkin_generated/installspace/adeept_awr_gazeboConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/adeept_awr_gazebo" TYPE FILE FILES "/home/pham/enph353_ws/src/2019F_competition_students/adeept_awr/adeept_awr_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/adeept_awr_gazebo" TYPE FILE FILES "/home/gabriel/ENPH353/src/2019F_competition_students/adeept_awr/adeept_awr_gazebo/package.xml")
 endif()
 

@@ -118,25 +118,62 @@ def four_point_transform(image, pts):
 #   return the warped image
     return warped
 
+dict = {}
+dict['0'] = '0'
+dict['1'] = '1'
+dict['2'] = '2'
+dict['3'] = '3'
+dict['4'] = '4'
+dict['5'] = '5'
+dict['6'] = '6'
+dict['7'] = '7'
+dict['8'] = '8'
+dict['9'] = '9'
+dict['10'] = 'a'
+dict['11'] = 'b'
+dict['12'] = 'c'
+dict['13'] = 'd'
+dict['14'] = 'e'
+dict['15'] = 'f'
+dict['16'] = 'g'
+dict['17'] = 'h'
+dict['18'] = 'i'
+dict['19'] = 'j'
+dict['20'] = 'k'
+dict['21'] = 'l'
+dict['22'] = 'm'
+dict['23'] = 'n'
+dict['24'] = 'o'
+dict['25'] = 'p'
+dict['26'] = 'q'
+dict['27'] = 'r'
+dict['28'] = 's'
+dict['29'] = 't'
+dict['30'] = 'u'
+dict['31'] = 'v'
+dict['32'] = 'w'
+dict['33'] = 'x'
+dict['34'] = 'y'
+dict['35'] = 'z'
 
-image = cv2.imread('license_plate_test1.png')
+image = cv2.imread('test3.png')
 # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 ratio = image.shape[0] / 500.0
-width = 355
+width = image.shape[1]
+half = image.shape[0]/2
 
-
-cv2.imshow('i',image)
-cv2.waitKey()
-
-image = imutils.resize(image, height=200)
+# cv2.imshow('i',image)
+# cv2.waitKey()
 orig = image
+
+# image = imutils.resize(image, height=200)
 frame = image
 
 hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
 # define range of blue color in HSV
-lower_blue = np.array([110, 150, 50])
+lower_blue = np.array([110, 50, 50])
 upper_blue = np.array([130, 255, 255])
 
 
@@ -147,7 +184,7 @@ mask = cv2.inRange(hsv, lower_blue, upper_blue)
 # Bitwise-AND mask and original image
 res = cv2.bitwise_and(frame, frame, mask=mask)
 
-# cv2.imshow('frame', frame)
+cv2.imshow('frame', frame)
 cv2.imshow('mask', mask)
 cv2.imshow('res', res)
 # cv2.imshow('hsv', hsv)
@@ -198,11 +235,11 @@ if right:
 
     br, tr = find_left_points(approx_right.reshape(size_r,2))
     bl, tl = find_right_points(approx_left.reshape(size_l,2))
-
-    print(bl)
-    print(tl)
-    print(br)
-    print(tr)
+    # print('haiufhiuewhfiuehriu')
+    # print(bl)
+    # print(tl)
+    # print(br)
+    # print(tr)
     # cv2.waitKey()
 
 else:
@@ -217,10 +254,10 @@ else:
 
     br, tr = find_left_points(approx_right.reshape(size_r,2))
     bl, tl = find_right_points(approx_left.reshape(size_l,2))
-    print(bl)
-    print(tl)
-    print(br)
-    print(tr)
+    # print(bl)
+    # print(tl)
+    # print(br)
+    # print(tr)
     # cv2.waitKey()
 
 
@@ -229,7 +266,8 @@ bounding[0] = [tl[0],tl[1]]
 bounding[1] = [tr[0],tr[1]]
 bounding[3] = [bl[0],bl[1]]
 bounding[2] = [br[0],br[1]]
-print(bounding)
+# print(bounding)
+# cv2.waitKey()
 
 # show the contour (outline) of the piece of paper
 print("STEP 2: Find contours of paper")
@@ -256,13 +294,29 @@ print("STEP 3: Apply perspective transform")
 # # cv2.imshow('cropped', cropped_plate)
 # cv2.waitKey()
 
-gray = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
-# dilation
-kernel = np.ones((10, 1), np.uint8)
-img_dilation = cv2.dilate(gray, kernel, iterations=1)
-cv2.imshow('blal',gray)
-cv2.waitKey()
+# gray = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
+# # dilation
+# kernel = np.ones((10, 1), np.uint8)
+# img_dilation = cv2.dilate(gray, kernel, iterations=1)
+# cv2.imshow('blal',gray)
+# cv2.waitKey()s
+#grayscale 
+hued = cv2.cvtColor(warped,cv2.COLOR_BGR2HSV)
+# cv2.imshow('warpeeedd',hued)
+gray = cv2.cvtColor(hued,cv2.COLOR_BGR2GRAY) 
+# cv2.imshow('gray', gray) 
+# cv2.waitKey(0) 
 
+#binary 
+ret,thresh = cv2.threshold(gray,80,255,cv2.THRESH_BINARY) 
+# cv2.imshow('second', thresh) 
+# cv2.waitKey(0) 
+
+#dilation 
+kernel = np.ones((1,1), np.uint8) 
+img_dilation = cv2.dilate(thresh, kernel, iterations=1) 
+# cv2.imshow('dilated', img_dilation) 
+# cv2.waitKey(0)
 # find contours
 # cv2.findCountours() function changed from OpenCV3 to OpenCV4: now it have only two parameters instead of 3
 cv2MajorVersion = cv2.__version__.split(".")[0]
@@ -273,31 +327,46 @@ else:
     im2, ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
 # sort contours
+
 sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
+# print(len(sorted_ctrs))
+
+imgs = []
 
 for i, ctr in enumerate(sorted_ctrs):
     # Get bounding box
     x, y, w, h = cv2.boundingRect(ctr)
 
     # Getting ROI
-    roi = gray[y:y + h, x:x + w]
+    roi = warped[y:y + h, x:x + w]
     # show ROI
-    cv2.imshow('segment no:'+str(i),roi)
-    cv2.rectangle(gray, (x, y), (x + w, y + h), (0, 255, 0), 2)
-    cv2.waitKey()
-cv2.waitKey()
+    if (w*h>40 and (w/h>.5 and w/h<2)):
+        roi = cv2.resize(roi, (102,150))
+
+        imgs.append(roi)
+        # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+        # cv2.imshow('segment no:'+str(i),roi)
+        # cv2.waitKey()
+
+# cv2.imshow('hay',gray)  
+# cv2.imshow('1',imgs[0])
+# cv2.imshow('2',imgs[1])
+# cv2.imshow('3',imgs[2])
+# cv2.imshow('4', imgs[3])
+# cv2.waitKey()
 
 
-
-
-# # load model
-# model = load_model('model.h5')
-# # summarize model.
+# load model
+model = load_model('model.h5')
+# summarize model.
 # model.summary()
-# imgs = []
-# imgs.append(warped)
-# yp = np.array(imgs)
-# print(cropped_plate.shape)
+yp = np.array(imgs)
 # print(yp.shape)
-# predictions = model.predict(yp)
+predictions = model.predict(yp)
+# print(predictions.shape)
+# print(len(predictions))
+label = []
+for index in range(len(predictions)):
+    label.append(dict[str(np.argmax(predictions[index]))])
+print(label)
 

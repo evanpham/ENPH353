@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/srv/GetLegalPlates.srv;/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/srv/SubmitPlate.srv"
+services_str = "/home/gabriel/ENPH353/src/2019F_competition_students/enph353/enph353_gazebo/srv/GetLegalPlates.srv;/home/gabriel/ENPH353/src/2019F_competition_students/enph353/enph353_gazebo/srv/SubmitPlate.srv"
 pkg_name = "enph353_gazebo"
 dependencies_str = "std_msgs;sensor_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"
