@@ -1,0 +1,3 @@
+0000000000000000000000000000000000000000 a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e Evan Pham <pham@enph353.JoDo> 1572648784 -0700	branch: Created from master
+a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e 267187a151375198be129bc07d9ab62a07f35db1 Evan Pham <pham@enph353.JoDo> 1572648832 -0700	commit: began setting up directory for nav training environment
+267187a151375198be129bc07d9ab62a07f35db1 c5c9582b63c7705f33c40dc08c5e1c228434c9fd Evan Pham <pham@enph353.JoDo> 1572651774 -0700	commit: can now launch training env

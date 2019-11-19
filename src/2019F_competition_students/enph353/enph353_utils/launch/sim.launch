@@ -2,6 +2,7 @@
   <param name="/use_sim_time" value="true" />
   <arg name="spawn_pedestrians" default="false"/>
   <arg name="spawn_vehicles" default="false"/>
+  <arg name="drive_car" default="false"/>
 
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
 		<env name="GAZEBO_RESOURCE_PATH" value="$(find enph353_gazebo)"/>
@@ -17,5 +18,8 @@
 	</include>
 
 	<node pkg="enph353_gazebo" type="license_server.py" name="license_server" output="screen"/>
+	<group if="$(arg drive_car)">
+		<node pkg='enph353_gazebo' type='line_follower.py' name='license_follower' output="screen"/>
+	</group>
 
 </launch>

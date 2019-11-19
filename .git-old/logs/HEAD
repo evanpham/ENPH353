@@ -1,0 +1,49 @@
+0000000000000000000000000000000000000000 b08d9ce4f6804fca2a8aa4fa1b0fc67ce88e8c26 Evan Pham <fizzer@enph353.JoDo> 1569284365 -0700	commit (initial): initial commit
+b08d9ce4f6804fca2a8aa4fa1b0fc67ce88e8c26 cfc5380b402313ea26f85a4d469505b9419a525e Evan Pham <fizzer@enph353.JoDo> 1569284582 -0700	commit: removed submodule structure
+baf6856a0e3be9dd7091e84230898601ec0a942e bd40f57559f6c9541b4e009d2cbe75473454750f Evan Pham <fizzer@enph353.JoDo> 1569341227 -0700	commit: Fixed video filepath for new directory
+bd40f57559f6c9541b4e009d2cbe75473454750f bd40f57559f6c9541b4e009d2cbe75473454750f Evan Pham <pham@enph353.JoDo> 1569451945 -0700	reset: moving to HEAD
+bd40f57559f6c9541b4e009d2cbe75473454750f 0676ecdf05619c5ca67f8d731f3f350ba13a5d3e Evan Pham <pham@enph353.JoDo> 1569451956 -0700	pull: Fast-forward
+0676ecdf05619c5ca67f8d731f3f350ba13a5d3e 60d1bf2241d44ebcbcc2d05eb8034b8b4ace4984 Evan Pham <pham@enph353.JoDo> 1569452262 -0700	commit: getImage cleanup
+60d1bf2241d44ebcbcc2d05eb8034b8b4ace4984 b01dc5a17512e9532633f57a27b1bf6987f2c8e4 Evan Pham <pham@enph353.JoDo> 1569455030 -0700	commit: Improved line tracking algorithm
+b01dc5a17512e9532633f57a27b1bf6987f2c8e4 f88bb8e013b83310b4c210ccd19fd9b85fadc106 Evan Pham <pham@enph353.JoDo> 1569455230 -0700	commit: Moved line tracking modifcations into getImage
+f88bb8e013b83310b4c210ccd19fd9b85fadc106 f88bb8e013b83310b4c210ccd19fd9b85fadc106 Evan Pham <pham@enph353.JoDo> 1569455761 -0700	reset: moving to HEAD
+f88bb8e013b83310b4c210ccd19fd9b85fadc106 8835a10cee3a7ee312397fdd288df1b0ef456f01 Evan Pham <pham@enph353.JoDo> 1569455953 -0700	commit (merge): Style cleanup
+8835a10cee3a7ee312397fdd288df1b0ef456f01 8835a10cee3a7ee312397fdd288df1b0ef456f01 Evan Pham <pham@enph353.JoDo> 1569458514 -0700	reset: moving to HEAD
+8835a10cee3a7ee312397fdd288df1b0ef456f01 846e15e215f1be78696e65cb759e55af4e86c2c8 Evan Pham <pham@enph353.JoDo> 1569459342 -0700	commit (merge): LineTracker fixed
+846e15e215f1be78696e65cb759e55af4e86c2c8 aa03750c748cb214ab074b9585738fbc04fbbb75 Evan Pham <pham@enph353.JoDo> 1569459505 -0700	commit (merge): fixed merge issues
+aa03750c748cb214ab074b9585738fbc04fbbb75 8ec0359223e01b663c62c83c6cf7b5572e2b8350 Evan Pham <pham@enph353.JoDo> 1569460081 -0700	commit: Broke up some functions for cleanliness
+8ec0359223e01b663c62c83c6cf7b5572e2b8350 b0c8de06aea4fa0c4a19fb511455a5090c31c7c1 Evan Pham <pham@enph353.JoDo> 1569460663 -0700	commit: Added appropriate off line procedure
+b0c8de06aea4fa0c4a19fb511455a5090c31c7c1 981c66b00eb3d41832ece5e791a357db82655601 Evan Pham <pham@enph353.JoDo> 1569462573 -0700	commit: working on pid
+981c66b00eb3d41832ece5e791a357db82655601 981c66b00eb3d41832ece5e791a357db82655601 Evan Pham <pham@enph353.JoDo> 1569463024 -0700	checkout: moving from master to create
+981c66b00eb3d41832ece5e791a357db82655601 31f8e5b2b1d7425477117d626539b3194493190c Evan Pham <pham@enph353.JoDo> 1569465351 -0700	commit: moved to class structure
+31f8e5b2b1d7425477117d626539b3194493190c 7f2a66e37fea64c9cf0e93015687e1a7bb9c882f Evan Pham <pham@enph353.JoDo> 1569559746 -0700	commit: Class structure now works for line following. Intergrating PID sliders from master branch
+7f2a66e37fea64c9cf0e93015687e1a7bb9c882f 7197e9a5a8f4150c29f9002ad3f1c855ec4b2d9e Evan Pham <pham@enph353.JoDo> 1570055876 -0700	commit: Incomplete work on integrating PID sliders into class
+7197e9a5a8f4150c29f9002ad3f1c855ec4b2d9e 981c66b00eb3d41832ece5e791a357db82655601 Evan Pham <pham@enph353.JoDo> 1570055892 -0700	checkout: moving from create to master
+981c66b00eb3d41832ece5e791a357db82655601 cb4cff47d04f2cb2fc13de0e91dcc3a414a4e2d4 Evan Pham <pham@enph353.JoDo> 1570055919 -0700	pull: Fast-forward
+cb4cff47d04f2cb2fc13de0e91dcc3a414a4e2d4 469c7adc1728a3cfabb0bb5ebf7a2c4bf6b8dc0c Evan Pham <pham@enph353.JoDo> 1571264455 -0700	pull: Fast-forward
+469c7adc1728a3cfabb0bb5ebf7a2c4bf6b8dc0c 52a4757b47317ab10d7a8a0aed8190e2efba130e Evan Pham <pham@enph353.JoDo> 1571264887 -0700	pull: Fast-forward
+52a4757b47317ab10d7a8a0aed8190e2efba130e c2c31e6f4e5063a4bf313acd78ce3d76fa6e6c59 Evan Pham <pham@enph353.JoDo> 1571265082 -0700	pull: Fast-forward
+c2c31e6f4e5063a4bf313acd78ce3d76fa6e6c59 2684e79b1b6f8e09fb7acc9b31a0dfb8ed275b09 Evan Pham <pham@enph353.JoDo> 1571265141 -0700	pull: Fast-forward
+2684e79b1b6f8e09fb7acc9b31a0dfb8ed275b09 f4c38186543ee33aaf49de0fa9ad489c1854f694 Evan Pham <pham@enph353.JoDo> 1571265196 -0700	pull: Fast-forward
+f4c38186543ee33aaf49de0fa9ad489c1854f694 a873f8fe19425dd3fbfc1e3e8db1e4ab8b6ddbf2 Evan Pham <pham@enph353.JoDo> 1571871642 -0700	commit: Restructured directory to include previous lab code and new reinforcement learning files
+a873f8fe19425dd3fbfc1e3e8db1e4ab8b6ddbf2 351bee260d0ad17af7d283a8fd93256440ac5d53 Evan Pham <pham@enph353.JoDo> 1571871808 -0700	commit: replaced submodule with proper directory
+351bee260d0ad17af7d283a8fd93256440ac5d53 72cd680391f1e222a4aae7ae8fae9c166b9284cb Evan Pham <pham@enph353.JoDo> 1571872929 -0700	commit: added plate reading code and images
+72cd680391f1e222a4aae7ae8fae9c166b9284cb 1de335feb1857d0c2985c7aa4cc0138493367fa8 Evan Pham <pham@enph353.JoDo> 1571892385 -0700	commit: Fixed shell command syntax to work in VScode (previous command only worked in jupyter
+1de335feb1857d0c2985c7aa4cc0138493367fa8 de200c74be850c7442794020d595f2fc45530609 Evan Pham <pham@enph353.JoDo> 1571899875 -0700	commit: Fixed remaining crossover errors from google colab. NN can now identify skewed character images with 98.5% accuracy
+de200c74be850c7442794020d595f2fc45530609 55225e7412b38820ee94c3a522a81cd9bd9207e7 Evan Pham <pham@enph353.JoDo> 1572471241 -0700	commit: Added competition world
+55225e7412b38820ee94c3a522a81cd9bd9207e7 874835e555486a7a95a039d22c6c778193f2e972 Evan Pham <pham@enph353.JoDo> 1572486595 -0700	commit: working on line follower
+874835e555486a7a95a039d22c6c778193f2e972 a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e Evan Pham <pham@enph353.JoDo> 1572503568 -0700	commit: Car can drive around outer lap in comp env. Also began working on possible RL driver
+a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e Evan Pham <pham@enph353.JoDo> 1572648788 -0700	checkout: moving from master to ML
+a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e 267187a151375198be129bc07d9ab62a07f35db1 Evan Pham <pham@enph353.JoDo> 1572648832 -0700	commit: began setting up directory for nav training environment
+267187a151375198be129bc07d9ab62a07f35db1 c5c9582b63c7705f33c40dc08c5e1c228434c9fd Evan Pham <pham@enph353.JoDo> 1572651774 -0700	commit: can now launch training env
+c5c9582b63c7705f33c40dc08c5e1c228434c9fd a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e Evan Pham <pham@enph353.JoDo> 1573686690 -0800	checkout: moving from ML to master
+a6fac153753cf4bf398e02fe2efb9b1e4ba4bd7e fe44171c17ba83c60951398c5972cbb894f351d4 Evan Pham <pham@enph353.JoDo> 1574022832 -0800	commit: doesnt kill pedestrains (often)
+fe44171c17ba83c60951398c5972cbb894f351d4 2a942f868229af311a5e86220346ba6db291525a Evan Pham <pham@enph353.JoDo> 1574022906 -0800	pull: Merge made by the 'recursive' strategy.
+2a942f868229af311a5e86220346ba6db291525a 78901ebe09638d4e036f43b9bca5c15a11050111 Evan Pham <pham@enph353.JoDo> 1574026336 -0800	commit: began car detection
+78901ebe09638d4e036f43b9bca5c15a11050111 0f8348318e24501dd2ee87fab2bc07a1457599cc Evan Pham <pham@enph353.JoDo> 1574034567 -0800	commit: Has car procedure and usually doesnt kill pedestrians
+0f8348318e24501dd2ee87fab2bc07a1457599cc e8b82b8b93ea3f73c8c7eb8ab5553a35f14631b0 Evan Pham <pham@enph353.JoDo> 1574036611 -0800	commit: generated some plate images
+e8b82b8b93ea3f73c8c7eb8ab5553a35f14631b0 008422db5dcab0d0e492cdbaca4176238b1714e7 Evan Pham <pham@enph353.JoDo> 1574036973 -0800	commit: more plates
+008422db5dcab0d0e492cdbaca4176238b1714e7 0b3488a4076cd858c9f7a2e5393e77b34ba85cfc Evan Pham <pham@enph353.JoDo> 1574036977 -0800	pull: Merge made by the 'recursive' strategy.
+0b3488a4076cd858c9f7a2e5393e77b34ba85cfc 2b27775fde6496bdf92fb4d92b2b5758b6b55f60 Evan Pham <pham@enph353.JoDo> 1574041059 -0800	commit: works w cmd_vel now
+2b27775fde6496bdf92fb4d92b2b5758b6b55f60 bbe3b6eb0a16b4962c2c486d29b9688a0c5dbcdf Evan Pham <pham@enph353.JoDo> 1574041090 -0800	pull: Merge made by the 'recursive' strategy.
+                                                                                                                                                                       

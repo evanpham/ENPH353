@@ -11,14 +11,16 @@ print_usage() {
   echo "-p to spawn pedestrians"
   echo "-g to generate new license plates"
   echo "-l to spawn QR code labels"
+  echo "-d to start driving code"
 }
 
-while getopts 'vpgl' flag; do
+while getopts 'vpgld' flag; do
   case "${flag}" in
     v) spawn_vehicles='true' ;;
     p) spawn_pedestrians='true' ;;
     g) generate_plates='true' ;;
     l) label_plates='true' ;;
+    d) drive_car='true' ;;
     *) print_usage
        exit 1 ;;
   esac
@@ -39,4 +41,4 @@ else
   ln -sfn unlabelled ../../enph353_gazebo/media/materials/textures/license_plates
 fi
 
-roslaunch enph353_utils sim.launch spawn_pedestrians:=$spawn_pedestrians spawn_vehicles:=$spawn_vehicles
+roslaunch enph353_utils sim.launch spawn_pedestrians:=$spawn_pedestrians spawn_vehicles:=$spawn_vehicles drive_car:=$drive_car
