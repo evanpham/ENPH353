@@ -2,6 +2,7 @@ import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import cv2
+from license_reader import getPlateChars
 
 
 bridge = CvBridge()
@@ -21,8 +22,7 @@ def callback(data):
         print(e)
     w, h = img.shape[0:2]
     # # Gets plate characters from image
-    # chars = getPlateChars(img)
-    chars = ["A"]*4
+    chars = getPlateChars(img)
     if (frameCount % 5 == 0):
         plate = ''.join(chars)
         bottomLeft = (10, w/2)

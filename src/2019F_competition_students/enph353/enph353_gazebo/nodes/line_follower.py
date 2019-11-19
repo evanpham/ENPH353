@@ -175,10 +175,10 @@ class LineFollower:
     def dontKillThePedestrian(self):
         # bw = cv2.threshold(image, 225, 255, cv2.THRESH_BINARY)[1]
         corner = self.bw[300:400, 740:840]
-        # cornerG = image[300:400, 750:850]
-        # cv2.imshow("dontkill", corner)
-        # cv2.imshow("dontkill2", cornerG)
-        # cv2.waitKey(25)
+        cornerG = self.frame[300:400, 750:850]
+        cv2.imshow("dontkill", corner)
+        cv2.imshow("dontkill2", cornerG)
+        cv2.waitKey(25)
         if (np.sum(corner) < 500):
             self.stop()
         else:

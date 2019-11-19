@@ -124,10 +124,10 @@ def return_characters(chars,dict):
     labels = []
     if (len(chars) == 4):
         for index in range(0,2):
-            letters = predictions[index][10:35]
+            letters = chars[index][10:35]
             labels.append(dict[str(np.argmax(letters)+10)])
         for index in range(2,4):
-            numbers = predictions[index][0:9]
+            numbers = chars[index][0:9]
             labels.append(dict[str(np.argmax(numbers))])
     else:
         labels = ['0','0','0','0']
@@ -183,222 +183,92 @@ def four_point_transform(image, pts):
 #   return the warped image
     return warped
 
-dict = {}
-dict['0'] = '0'
-dict['1'] = '1'
-dict['2'] = '2'
-dict['3'] = '3'
-dict['4'] = '4'
-dict['5'] = '5'
-dict['6'] = '6'
-dict['7'] = '7'
-dict['8'] = '8'
-dict['9'] = '9'
-dict['10'] = 'a'
-dict['11'] = 'b'
-dict['12'] = 'c'
-dict['13'] = 'd'
-dict['14'] = 'e'
-dict['15'] = 'f'
-dict['16'] = 'g'
-dict['17'] = 'h'
-dict['18'] = 'i'
-dict['19'] = 'j'
-dict['20'] = 'k'
-dict['21'] = 'l'
-dict['22'] = 'm'
-dict['23'] = 'n'
-dict['24'] = 'o'
-dict['25'] = 'p'
-dict['26'] = 'q'
-dict['27'] = 'r'
-dict['28'] = 's'
-dict['29'] = 't'
-dict['30'] = 'u'
-dict['31'] = 'v'
-dict['32'] = 'w'
-dict['33'] = 'x'
-dict['34'] = 'y'
-dict['35'] = 'z'
+def return_Labels(image):
+    dict = {}
+    dict['0'] = '0'
+    dict['1'] = '1'
+    dict['2'] = '2'
+    dict['3'] = '3'
+    dict['4'] = '4'
+    dict['5'] = '5'
+    dict['6'] = '6'
+    dict['7'] = '7'
+    dict['8'] = '8'
+    dict['9'] = '9'
+    dict['10'] = 'a'
+    dict['11'] = 'b'
+    dict['12'] = 'c'
+    dict['13'] = 'd'
+    dict['14'] = 'e'
+    dict['15'] = 'f'
+    dict['16'] = 'g'
+    dict['17'] = 'h'
+    dict['18'] = 'i'
+    dict['19'] = 'j'
+    dict['20'] = 'k'
+    dict['21'] = 'l'
+    dict['22'] = 'm'
+    dict['23'] = 'n'
+    dict['24'] = 'o'
+    dict['25'] = 'p'
+    dict['26'] = 'q'
+    dict['27'] = 'r'
+    dict['28'] = 's'
+    dict['29'] = 't'
+    dict['30'] = 'u'
+    dict['31'] = 'v'
+    dict['32'] = 'w'
+    dict['33'] = 'x'
+    dict['34'] = 'y'
+    dict['35'] = 'z'
 
-image = cv2.imread('20.png')
-# image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-height = image.shape[0]
-width = image.shape[1]
-half = 2*image.shape[0]/5
+    height = image.shape[0]
+    width = image.shape[1]
+    half = 2*image.shape[0]/5
 
-for h in range(height-half):
-    for w in range(width):
-        image[h,w] = [0,0,0]
-
-
-# cv2.imshow('i',image)
-# cv2.waitKey()
-orig = image
-
-# image = imutils.resize(image, height=200)
-frame = image
-
-hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-# define range of blue color in HSV
-lower_blue = np.array([110, 80, 50])
-upper_blue = np.array([130, 255, 255])
+    for h in range(height-half):
+        for w in range(width):
+            image[h,w] = [0,0,0]
 
 
-
-# Threshold the HSV image to get only blue colors
-mask = cv2.inRange(hsv, lower_blue, upper_blue)
-
-# Bitwise-AND mask and original image
-res = cv2.bitwise_and(frame, frame, mask=mask)
-
-# cv2.imshow('frame', frame)
-# cv2.imshow('mask', mask)
-# cv2.imshow('res', res)
-# cv2.imshow('hsv', hsv)
-hued = cv2.cvtColor(res,cv2.COLOR_BGR2HSV)
-imgs = []
-imgs = roi(hued,orig)
-# cv2.waitKey()
-
-# gray = cv2.cvtColor(res, cv2.COLOR_BGR2GRAY)
-gray = cv2.GaussianBlur(res, (7,7), 0)
-edged = cv2.Canny(gray, 0, 255)
-# cv2.imshow('gray',gray)
-# cv2.imshow('edged',edged)
-# cv2.waitKey()
-# convert image to grayscale image
-gray_image = cv2.cvtColor(gray, cv2.COLOR_BGR2GRAY)
- 
-# convert the grayscale image to binary image
-ret,thresh = cv2.threshold(gray_image,15,255,0)
- 
-# calculate moments of binary image
-M = cv2.moments(thresh)
- 
-# calculate x,y coordinate of center
-cX = int(M["m10"] / M["m00"])
-print(cX)
-
-if cX>width/2.0:
-    right = True
-else:
-    right = False
-
-# find the contours in the edged image, keeping only the
-# largest ones, and initialize the screen contour
-cnts = cv2.findContours(edged.copy(), cv2.RETR_EXTERNAL,
-	cv2.CHAIN_APPROX_SIMPLE)
-cnts = imutils.grab_contours(cnts)
-cnts = sorted(cnts, key=cv2.contourArea, reverse=True)[:5]
-
-
-if right:
-    peri_left = cv2.arcLength(cnts[0], True)
-    approx_left = cv2.approxPolyDP(cnts[0], 0.02 * peri_left, True)
-
-    peri_right = cv2.arcLength(cnts[1], True)
-    approx_right = cv2.approxPolyDP(cnts[1], 0.02 * peri_right, True)
-
-    size_r = len(approx_right)
-    size_l = len(approx_left)
-
-    br, tr = find_left_points(approx_right.reshape(size_r,2))
-    bl, tl = find_right_points(approx_left.reshape(size_l,2))
-    # print('haiufhiuewhfiuehriu')
-    # print(bl)
-    # print(tl)
-    # print(br)
-    # print(tr)
+    # cv2.imshow('i',image)
     # cv2.waitKey()
+    orig = image
 
-else:
-    peri_left = cv2.arcLength(cnts[1], True)
-    approx_left = cv2.approxPolyDP(cnts[1], 0.02 * peri_left, True)
+    # image = imutils.resize(image, height=200)
+    frame = image
 
-    peri_right = cv2.arcLength(cnts[0], True)
-    approx_right = cv2.approxPolyDP(cnts[0], 0.02 * peri_right, True)
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    size_r = len(approx_right)
-    size_l = len(approx_left)
-
-    br, tr = find_left_points(approx_right.reshape(size_r,2))
-    bl, tl = find_right_points(approx_left.reshape(size_l,2))
-    # print(bl)
-    # print(tl)
-    # print(br)
-    # print(tr)
-    # cv2.waitKey()
-
-
-bounding = np.zeros((4,1, 2), dtype="float32")
-bounding[0] = [tl[0],tl[1]]
-bounding[1] = [tr[0],tr[1]]
-bounding[3] = [bl[0],bl[1]]
-bounding[2] = [br[0],br[1]]
-# print(bounding)
-# cv2.waitKey()
-
-# show the contour (outline) of the piece of paper
-print("STEP 2: Find contours of paper")
-# plt.clf()
-# cv2.drawContours(frame, bounding.astype(int), -1, (255, 255, 255), 0)
-# cv2.imshow('resw', frame)
-# cv2.waitKey()
-# # apply the four point transform to obtain a top-down
-# # view of the original image
-warped = four_point_transform(orig, bounding.reshape(4, 2))
-
-# # convert the warped image to grayscale, then threshold it
-# # to give it that 'black and white' paper effect
-
-# warped = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
-# T = threshold_local(warped, 11, offset = 10, method = "gaussian")
-# warped = (warped > T).astype("uint8") * 255
-
-# # show the original and scanned images
-print("STEP 3: Apply perspective transform")
-# plt.clf()
-# cv2.imshow('warped', warped)
-# # cropped_plate = warped[35:50, 0:100]
-# # cv2.imshow('cropped', cropped_plate)
-# cv2.waitKey()
-
-# gray = cv2.cvtColor(warped, cv2.COLOR_BGR2GRAY)
-# # dilation
-# kernel = np.ones((10, 1), np.uint8)
-# img_dilation = cv2.dilate(gray, kernel, iterations=1)
-# cv2.imshow('blal',gray)
-# cv2.waitKey()s
-#grayscale 
-hued = cv2.cvtColor(warped,cv2.COLOR_BGR2HSV)
-# cv2.imshow('warpeeedd',hued)
-
-# imgs = roi(hued)
+    # define range of blue color in HSV
+    lower_blue = np.array([110, 80, 50])
+    upper_blue = np.array([130, 255, 255])
 
 
 
-# cv2.imshow('hay',gray)  
-# cv2.imshow('1',imgs[0])
-# cv2.imshow('2',imgs[1])
-# cv2.imshow('3',imgs[2])
-# cv2.imshow('4', imgs[3])
-# cv2.waitKey()
-# load model
-model = load_model('model3.h5')
-# summarize model.
-# model.summary()
-yp = np.array(imgs)
-# print(yp.shape)
-predictions = model.predict(yp)
-# print(predictions.shape)
-# print(len(predictions))
-labels = return_characters(predictions,dict)
-# print(predictions[0][20:25])
-# for index in range(len(predictions)):
-#     label.append(dict[str(np.argmax(predictions[index]))])
-print(labels)
-# print(predictions)
+    # Threshold the HSV image to get only blue colors
+    mask = cv2.inRange(hsv, lower_blue, upper_blue)
+
+    # Bitwise-AND mask and original image
+    res = cv2.bitwise_and(frame, frame, mask=mask)
+
+    # cv2.imshow('frame', frame)
+    # cv2.imshow('mask', mask)
+    # cv2.imshow('res', res)
+    # cv2.imshow('hsv', hsv)
+    hued = cv2.cvtColor(res,cv2.COLOR_BGR2HSV)
+    imgs = []
+    imgs = roi(hued,orig)
+
+
+    # load model
+    model = load_model('model3.h5')
+    # summarize model.
+    # model.summary()
+    yp = np.array(imgs)
+    predictions = model.predict(yp)
+    labels = return_characters(predictions,dict)
+
+    return labels
 
