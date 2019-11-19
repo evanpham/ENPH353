@@ -20,9 +20,11 @@ def callback(data):
     except CvBridgeError as e:
         print(e)
     w, h = img.shape[0:2]
-
+    # # Gets plate characters from image
+    # chars = getPlateChars(img)
+    chars = ["A"]*4
     if (frameCount % 5 == 0):
-        plate = ''.join(["A"]*4)
+        plate = ''.join(chars)
         bottomLeft = (10, w/2)
         cv2.putText(img, plate, bottomLeft, font, fontScale, fontColor, lineType)
     cv2.imshow("img", img)
