@@ -9,11 +9,6 @@ import time
 import sys
 import cv2
 import numpy as np
-from darkflow.net.build import TFNet
-import json
-
-options = {"model": "/home/pham/darkflow/cfg/tiny-yolo-voc.cfg", "load": "/home/pham/darkflow/tiny-yolo-voc.weights", "threshold": 0.1}
-tfnet = TFNet(options)
 
 class LineFollower:
 
@@ -84,18 +79,7 @@ class LineFollower:
         except CvBridgeError as e:
             print(e)
 
-        result = tfnet.return_predict(self.frame)
-        for bbox in result:
-            if bbox["confidence"] > .1:
-                print(bbox["label"])
-                p1 = (bbox["topleft"]["x"], bbox["topleft"]["y"])
-                p2 = (bbox["bottomright"]["x"], bbox["bottomright"]["y"])
-                cv2.rectangle(self.frame, p1, p2, (255, 0, 0))
-
-        cv2.imshow("frame", self.frame)
-        cv2.waitKey(25)
-
-        # Turn image black and white
+        # Turn image black and white and get hsv version for color filtering
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
         self.bw = cv2.threshold(gray, 225, 255, cv2.THRESH_BINARY)[1]
         self.hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)
@@ -128,24 +112,24 @@ class LineFollower:
         # cv2.waitKey(25)
         # print(self.getBlueness())
 
-        # # If at a crosswalk, stop and set notKillin boolean true
-        # if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
-        #     self.notKillin = True
-        #     self.stop()
-        #     self.lastCross = time.time()
-        # # If notKillin, dont kill
-        # elif self.notKillin:
-        #     self.dontKillThePedestrian()
-        # # If at a car, stop and set gettinLicense boolean true
-        # elif ((time.time()-self.lastCar > 4) and self.atCar()):
-        #     self.gettinLicense = True
-        #     self.lastCar = time.time()
-        # # If gettinLicense, get license
-        # elif self.gettinLicense:
-        #     self.getLicense()
-        # # Otherwise, follow the line my dude
-        # else:
-        #     self.follow(state_num)
+        # If at a crosswalk, stop and set notKillin boolean true
+        if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
+            self.notKillin = True
+            self.stop()
+            self.lastCross = time.time()
+        # If notKillin, dont kill
+        elif self.notKillin:
+            self.dontKillThePedestrian()
+        # If at a car, stop and set gettinLicense boolean true
+        elif ((time.time()-self.lastCar > 4) and self.atCar()):
+            self.gettinLicense = True
+            self.lastCar = time.time()
+        # If gettinLicense, get license
+        elif self.gettinLicense:
+            self.getLicense()
+        # Otherwise, follow the line my dude
+        else:
+            self.follow(state_num)
 
     def getLicense(self):
         if self.car_pic_count < 5:

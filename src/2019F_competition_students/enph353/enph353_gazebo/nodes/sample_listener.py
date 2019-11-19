@@ -5,16 +5,28 @@ import cv2
 
 
 bridge = CvBridge()
+frameCount = 0
+font = cv2.FONT_HERSHEY_SIMPLEX
+fontScale = 1
+fontColor = (255, 255, 255)
+lineType = 2
 
 
 def callback(data):
+    global frameCount
+    frameCount = frameCount + 1
     try:
         img = bridge.imgmsg_to_cv2(data, "bgr8")
     except CvBridgeError as e:
         print(e)
+    w, h = img.shape[0:2]
+
+    if (frameCount % 5 == 0):
+        plate = ''.join(["A"]*4)
+        bottomLeft = (10, w/2)
+        cv2.putText(img, plate, bottomLeft, font, fontScale, fontColor, lineType)
     cv2.imshow("img", img)
     cv2.waitKey(25)
-
 
 if __name__ == '__main__':
     rospy.init_node('image_converter', anonymous=True)
