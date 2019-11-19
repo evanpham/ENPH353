@@ -57,8 +57,8 @@ def roi(image, orig):
             # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             # cv2.imshow('segment no:'+str(i),roi)
             # cv2.waitKey()
-    cv2.imshow('segment no:'+str(i),gray)
-    cv2.waitKey()
+    # cv2.imshow('segment no:'+str(i),gray)
+    # cv2.waitKey()
     return imgs
 
 def order_points(pts):
@@ -119,6 +119,22 @@ def find_left_points(pts):
     rect[0] = pts[np.argmax(diff)]
     # return the ordered coordinates
     return rect
+
+def return_characters(chars,dict):
+    labels = []
+    if (len(chars) == 4):
+        for index in range(0,2):
+            letters = predictions[index][10:35]
+            labels.append(dict[str(np.argmax(letters)+10)])
+        for index in range(2,4):
+            numbers = predictions[index][0:9]
+            labels.append(dict[str(np.argmax(numbers))])
+    else:
+        labels = ['0','0','0','0']
+    return labels
+
+
+
 
 
 def four_point_transform(image, pts):
@@ -205,12 +221,11 @@ dict['33'] = 'x'
 dict['34'] = 'y'
 dict['35'] = 'z'
 
-
-image = cv2.imread('4.png')
+image = cv2.imread('20.png')
 # image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 height = image.shape[0]
 width = image.shape[1]
-half = image.shape[0]/2
+half = 2*image.shape[0]/5
 
 for h in range(height-half):
     for w in range(width):
@@ -228,7 +243,7 @@ hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
 # define range of blue color in HSV
-lower_blue = np.array([110, 50, 50])
+lower_blue = np.array([110, 80, 50])
 upper_blue = np.array([130, 255, 255])
 
 
@@ -372,7 +387,7 @@ hued = cv2.cvtColor(warped,cv2.COLOR_BGR2HSV)
 # cv2.imshow('4', imgs[3])
 # cv2.waitKey()
 # load model
-model = load_model('model_new.h5')
+model = load_model('model3.h5')
 # summarize model.
 # model.summary()
 yp = np.array(imgs)
@@ -380,8 +395,10 @@ yp = np.array(imgs)
 predictions = model.predict(yp)
 # print(predictions.shape)
 # print(len(predictions))
-label = []
-for index in range(len(predictions)):
-    label.append(dict[str(np.argmax(predictions[index]))])
-print(label)
+labels = return_characters(predictions,dict)
+# print(predictions[0][20:25])
+# for index in range(len(predictions)):
+#     label.append(dict[str(np.argmax(predictions[index]))])
+print(labels)
+# print(predictions)
 
