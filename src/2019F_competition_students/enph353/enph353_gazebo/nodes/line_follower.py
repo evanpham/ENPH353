@@ -10,10 +10,11 @@ import sys
 import cv2
 import numpy as np
 from darkflow.net.build import TFNet
-import json
 
-options = {"model": "/home/pham/darkflow/cfg/tiny-yolo-voc.cfg", "load": "/home/pham/darkflow/tiny-yolo-voc.weights", "threshold": 0.1}
+
+options = {"model": "/home/pham/darkflow/cfg/tiny-yolo-voc-enph353.cfg", "load": "/home/pham/darkflow/tiny-yolo-voc.weights", "threshold": 0.1}
 tfnet = TFNet(options)
+
 
 class LineFollower:
 
