@@ -1,0 +1,10 @@
+21:14:12: Position 1: QN72
+21:14:12: Position 2: KZ70
+21:14:12: Position 3: WM31
+21:14:12: Position 4: BK40
+21:14:12: Position 5: IH56
+21:14:12: Position 6: RW10
+21:14:12: Position 7: GD12
+21:14:12: Position 8: OB65
+21:14:20: Timer started.
+21:14:22: Message received: 123,456,0,AB12
