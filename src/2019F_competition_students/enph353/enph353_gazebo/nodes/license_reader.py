@@ -53,11 +53,11 @@ def roi(image, orig):
             roi = cv2.resize(roi, (102,150))
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             imgs.append(roi)
-            # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+            cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             # cv2.imshow('segment no:'+str(i),roi)
             # cv2.waitKey()
     # cv2.imshow('segment no:'+str(i),gray)
-    # cv2.waitKey()
+    # cv2.waitKey(25)
     return imgs
 
 
@@ -75,7 +75,7 @@ def return_characters(chars,dict):
     return labels
 
 
-def getPlateChars(image):
+def getPlateChars(image, initialized):
     dict = {}
     dict['0'] = '0'
     dict['1'] = '1'
@@ -145,7 +145,7 @@ def getPlateChars(image):
     # Bitwise-AND mask and original image
     res = cv2.bitwise_and(frame, frame, mask=mask)
 
-    cv2.imshow('frame', frame)
+    # cv2.imshow('frame', frame)
     # cv2.imshow('mask', mask)
     # cv2.imshow('res', res)
     # cv2.imshow('hsv', hsv)
@@ -153,9 +153,9 @@ def getPlateChars(image):
     imgs = []
     imgs = roi(hued,orig)
 
-
-    # load model
-    model = load_model('model3.h5')
+    if not initialized:
+        # load model
+        model = load_model('model3.h5')
 
     # summarize model.
     # model.summary()
