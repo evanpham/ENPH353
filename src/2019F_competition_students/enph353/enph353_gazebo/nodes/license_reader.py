@@ -11,13 +11,14 @@ from matplotlib import pyplot as plt
 from numpy import loadtxt
 from keras.models import load_model
 
+
 def roi(image, orig):
-    gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY) 
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
     # cv2.imshow('gray', gray) 
     # cv2.waitKey(0) 
 
     #binary 
-    ret,thresh = cv2.threshold(gray,100,255,cv2.THRESH_BINARY) 
+    ret, thresh = cv2.threshold(gray, 100, 255, cv2.THRESH_BINARY) 
     # cv2.imshow('second', thresh) 
     # cv2.waitKey(0) 
 
@@ -56,12 +57,12 @@ def roi(image, orig):
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             # cv2.imshow('segment no:'+str(i),roi)
             # cv2.waitKey()
-    # cv2.imshow('segment no:'+str(i),gray)
+    # cv2.imshow('plateBBox', gray)
     # cv2.waitKey(25)
     return imgs
 
 
-def return_characters(chars,dict):
+def return_characters(chars, dict):
     labels = []
     if (len(chars) == 4):
         for index in range(0,2):
@@ -70,12 +71,13 @@ def return_characters(chars,dict):
         for index in range(2,4):
             numbers = chars[index][0:9]
             labels.append(dict[str(np.argmax(numbers))])
+
     else:
-        labels = ['0','0','0','0']
+        labels = ['0', '0', '0', '0']
     return labels
 
 
-def getPlateChars(image, initialized):
+def getPlateChars(image):
     dict = {}
     dict['0'] = '0'
     dict['1'] = '1'
@@ -122,7 +124,7 @@ def getPlateChars(image, initialized):
         for w in range(width):
             image[h,w] = [0,0,0]
 
-
+    model = load_model('model3.h5')
     # cv2.imshow('i',image)
     # cv2.waitKey()
     orig = image
@@ -149,18 +151,16 @@ def getPlateChars(image, initialized):
     # cv2.imshow('mask', mask)
     # cv2.imshow('res', res)
     # cv2.imshow('hsv', hsv)
-    hued = cv2.cvtColor(res,cv2.COLOR_BGR2HSV)
+    hued = cv2.cvtColor(res, cv2.COLOR_BGR2HSV)
     imgs = []
-    imgs = roi(hued,orig)
-
-    if not initialized:
-        # load model
-        model = load_model('model3.h5')
+    imgs = roi(hued, orig)
 
     # summarize model.
     # model.summary()
-    # yp = np.array(imgs)
-    # predictions = model.predict(yp)
-    # labels = return_characters(predictions,dict)
-    labels = [0,0,0,0]
-    return labels
+    if len(imgs) == 4:
+        yp = np.array(imgs)
+        predictions = model.predict(yp)
+        labels = return_characters(predictions, dict)
+    # labels = [0, 0, 0, 0]
+        return labels
+    return ['0', '0', '0', '0']
