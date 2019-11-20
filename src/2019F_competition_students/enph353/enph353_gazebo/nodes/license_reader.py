@@ -6,7 +6,6 @@ import cv2
 import numpy as np
 import os
 import argparse
-import imutils
 from PIL import Image, ImageFont, ImageDraw
 from matplotlib import pyplot as plt
 from numpy import loadtxt
@@ -157,6 +156,7 @@ def getPlateChars(image):
 
     # load model
     model = load_model('model3.h5')
+
     # summarize model.
     # model.summary()
     # yp = np.array(imgs)

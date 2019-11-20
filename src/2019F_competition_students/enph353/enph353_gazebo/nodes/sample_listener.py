@@ -22,13 +22,14 @@ def callback(data):
         print(e)
     w, h = img.shape[0:2]
     # # Gets plate characters from image
-    chars = getPlateChars(img)
     if (frameCount % 5 == 0):
+        chars = str(getPlateChars(img))
+        print(chars)
         plate = ''.join(chars)
         bottomLeft = (10, w/2)
         cv2.putText(img, plate, bottomLeft, font, fontScale, fontColor, lineType)
-    cv2.imshow("img", img)
-    cv2.waitKey(25)
+        cv2.imshow("img", img)
+        cv2.waitKey(25)
 
 if __name__ == '__main__':
     rospy.init_node('image_converter', anonymous=True)
