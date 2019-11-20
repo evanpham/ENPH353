@@ -81,7 +81,7 @@ class LineFollower:
 
         # Turn image black and white and get hsv version for color filtering
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
-        self.bw = cv2.threshold(gray, 220, 255, cv2.THRESH_BINARY)[1]
+        self.bw = cv2.threshold(gray, 208, 255, cv2.THRESH_BINARY)[1]
         self.hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)
 
         # If the camera is running working and the car hasnt moved, make initial moves

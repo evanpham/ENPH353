@@ -48,77 +48,21 @@ def roi(image, orig):
         x, y, w, h = cv2.boundingRect(ctr)
         # Getting ROI
         roi = orig[y:y + h, x:x + w]
-        
+        # cv2.imshow('segment no:'+str(i),gray)
+        # cv2.waitKey()
         # show ROI
-        if (w*h>40 and w*h<300 and (w/h>.5 and w/h<2)):
-            roi = cv2.resize(roi, (102,150))
-            cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
-            imgs.append(roi)
-            # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
-            # cv2.imshow('segment no:'+str(i),roi)
-            # cv2.waitKey()
-    # cv2.imshow('segment no:'+str(i),gray)
-    # cv2.waitKey()
+        roi = cv2.resize(roi, (102,150))
+        cv2.rectangle(orig, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        if (w*h>200 and w*h<1200):
+            cv2.rectangle(orig, (x, y), (x + w, y + h), (0, 0, 255), 2)
+            # imgs.append(roi)
+        # cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+        # cv2.imshow('segment no:'+str(i),roi)
+        # cv2.waitKey()
+    cv2.imshow('segment no:'+str(i),orig)
+    cv2.waitKey()
     return imgs
 
-def order_points(pts):
-    # initialzie a list of coordinates that will be ordered
-    # such that the first entry in the list is the top-left,
-    # the second entry is the top-right, the third is the
-    # bottom-right, and the fourth is the bottom-left
-    rect = np.zeros((4, 2), dtype="float32")
-
-    # the top-left point will have the smallest sum, whereas
-    # the bottom-right point will have the largest sum
-    s = pts.sum(axis=1)
-    rect[0] = pts[np.argmin(s)]
-    rect[2] = pts[np.argmax(s)]
-
-    # now, compute the difference between the points, the
-    # top-right point will have the smallest difference,
-    # whereas the bottom-left will have the largest difference
-    diff = np.diff(pts, axis=1)
-    rect[1] = pts[np.argmin(diff)]
-    rect[3] = pts[np.argmax(diff)]
-
-    # return the ordered coordinates
-    return rect
-
-def find_right_points(pts):
-    
-    # the top-left point will have the smallest sum, whereas
-    # the bottom-right point will have the largest sum
-    s = pts.sum(axis = 1)
-    rect = np.zeros((2, 2), dtype="float32")
-    print(pts)
-    print(s)
-    rect[0] = pts[np.argmax(s)]
-
-    # now, compute the difference between the points, the
-    # top-right point will have the smallest difference,
-    # whereas the bottom-left will have the largest difference
-    diff = np.diff(pts, axis=1)
-    rect[1] = pts[np.argmin(diff)]
-    # return the ordered coordinates
-    return rect
-
-def find_left_points(pts):
-       
-    # the top-left point will have the smallest sum, whereas
-    # the bottom-right point will have the largest sum
-    s = pts.sum(axis=1)
-    rect = np.zeros((2, 2), dtype="float32")
-    rect[1] = pts[np.argmin(s)]
-    print('left')
-    print(pts)
-    print(s)
-    # now, compute the difference between the points, the
-    # top-right point will have the smallest difference,
-    # whereas the bottom-left will have the largest difference
-    diff = np.diff(pts, axis=1)
-    rect[0] = pts[np.argmax(diff)]
-    # return the ordered coordinates
-    return rect
 
 def return_characters(chars,dict):
     labels = []
@@ -272,3 +216,32 @@ def return_Labels(image):
 
     return labels
 
+
+image = cv2.imread('15.png')
+
+hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+# define range of blue color in HSV
+lower_blue = np.array([110, 80, 50])
+upper_blue = np.array([130, 255, 255])
+
+
+
+# Threshold the HSV image to get only blue colors
+mask = cv2.inRange(hsv, lower_blue, upper_blue)
+
+# Bitwise-AND mask and original image
+image = cv2.bitwise_not(image, image, mask=mask)
+cv2.imshow('i',image)
+cv2.waitKey()
+
+gray = cv2.cvtColor(image,cv2.COLOR_BGR2GRAY) 
+
+
+#binary 
+ret,thresh = cv2.threshold(gray,15,255,cv2.THRESH_BINARY_INV) 
+thresh = cv2.cvtColor(thresh,cv2.COLOR_GRAY2BGR)
+cv2.imshow('second', thresh)
+cv2.waitKey(0)  
+# cv2.imshow('seco',gray) 
+roi(thresh,image)
