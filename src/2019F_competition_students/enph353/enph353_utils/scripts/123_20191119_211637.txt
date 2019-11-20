@@ -1,0 +1,12 @@
+21:16:24: Position 1: JG58
+21:16:24: Position 2: BW88
+21:16:24: Position 3: IS74
+21:16:24: Position 4: HI40
+21:16:24: Position 5: MN63
+21:16:24: Position 6: ZN37
+21:16:24: Position 7: EC99
+21:16:24: Position 8: KS76
+21:16:37: Message received: 123,456,0,AB12
+21:17:26: Message received: 123,456,2,hw80
+21:17:26: Awarded: -5 pts
+21:17:26: Team total: -5 pts
