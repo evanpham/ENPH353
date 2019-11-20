@@ -145,7 +145,7 @@ def getPlateChars(image):
     # Bitwise-AND mask and original image
     res = cv2.bitwise_and(frame, frame, mask=mask)
 
-    # cv2.imshow('frame', frame)
+    cv2.imshow('frame', frame)
     # cv2.imshow('mask', mask)
     # cv2.imshow('res', res)
     # cv2.imshow('hsv', hsv)
