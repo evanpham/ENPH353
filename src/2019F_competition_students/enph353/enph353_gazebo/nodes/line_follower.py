@@ -138,6 +138,7 @@ class LineFollower:
             self.move("L")
             time.sleep(0.05)
             self.stop()
+            time.sleep(0.1)
             self.car_pub.publish(self.data)
             self.car_pic_count = self.car_pic_count + 1
         else:

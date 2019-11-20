@@ -161,6 +161,5 @@ def getPlateChars(image):
         yp = np.array(imgs)
         predictions = model.predict(yp)
         labels = return_characters(predictions, dict)
-    # labels = [0, 0, 0, 0]
         return labels
     return ['0', '0', '0', '0']

@@ -13,8 +13,9 @@ font = cv2.FONT_HERSHEY_SIMPLEX
 fontScale = 1
 fontColor = (255, 255, 255)
 lineType = 2
+textLocation = (10, 200)
 initialized = False
-plateReadings = np.chararray((5, 4))
+plateReadings = np.empty((5, 4), dtype=str)
 
 
 def callback(data):
@@ -25,33 +26,27 @@ def callback(data):
         img = bridge.imgmsg_to_cv2(data, "bgr8")
     except CvBridgeError as e:
         print(e)
-    w, h = img.shape[0:2]
     chars = getPlateChars(img)
 
     for i in range(4):
         plateReadings[frameCount % 5, i] = chars[i]
 
-    # # Gets plate characters from image
+    # Gets plate characters from image
     if (frameCount % 5 == 0):
         for i in range(4, -1, -1):
-            if (plateReadings[i] == [0, 0, 0, 0]).all():
+            if (plateReadings[i] == ['0', '0', '0', '0']).all():
                 plateReadings = np.delete(plateReadings, i, axis=0)
         try:
-            bestGuess = [mode(plateReadings[0, :])[0][0],
-                         mode(plateReadings[1, :])[0][0],
-                         mode(plateReadings[2, :])[0][0],
-                         mode(plateReadings[3, :])[0][0]]
+            bestGuess = str(mode(plateReadings)[0][0])
             plate = ''.join(str(bestGuess))
-            bottomLeft = (10, w/2)
-            cv2.putText(img, plate, bottomLeft, font, fontScale, fontColor, lineType)
-            cv2.imshow("img", img)
-            cv2.waitKey(25)
             print(plateReadings)
             print(bestGuess)
+            # cv2.putText(img, bestGuess, textLocation, font, fontScale, fontColor, lineType)
+            # cv2.imshow("img", img)
+            # cv2.waitKey(25)
         except IndexError:
             print("Could not read plate")
-
-        plateReadings = np.chararray((5, 4))
+        plateReadings = np.empty((5, 4), dtype=str)
 
 
 if __name__ == '__main__':
