@@ -136,9 +136,9 @@ class LineFollower:
             # filename = "../media/cars/" + str(time.time()) + ".png"
             # cv2.imwrite(filename, self.frame)
             self.move("L")
-            time.sleep(0.05)
+            time.sleep(0.02)
             self.stop()
-            time.sleep(0.1)
+            time.sleep(0.05)
             self.car_pub.publish(self.data)
             self.car_pic_count = self.car_pic_count + 1
         else:

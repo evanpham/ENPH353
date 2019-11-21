@@ -53,17 +53,16 @@ def roi(image, orig):
         y = y-border
         w = w+border*2
         h = h+border*2
-
-        roi = thresh[y:y + h, x:x + w]
         
         # show ROI
-        if (w*h>200 and w*h<2000 and (w/h>.5 and w/h<2)):
-            roi = cv2.resize(roi, (20,30))
+        if (w*h > 200 and w*h < 2000 and (w/h > .5 and w/h < 2)):
+            roi = thresh[y:y + h, x:x + w]
+            roi = cv2.resize(roi, (20, 30))
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             roi = np.expand_dims(roi,axis=2)
             imgs.append(roi)
-            
-            # cv2.imshow('segment no:'+str(i), gray)
+
+            # cv2.imshow('segment no:', roi)
             # cv2.waitKey(25)
 
     # cv2.imshow('plateBBox', gray)
@@ -75,10 +74,10 @@ def return_characters(chars, dict):
     labels = []
     if (len(chars) == 4):
         for index in range(0,2):
-            letters = chars[index][10:35]
+            letters = chars[index][10:36]
             labels.append(dict[str(np.argmax(letters)+10)])
         for index in range(2,4):
-            numbers = chars[index][0:9]
+            numbers = chars[index][0:10]
             labels.append(dict[str(np.argmax(numbers))])
 
     else:
@@ -93,7 +92,7 @@ loaded = False
 def getPlateChars(image):
     global model, loaded
     if not loaded:
-        model = load_model('/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/nodes/modelbin_6.h5')
+        model = load_model('/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/nodes/modelbin_7.h5')
         loaded = True
     
     dict = {}
@@ -179,3 +178,8 @@ def getPlateChars(image):
         labels = return_characters(predictions, dict)
         return labels
     return ['0', '0', '0', '0']
+
+# img = cv2.imread("/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/media/cars/1574037774.41.png")
+# cv2.imshow(img)
+
+# print(getPlateChars(img))

@@ -1,0 +1,17 @@
+17:29:35: Position 1: XC45
+17:29:35: Position 2: HG07
+17:29:35: Position 3: IE31
+17:29:35: Position 4: LM89
+17:29:35: Position 5: PB72
+17:29:35: Position 6: XN05
+17:29:35: Position 7: QB16
+17:29:35: Position 8: MA60
+17:29:46: Message received: 123,456,2,ie31
+17:29:46: Awarded: -5 pts
+17:29:46: Team total: -5 pts
+17:30:24: Message received: 123,456,2,ia88
+17:30:24: Awarded: -5 pts
+17:30:24: Team total: -5 pts
+17:30:45: Message received: 123,456,2,wa88
+17:30:45: Awarded: -5 pts
+17:30:45: Team total: -5 pts

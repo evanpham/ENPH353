@@ -1,0 +1,21 @@
+17:34:28: Position 1: PY63
+17:34:28: Position 2: ZM16
+17:34:28: Position 3: BJ34
+17:34:28: Position 4: JK94
+17:34:28: Position 5: DL50
+17:34:28: Position 6: EK83
+17:34:28: Position 7: DZ44
+17:34:28: Position 8: WS30
+17:34:34: Message received: 123,456,0,AB12
+17:34:51: Message received: 123,456,2,zm16
+17:34:51: Awarded: -5 pts
+17:34:51: Team total: -5 pts
+17:35:01: Message received: 123,456,3,ba04
+17:35:01: Awarded: -5 pts
+17:35:01: Team total: -10 pts
+17:35:48: Message received: 123,456,4,dl50
+17:35:48: Awarded: -5 pts
+17:35:48: Team total: -15 pts
+17:36:02: Message received: 123,456,5,ek83
+17:36:02: Awarded: -5 pts
+17:36:02: Team total: -20 pts

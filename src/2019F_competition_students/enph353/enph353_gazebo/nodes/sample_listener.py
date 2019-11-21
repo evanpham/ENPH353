@@ -16,11 +16,11 @@ lineType = 2
 textLocation = (10, 200)
 initialized = False
 plateReadings = np.empty((5, 4), dtype=str)
-spot = '2'
+spot = 2
 
 
 def callback(data):
-    global frameCount, plateReadings
+    global frameCount, plateReadings, spot
     # Increment frameCount
     # Every this node gets 5 frames per car passed
     frameCount = frameCount + 1
@@ -46,13 +46,16 @@ def callback(data):
             print(plateReadings)
             print(plateReadings[goodRows, :])
             print(bestGuess)
-            submitPlate(spot, bestGuess)
+            submitPlate(bestGuess)
         except IndexError:
             print("Could not read plate")
+            spot = spot + 1
 
 
-def submitPlate(spot, plate):
-    plate_pub.publish("123,456," + spot + "," + plate)
+def submitPlate(plate):
+    global spot
+    plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
+    spot = spot + 1
 
 
 if __name__ == '__main__':

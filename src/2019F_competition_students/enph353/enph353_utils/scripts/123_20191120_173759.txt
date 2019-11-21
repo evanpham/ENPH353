@@ -1,0 +1,15 @@
+17:37:48: Position 1: RH63
+17:37:48: Position 2: PX67
+17:37:48: Position 3: CB59
+17:37:48: Position 4: WR45
+17:37:48: Position 5: WA64
+17:37:48: Position 6: EJ57
+17:37:48: Position 7: HA71
+17:37:48: Position 8: UQ58
+17:37:59: Message received: 123,456,0,AB12
+17:38:16: Message received: 123,456,2,px67
+17:38:16: Awarded: -5 pts
+17:38:16: Team total: -5 pts
+17:38:23: Message received: 123,456,3,cb59
+17:38:23: Awarded: -5 pts
+17:38:23: Team total: -10 pts
