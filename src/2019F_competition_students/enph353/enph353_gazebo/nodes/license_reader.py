@@ -53,7 +53,7 @@ def roi(image, orig):
         y = y-border
         w = w+border*2
         h = h+border*2
-        
+
         # show ROI
         if (w*h > 200 and w*h < 2000 and (w/h > .5 and w/h < 2)):
             roi = thresh[y:y + h, x:x + w]
