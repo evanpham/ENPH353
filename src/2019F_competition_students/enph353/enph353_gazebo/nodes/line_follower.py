@@ -180,12 +180,16 @@ class LineFollower:
         kernel = np.ones((1,1), np.uint8) 
         img_dilation = cv2.dilate(image, kernel, iterations=1) 
         cv2MajorVersion = cv2.__version__.split(".")[0]
+
         # check for contours on thresh
         if int(cv2MajorVersion) >= 4:
-            ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            ctrs, hier = cv2.findContours(img_dilation.copy(),
+                                          cv2.RETR_EXTERNAL,
+                                          cv2.CHAIN_APPROX_SIMPLE)
         else:
-            im2, ctrs, hier = cv2.findContours(img_dilation.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
+            im2, ctrs, hier = cv2.findContours(img_dilation.copy(),
+                                               cv2.RETR_EXTERNAL,
+                                               cv2.CHAIN_APPROX_SIMPLE)
         sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
 
         for i, ctr in enumerate(sorted_ctrs):
@@ -194,15 +198,17 @@ class LineFollower:
 
             # show ROI
             if (h > 40):
-                cv2.rectangle(image, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+                # cv2.rectangle(image, (x, y), (x + w, y + h), (255, i*10, 0), 2)
                 boxCount = 1 + boxCount
 
         return boxCount
 
     def dontKillThePedestrian(self):
-        # gray = cv2.cvtColor(self.last[self.h/4:3*self.h/4, self.w/4:3*self.w/4], cv2.COLOR_BGR2GRAY)
-        # lastBW = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY)[1]
-        change = self.frame[self.h/3:2*self.h/3, self.w/4:3*self.w/4] - self.last[self.h/3:2*self.h/3, self.w/4:3*self.w/4]
+        t = self.h/3
+        b = 2*self.h/3
+        l = self.w/4
+        r = 3*self.w/4
+        change = self.frame[t:b, l:r] - self.last[t:b, l:r]
         change = cv2.medianBlur(change, 9)
         gray = cv2.cvtColor(change, cv2.COLOR_BGR2GRAY)
         bw = cv2.threshold(gray, 5, 255, cv2.THRESH_BINARY)[1]
@@ -227,7 +233,7 @@ class LineFollower:
         return False
 
     def follow(self, state):
-        if state <= 22*self.slice_num/30:
+        if state <= 21*self.slice_num/30:
             self.move("L")
         elif state >= 24*self.slice_num/30:
             self.move("R")
