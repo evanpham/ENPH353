@@ -13,6 +13,7 @@ from keras.models import load_model
 
 
 def roi(image, orig):
+    border = 10
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
     # cv2.imshow('gray', gray) 
     # cv2.waitKey(0) 
@@ -47,14 +48,23 @@ def roi(image, orig):
         # Get bounding box
         x, y, w, h = cv2.boundingRect(ctr)
         # Getting ROI
-        roi = orig[y:y + h, x:x + w]
+        x = x-border
+        y = y-border
+        w = w+border
+        h = h+border
+
+        roi = thresh[y:y + h, x:x + w]
         
         # show ROI
         if (w*h>40 and w*h<300 and (w/h>.5 and w/h<2)):
-            roi = cv2.resize(roi, (102,150))
+            roi = cv2.resize(roi, (20,30))
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+            roi = np.expand_dims(roi,axis=2)
             imgs.append(roi)
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+
+
+
             # cv2.imshow('segment no:'+str(i),roi)
             # cv2.waitKey()
     # cv2.imshow('plateBBox', gray)
@@ -124,7 +134,7 @@ def getPlateChars(image):
         for w in range(width):
             image[h,w] = [0,0,0]
 
-    model = load_model('model3.h5')
+    model = load_model('modelbin_1.h5')
     # cv2.imshow('i',image)
     # cv2.waitKey()
     orig = image
