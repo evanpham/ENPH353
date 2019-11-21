@@ -1,0 +1,15 @@
+16:16:06: Position 1: EC84
+16:16:06: Position 2: PZ35
+16:16:06: Position 3: LC54
+16:16:06: Position 4: XY99
+16:16:06: Position 5: WD49
+16:16:06: Position 6: DE16
+16:16:06: Position 7: TL74
+16:16:06: Position 8: AX36
+16:16:15: Message received: 123,456,0,AB12
+16:16:49: Message received: 123,456,2,pa35
+16:16:49: Awarded: -5 pts
+16:16:49: Team total: -5 pts
+16:17:33: Message received: 123,456,2,lc04
+16:17:33: Awarded: -5 pts
+16:17:33: Team total: -5 pts

@@ -1,0 +1,18 @@
+16:31:54: Position 1: OC51
+16:31:54: Position 2: CJ24
+16:31:54: Position 3: HB54
+16:31:54: Position 4: PF11
+16:31:54: Position 5: OK13
+16:31:54: Position 6: YW37
+16:31:54: Position 7: XE48
+16:31:54: Position 8: GL41
+16:32:03: Message received: 123,456,0,AB12
+16:32:17: Message received: 123,456,2,lj24
+16:32:17: Awarded: -5 pts
+16:32:17: Team total: -5 pts
+16:32:25: Message received: 123,456,2,hb04
+16:32:25: Awarded: -5 pts
+16:32:25: Team total: -5 pts
+16:32:42: Message received: 123,456,2,pf00
+16:32:42: Awarded: -5 pts
+16:32:42: Team total: -5 pts

@@ -10,6 +10,7 @@ from PIL import Image, ImageFont, ImageDraw
 from matplotlib import pyplot as plt
 from numpy import loadtxt
 from keras.models import load_model
+import keras
 
 
 def roi(image, orig):
@@ -47,12 +48,13 @@ def roi(image, orig):
         # Get bounding box
         x, y, w, h = cv2.boundingRect(ctr)
         # Getting ROI
-        roi = orig[y:y + h, x:x + w]
+        roi = thresh[y:y + h, x:x + w]
         
         # show ROI
         if (w*h>40 and w*h<300 and (w/h>.5 and w/h<2)):
-            roi = cv2.resize(roi, (102,150))
+            roi = cv2.resize(roi, (20, 30))
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+            roi = np.expand_dims(roi, axis=2)
             imgs.append(roi)
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             # cv2.imshow('segment no:'+str(i),roi)
@@ -77,7 +79,16 @@ def return_characters(chars, dict):
     return labels
 
 
+model = keras.initializers.Initializer()
+loaded = False
+
+
 def getPlateChars(image):
+    global model, loaded
+    if not loaded:
+        model = load_model('/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/nodes/modelbin_5.h5')
+        loaded = True
+    
     dict = {}
     dict['0'] = '0'
     dict['1'] = '1'
@@ -123,8 +134,6 @@ def getPlateChars(image):
     for h in range(height-half):
         for w in range(width):
             image[h,w] = [0,0,0]
-
-    model = load_model('model3.h5')
     # cv2.imshow('i',image)
     # cv2.waitKey()
     orig = image
