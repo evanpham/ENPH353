@@ -105,7 +105,7 @@ class LineFollower:
         max = 0
 
         for i in range(self.slice_num):
-            s = self.bw[2*self.h/3:3*self.h/4, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+            s = self.bw[2*self.h/3:7*self.h/9, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
             if np.sum(s) > max:
                 state_num = i
 
@@ -227,9 +227,9 @@ class LineFollower:
         return False
 
     def follow(self, state):
-        if state <= 21*self.slice_num/30:
+        if state <= 22*self.slice_num/30:
             self.move("L")
-        elif state >= 23*self.slice_num/30:
+        elif state >= 24*self.slice_num/30:
             self.move("R")
         else:
             self.move("F")
