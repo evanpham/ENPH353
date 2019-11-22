@@ -9,11 +9,6 @@ import time
 import sys
 import cv2
 import numpy as np
-from darkflow.net.build import TFNet
-
-
-options = {"model": "/home/pham/darkflow/cfg/tiny-yolo-voc-enph353.cfg", "load": "/home/pham/darkflow/tiny-yolo-voc.weights", "threshold": 0.1}
-tfnet = TFNet(options)
 
 
 class LineFollower:
@@ -24,6 +19,8 @@ class LineFollower:
         self.vel_pub = rospy.Publisher('/R1/cmd_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
         self.car_pub = rospy.Publisher("/car_pics", Image, queue_size=1)
+        self.yolo_pub = rospy.Publisher("/camera/rgb/image_raw", Image, queue_size=1)
+        self.yolo_sub = rospy.Subscriber("/darknet_ros/detection_image", Image, self.yolo)
         self.listener = rospy.Subscriber(self.cam_path, Image, self.callback)
         self.data = None
         self.h = 0
@@ -78,23 +75,22 @@ class LineFollower:
         vel_cmd.angular.z = 0.0
         self.vel_pub.publish(vel_cmd)
 
+    def yolo(self, data):
+        try:
+            yolo = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            print(e)
+
+        cv2.imshow("yolo", yolo)
+        cv2.waitKey(25)
+
     def callback(self, data):
+        self.yolo_pub.publish(data)
         self.data = data
         try:
             self.frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
             print(e)
-
-        result = tfnet.return_predict(self.frame)
-        for bbox in result:
-            if bbox["confidence"] > .1:
-                print(bbox["label"])
-                p1 = (bbox["topleft"]["x"], bbox["topleft"]["y"])
-                p2 = (bbox["bottomright"]["x"], bbox["bottomright"]["y"])
-                cv2.rectangle(self.frame, p1, p2, (255, 0, 0))
-
-        cv2.imshow("frame", self.frame)
-        cv2.waitKey(25)
 
         # Turn image black and white
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)

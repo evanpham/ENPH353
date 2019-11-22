@@ -1,0 +1,8 @@
+prefix=/home/pham/enph353_ws/darknet/devel
+
+Name: darknet_ros_msgs
+Description: Description of darknet_ros_msgs
+Version: 1.1.4
+Cflags: -I/home/pham/enph353_ws/darknet/devel/include
+Libs: -L/home/pham/enph353_ws/darknet/devel/lib 
+Requires: actionlib_msgs geometry_msgs sensor_msgs message_runtime std_msgs

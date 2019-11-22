@@ -1,0 +1,2 @@
+darknet_ros/darknet_ros:darknet_ros/darknet_ros_msgs
+-DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/pham/enph353_ws/darknet/devel -DCMAKE_INSTALL_PREFIX=/home/pham/enph353_ws/darknet/install -G Unix Makefiles
