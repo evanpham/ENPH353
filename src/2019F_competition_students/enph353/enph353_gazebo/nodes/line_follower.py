@@ -23,6 +23,7 @@ class LineFollower:
         self.h = 0
         self.w = 0
         self.car_pic_count = 0
+        self.plateCount = 0
         self.lastCross = time.time()
         self.lastCar = time.time()
         self.gettinLicense = False
@@ -92,9 +93,13 @@ class LineFollower:
 
             # Pull out of parking spot and turn to face road
             self.initial_move()
-        elif self.initialized:
+        elif self.initialized and self.plateCount < 6:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
+        elif self.initialized and self.plateCount >= 6:
+            print("done")
+            print(self.plateCount)
+            self.stop()
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is
@@ -145,6 +150,7 @@ class LineFollower:
             self.gettinLicense = False
             self.lastCar = time.time()
             self.car_pic_count = 0
+            self.plateCount = self.plateCount + 1
 
     def getBlueness(self):
         blue = self.blue_filter()
