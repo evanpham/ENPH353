@@ -32,8 +32,9 @@ class LineFollower:
         self.gettinLicense = False
         self.notKillin = False
         self.initialized = False
-        self.haveRight = False
-        self.hadRight = False
+        self.innerRing = False
+        self.innerInit = False
+        self.truckPassed = False
         self.slice_num = 30
         self.frame = Image()
         self.last = Image()
@@ -56,6 +57,30 @@ class LineFollower:
             self.stop()
             self.register()
             self.initialized = True
+
+    def inner_initial_moves(self):
+        if not self.truckPassed and self.truck_check():
+            self.stop()
+        elif not self.truckPassed:
+            self.truckPassed = True
+        elif self.truckPassed and np.sum(self.bw[8*self.h/10:9*self.h/10, :]) < 5000000:
+            self.move("F")
+        else:
+            print("WE HERE")
+            self.move("L")
+            rospy.sleep(.5)
+            self.stop()
+            self.innerInit = True
+
+    def truck_check(self):
+        change = self.frame[0:2*self.h/3] - self.last[0:2*self.h/3]
+        change = cv2.medianBlur(change, 9)
+        gray = cv2.cvtColor(change, cv2.COLOR_BGR2GRAY)
+        bw = cv2.threshold(gray, 50, 255, cv2.THRESH_BINARY)[1]
+        bw = cv2.medianBlur(bw, 13)
+        boxCount = self.roi(bw)
+        
+        return boxCount > 0
 
     def move(self, action):
         vel_cmd = Twist()
@@ -99,6 +124,9 @@ class LineFollower:
 
             # Pull out of parking spot and turn to face road
             self.initial_move()
+        # If at inner ring and not initialized run initial inner ring procedure
+        elif self.innerRing and not self.innerInit:
+            self.inner_initial_moves()
         elif self.initialized and self.plateCount < 6:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
@@ -112,7 +140,7 @@ class LineFollower:
         self.last = self.frame
 
     def getToInnerRing(self):
-        if np.sum(self.line_filter()[9*self.h/10:-1, self.w/2-50:self.w/2+50]) < 100:
+        if np.sum(self.line_filter()[19*self.h/20:-1, self.w/2-50:self.w/2+50]) < 100:
             # Slice bw image into slices and find out where right curb is
             state_num = 0
             max = 0
@@ -125,13 +153,13 @@ class LineFollower:
             self.follow(state_num, "L")
         elif not self.firstLine:
             self.move("F")
-            rospy.sleep(.2)
+            rospy.sleep(.1)
             self.firstLine = True
             print("firstline")
         else:
-            self.stop()
-            cv2.imshow("slice", self.line_filter()[9*self.h/10:-1, self.w/2-50:self.w/2+50])
-            cv2.waitKey(25)
+            self.move("L")
+            rospy.sleep(.1)
+            self.innerRing = True
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is
@@ -236,9 +264,10 @@ class LineFollower:
 
             # show ROI
             if (h > 40):
-                # cv2.rectangle(image, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+                cv2.rectangle(image, (x, y), (x + w, y + h), (255, i*10, 0), 2)
                 boxCount = 1 + boxCount
-        # cv2.imshow("roi", image)
+        cv2.imshow("roi", image)
+        cv2.waitKey(25)
 
         return boxCount
 
