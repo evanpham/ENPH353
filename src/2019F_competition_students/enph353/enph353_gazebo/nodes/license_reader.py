@@ -53,7 +53,7 @@ def roi(image, orig):
         y = y-border
         w = w+border*2
         h = h+border*2
-        
+
         # show ROI
         if (w*h > 200 and w*h < 2000 and (w/h > .5 and w/h < 2)):
             roi = thresh[y:y + h, x:x + w]
@@ -140,11 +140,8 @@ def getPlateChars(image):
     for h in range(height-half):
         for w in range(width):
             image[h,w] = [0,0,0]
-    # cv2.imshow('i',image)
-    # cv2.waitKey()
-    orig = image
 
-    # image = imutils.resize(image, height=200)
+    orig = image
     frame = image
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -154,32 +151,19 @@ def getPlateChars(image):
     lower_blue = np.array([110, 80, 50])
     upper_blue = np.array([130, 255, 255])
 
-
-
     # Threshold the HSV image to get only blue colors
     mask = cv2.inRange(hsv, lower_blue, upper_blue)
 
     # Bitwise-AND mask and original image
     res = cv2.bitwise_and(frame, frame, mask=mask)
 
-    # cv2.imshow('frame', frame)
-    # cv2.imshow('mask', mask)
-    # cv2.imshow('res', res)
-    # cv2.imshow('hsv', hsv)
     hued = cv2.cvtColor(res, cv2.COLOR_BGR2HSV)
     imgs = []
     imgs = roi(hued, orig)
 
-    # summarize model.
-    # model.summary()
     if len(imgs) == 4:
         yp = np.array(imgs)
         predictions = model.predict(yp)
         labels = return_characters(predictions, dict)
         return labels
     return ['0', '0', '0', '0']
-
-# img = cv2.imread("/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/media/cars/1574037774.41.png")
-# cv2.imshow(img)
-
-# print(getPlateChars(img))

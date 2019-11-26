@@ -1,0 +1,17 @@
+17:41:06: Position 1: FR87
+17:41:06: Position 2: OW31
+17:41:06: Position 3: IL91
+17:41:06: Position 4: ZM11
+17:41:06: Position 5: FG37
+17:41:06: Position 6: TL29
+17:41:06: Position 7: QQ07
+17:41:06: Position 8: ZV65
+17:41:18: Message received: 123,456,0,AB12
+17:41:35: Message received: 123,456,2,OW31
+17:41:35: Awarded: 5 pts
+17:41:35: Team total: 5 pts
+17:41:44: Message received: 123,456,3,IL91
+17:41:44: Awarded: 5 pts
+17:41:44: Team total: 10 pts
+17:41:52: Penalty: pedestrian collision: -10 pts
+17:41:52: Team total: 0 pts

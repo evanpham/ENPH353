@@ -1,0 +1,18 @@
+16:15:09: Position 1: EX59
+16:15:09: Position 2: GX15
+16:15:09: Position 3: EU93
+16:15:09: Position 4: GT66
+16:15:09: Position 5: CU27
+16:15:09: Position 6: YK29
+16:15:09: Position 7: KN06
+16:15:09: Position 8: XO62
+16:15:26: Message received: 123,456,0,AB12
+16:15:44: Message received: 123,456,2,GX15
+16:15:44: Awarded: 5 pts
+16:15:44: Team total: 5 pts
+16:15:55: Message received: 123,456,3,EU93
+16:15:55: Awarded: 5 pts
+16:15:55: Team total: 10 pts
+16:16:26: Message received: 123,456,5,GT66
+16:16:26: Awarded: -5 pts
+16:16:26: Team total: 5 pts

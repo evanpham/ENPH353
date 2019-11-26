@@ -54,7 +54,11 @@ def callback(data):
 
 def submitPlate(plate):
     global spot
-    plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
+    if spot != 7:
+        plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
+    else:
+        # 7th spot is 0
+        plate_pub.publish("123,456,1," + plate.upper()) 
     spot = spot + 1
 
 

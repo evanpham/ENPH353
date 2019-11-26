@@ -1,0 +1,29 @@
+23:25:28: Position 1: YT18
+23:25:28: Position 2: YM68
+23:25:28: Position 3: XI28
+23:25:28: Position 4: HV40
+23:25:28: Position 5: WF13
+23:25:28: Position 6: NJ06
+23:25:28: Position 7: VV68
+23:25:28: Position 8: AZ60
+23:25:40: Message received: 123,456,0,AB12
+23:25:57: Message received: 123,456,3,XI28
+23:25:57: Awarded: 5 pts
+23:25:57: Team total: 5 pts
+23:26:19: Message received: 123,456,5,HV40
+23:26:19: Awarded: -5 pts
+23:26:19: Team total: 0 pts
+23:26:38: Message received: 123,456,7,NJ06
+23:26:38: Awarded: -5 pts
+23:26:38: Team total: -5 pts
+23:26:54: Message received: 123,456,8,YI18
+23:26:54: Awarded: -5 pts
+23:26:54: Team total: -10 pts
+23:27:01: Message received: 123,456,9,YI18
+23:27:01: Invalid plate location: 9
+23:27:11: Message received: 123,456,11,XI28
+23:27:11: Invalid plate location: 11
+23:27:22: Message received: 123,456,12,HN40
+23:27:22: Invalid plate location: 12
+23:27:33: Message received: 123,456,13,WF13
+23:27:33: Invalid plate location: 13

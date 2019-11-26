@@ -1,0 +1,14 @@
+16:10:45: Position 1: VM37
+16:10:45: Position 2: XZ59
+16:10:45: Position 3: FE57
+16:10:45: Position 4: DD18
+16:10:45: Position 5: IX12
+16:10:45: Position 6: ET68
+16:10:45: Position 7: NH77
+16:10:45: Position 8: PL58
+16:11:20: Message received: 123,456,2,FE57
+16:11:20: Awarded: -5 pts
+16:11:20: Team total: -5 pts
+16:12:17: Message received: 123,456,4,IX12
+16:12:17: Awarded: -5 pts
+16:12:17: Team total: -10 pts

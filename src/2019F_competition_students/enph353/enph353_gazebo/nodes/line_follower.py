@@ -10,6 +10,7 @@ import sys
 import cv2
 import numpy as np
 
+
 class LineFollower:
 
     def __init__(self):
@@ -24,6 +25,7 @@ class LineFollower:
         self.w = 0
         self.car_pic_count = 0
         self.plateCount = 0
+        self.pastCar = False
         self.lastCross = time.time()
         self.lastCar = time.time()
         self.gettinLicense = False
@@ -31,6 +33,7 @@ class LineFollower:
         self.initialized = False
         self.slice_num = 30
         self.frame = Image()
+        self.last = Image()
         self.bw = Image()
         self.hsv = Image()
         self.bridge = CvBridge()
@@ -82,7 +85,7 @@ class LineFollower:
 
         # Turn image black and white and get hsv version for color filtering
         gray = cv2.cvtColor(self.frame, cv2.COLOR_BGR2GRAY)
-        self.bw = cv2.threshold(gray, 208, 255, cv2.THRESH_BINARY)[1]
+        self.bw = cv2.threshold(gray, 215, 255, cv2.THRESH_BINARY)[1]
         self.hsv = cv2.cvtColor(self.frame, cv2.COLOR_BGR2HSV)
 
         # If the camera is running working and the car hasnt moved, make initial moves
@@ -97,9 +100,40 @@ class LineFollower:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
         elif self.initialized and self.plateCount >= 6:
-            print("done")
-            print(self.plateCount)
-            self.stop()
+            if self.getBlueness() > 2000000 and not self.pastCar:  # Get past car
+                self.gogogo()
+                print(self.getBlueness())
+                print("done")
+                print(self.plateCount)
+            else:
+                self.pastCar = True
+                self.getToInnerRing()
+        self.last = self.frame
+
+    def getToInnerRing(self):
+        # Slice bw image into slices and find out where right curb is
+        state_num = 0
+        # haveLeft = False
+        max = 0
+
+        for i in range(0, self.slice_num, -1):
+            print(i)
+            s = self.bw[2*self.h/3:7*self.h/9, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+            if np.sum(s) > max:
+                state_num = i
+                # if i < 15:
+                #     haveLeft = True
+
+        self.follow(state_num, "L")
+
+        # if haveLeft:
+        #     self.follow(state_num)
+        #     self.pastCar = True
+        # elif not self.pastCar:
+        #     self.follow(state_num)
+        # else:
+        #     print("no left")
+        #     self.stop()
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is
@@ -107,15 +141,14 @@ class LineFollower:
         max = 0
 
         for i in range(self.slice_num):
-            s = self.bw[self.h/2:self.h, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+            s = self.bw[2*self.h/3:7*self.h/9, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
             if np.sum(s) > max:
                 state_num = i
 
         # # Show where curb is on frame
         # cv2.circle(self.frame, (self.w*state_num/self.slice_num, self.h-10), 10, (0, 255, 0), -1)
-        # cv2.imshow("bl", self.blue_filter())
+        # cv2.imshow("bl", self.frame)
         # cv2.waitKey(25)
-        # print(self.getBlueness())
 
         # If at a crosswalk, stop and set notKillin boolean true
         if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
@@ -126,7 +159,7 @@ class LineFollower:
         elif self.notKillin:
             self.dontKillThePedestrian()
         # If at a car, stop and set gettinLicense boolean true
-        elif ((time.time()-self.lastCar > 4) and self.atCar()):
+        elif ((time.time()-self.lastCar > 5) and self.atCar()):
             self.gettinLicense = True
             self.lastCar = time.time()
         # If gettinLicense, get license
@@ -143,7 +176,7 @@ class LineFollower:
             self.move("L")
             time.sleep(0.02)
             self.stop()
-            time.sleep(0.05)
+            time.sleep(0.1)
             self.car_pub.publish(self.data)
             self.car_pic_count = self.car_pic_count + 1
         else:
@@ -179,14 +212,48 @@ class LineFollower:
 
         return mask
 
+    def roi(self, image):
+        boxCount = 0
+        kernel = np.ones((1,1), np.uint8) 
+        img_dilation = cv2.dilate(image, kernel, iterations=1) 
+        cv2MajorVersion = cv2.__version__.split(".")[0]
+
+        # check for contours on thresh
+        if int(cv2MajorVersion) >= 4:
+            ctrs, hier = cv2.findContours(img_dilation.copy(),
+                                          cv2.RETR_EXTERNAL,
+                                          cv2.CHAIN_APPROX_SIMPLE)
+        else:
+            im2, ctrs, hier = cv2.findContours(img_dilation.copy(),
+                                               cv2.RETR_EXTERNAL,
+                                               cv2.CHAIN_APPROX_SIMPLE)
+        sorted_ctrs = sorted(ctrs, key=lambda ctr: cv2.boundingRect(ctr)[0])
+
+        for i, ctr in enumerate(sorted_ctrs):
+            # Get bounding box
+            x, y, w, h = cv2.boundingRect(ctr)
+
+            # show ROI
+            if (h > 40):
+                # cv2.rectangle(image, (x, y), (x + w, y + h), (255, i*10, 0), 2)
+                boxCount = 1 + boxCount
+        # cv2.imshow("roi", image)
+
+        return boxCount
+
     def dontKillThePedestrian(self):
-        # bw = cv2.threshold(image, 225, 255, cv2.THRESH_BINARY)[1]
-        corner = self.bw[300:400, 740:840]
-        cornerG = self.frame[300:400, 750:850]
-        cv2.imshow("dontkill", corner)
-        cv2.imshow("dontkill2", cornerG)
-        cv2.waitKey(25)
-        if (np.sum(corner) < 500):
+        t = self.h/3
+        b = 2*self.h/3
+        l = self.w/4
+        r = 3*self.w/4
+        change = self.frame[t:b, l:r] - self.last[t:b, l:r]
+        change = cv2.medianBlur(change, 9)
+        gray = cv2.cvtColor(change, cv2.COLOR_BGR2GRAY)
+        bw = cv2.threshold(gray, 5, 255, cv2.THRESH_BINARY)[1]
+        bw = cv2.medianBlur(bw, 5)
+        boxCount = self.roi(bw)
+
+        if (boxCount != 0 or np.sum(bw) > 20000000):
             self.stop()
         else:
             self.notKillin = False
@@ -203,13 +270,21 @@ class LineFollower:
                 return True
         return False
 
-    def follow(self, state):
-        if state <= 26*self.slice_num/30:
-            self.move("L")
-        elif state >= 29*self.slice_num/30:
-            self.move("R")
+    def follow(self, state, curb="R"):
+        if curb == "R":
+            if state <= 21*self.slice_num/30:
+                self.move("L")
+            elif state >= 24*self.slice_num/30:
+                self.move("R")
+            else:
+                self.move("F")
         else:
-            self.move("F")
+            if state <= 5*self.slice_num/30:
+                self.move("L")
+            elif state >= 9*self.slice_num/30:
+                self.move("R")
+            else:
+                self.move("F")
 
 
 def main(args):
