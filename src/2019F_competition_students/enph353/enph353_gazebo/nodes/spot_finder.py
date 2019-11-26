@@ -72,7 +72,7 @@ def return_characters(chars, dict):
     labels = []
     for index in range(len(chars)):
         letter = dict[str(np.argmax(chars[index]))]
-        if(letter == 'p' and index < len(chars)):
+        if(letter == 'p' and index < len(chars)-1):
             labels.append(letter)
             numbers = chars[index+1][0:10]
             labels.append(dict[str(np.argmax(numbers))])
@@ -167,9 +167,12 @@ def getSpotChars(image):
 
 
     yp = np.array(imgs)
-    predictions = model.predict(yp)
-    print(predictions)
-    labels = return_characters(predictions, dict)
+    if (len(yp)>0):
+        predictions = model.predict(yp)
+    # print(predictions)
+        labels = return_characters(predictions, dict)
     # print(labels)
-    return labels[1]
+        return labels[1]
+    else:
+        return 'z'
 
