@@ -31,6 +31,8 @@ class LineFollower:
         self.gettinLicense = False
         self.notKillin = False
         self.initialized = False
+        self.haveRight = False
+        self.hadRight = False
         self.slice_num = 30
         self.frame = Image()
         self.last = Image()
@@ -100,7 +102,7 @@ class LineFollower:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
         elif self.initialized and self.plateCount >= 6:
-            if self.getBlueness() > 2000000 and not self.pastCar:  # Get past car
+            if self.getBlueness() > 700000 and not self.pastCar:  # Get past car
                 self.gogogo()
                 print(self.getBlueness())
                 print("done")
@@ -113,27 +115,19 @@ class LineFollower:
     def getToInnerRing(self):
         # Slice bw image into slices and find out where right curb is
         state_num = 0
-        # haveLeft = False
         max = 0
 
-        for i in range(0, self.slice_num, -1):
-            print(i)
-            s = self.bw[2*self.h/3:7*self.h/9, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+        for i in range(self.slice_num-1,-1, -1):
+            s = self.bw[8*self.h/10:9*self.h/10, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
             if np.sum(s) > max:
                 state_num = i
-                # if i < 15:
-                #     haveLeft = True
+ 
+        # # Show where curb is on frame
+        # cv2.circle(self.frame, (self.w*state_num/self.slice_num, self.h-10), 10, (0, 255, 0), -1)
+        # cv2.imshow("bl", self.frame)
+        # cv2.waitKey(25)
 
         self.follow(state_num, "L")
-
-        # if haveLeft:
-        #     self.follow(state_num)
-        #     self.pastCar = True
-        # elif not self.pastCar:
-        #     self.follow(state_num)
-        # else:
-        #     print("no left")
-        #     self.stop()
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is
@@ -279,9 +273,9 @@ class LineFollower:
             else:
                 self.move("F")
         else:
-            if state <= 5*self.slice_num/30:
+            if state <= 2*self.slice_num/30:
                 self.move("L")
-            elif state >= 9*self.slice_num/30:
+            elif state >= 6*self.slice_num/30:
                 self.move("R")
             else:
                 self.move("F")
