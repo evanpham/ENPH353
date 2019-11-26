@@ -4,6 +4,7 @@ from std_msgs.msg import String
 from cv_bridge import CvBridge, CvBridgeError
 import cv2
 from license_reader import getPlateChars
+from spot_finder import getSpotChars
 import numpy as np
 from scipy.stats import mode
 
@@ -16,6 +17,7 @@ lineType = 2
 textLocation = (10, 200)
 initialized = False
 plateReadings = np.empty((5, 4), dtype=str)
+spotReadings = np.empty((5, 1), dtype=str)
 spot = 2
 
 
@@ -31,36 +33,43 @@ def callback(data):
         print(e)
     chars = getPlateChars(img)
 
+    spot = getSpotChars(img)
+    spotReadings[frameCount % 5, 0] = spot
     # Add character guesses to plateReadings array
     for i in range(4):
         plateReadings[frameCount % 5, i] = chars[i]
+        
 
     # After 5 frames, get modal guess for each character
     if (frameCount % 5 == 0):
         goodRows = []
+        goodSpots = []
         for i in range(4, -1, -1):
             if not (plateReadings[i] == ['0', '0', '0', '0']).all():
                 goodRows.append(i)
+        for i in range(len(spotReadings)):
+            if not (spotReadings[i] == 'x' ):
+                goodSpots.append(i)
+
         try:
             bestGuess = ''.join(mode(plateReadings[goodRows, :])[0][0])
+            bestSpotGuess = ''.join(mode(spotReadings[goodSpots, :])[0][0])
             print(plateReadings)
             print(plateReadings[goodRows, :])
             print(bestGuess)
+            print("Spot is P")
+            print(spotReadings[goodSpots, :])
+            print(bestSpotGuess)
+            spot = bestSpotGuess
             submitPlate(bestGuess)
         except IndexError:
             print("Could not read plate")
-            spot = spot + 1
 
 
 def submitPlate(plate):
     global spot
-    if spot != 7:
-        plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
-    else:
-        # 7th spot is 0
-        plate_pub.publish("123,456,1," + plate.upper()) 
-    spot = spot + 1
-
+    plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
+  
 
 if __name__ == '__main__':
     rospy.init_node('image_processor', anonymous=True)

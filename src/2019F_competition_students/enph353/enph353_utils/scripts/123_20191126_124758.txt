@@ -1,0 +1,18 @@
+12:47:40: Position 1: CM12
+12:47:40: Position 2: XF32
+12:47:40: Position 3: KE88
+12:47:40: Position 4: SE35
+12:47:40: Position 5: HJ67
+12:47:40: Position 6: BE62
+12:47:40: Position 7: VU96
+12:47:41: Position 8: DL04
+12:47:58: Message received: 123,456,0,AB12
+12:49:17: Message received: 123,456,4,SE35
+12:49:17: Awarded: 5 pts
+12:49:17: Team total: 5 pts
+12:49:36: Message received: 123,456,4,SE35
+12:49:36: Awarded: 5 pts
+12:49:36: Team total: 5 pts
+12:50:12: Message received: 123,456,4,BE32
+12:50:12: Awarded: -5 pts
+12:50:12: Team total: -5 pts
