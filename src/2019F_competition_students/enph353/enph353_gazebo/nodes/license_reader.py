@@ -92,7 +92,7 @@ loaded = False
 def getPlateChars(image):
     global model, loaded
     if not loaded:
-        model = load_model('/home/pham/enph353_ws/src/2019F_competition_students/enph353/enph353_gazebo/nodes/modelbin_7.h5')
+        model = load_model('modelbin_7.h5')
         loaded = True
     
     dict = {}

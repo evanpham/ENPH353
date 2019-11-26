@@ -1,0 +1,24 @@
+12:32:00: Position 1: BJ34
+12:32:00: Position 2: BM94
+12:32:00: Position 3: EG01
+12:32:00: Position 4: EB27
+12:32:00: Position 5: DL16
+12:32:00: Position 6: NQ39
+12:32:00: Position 7: OH00
+12:32:00: Position 8: PY59
+12:32:19: Message received: 123,456,0,AB12
+12:32:49: Message received: 123,456,2,BM94
+12:32:49: Awarded: 5 pts
+12:32:49: Team total: 5 pts
+12:33:23: Message received: 123,456,4,EG01
+12:33:23: Awarded: -5 pts
+12:33:23: Team total: 0 pts
+12:33:42: Message received: 123,456,4,EB27
+12:33:42: Awarded: 5 pts
+12:33:42: Team total: 10 pts
+12:34:01: Message received: 123,456,5,DL16
+12:34:01: Awarded: 5 pts
+12:34:01: Team total: 15 pts
+12:34:36: Message received: 123,456,5,DL36
+12:34:36: Awarded: -5 pts
+12:34:36: Team total: 5 pts

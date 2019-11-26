@@ -1,0 +1,14 @@
+12:25:04: Position 1: KY82
+12:25:04: Position 2: HK28
+12:25:04: Position 3: XM47
+12:25:04: Position 4: EE75
+12:25:04: Position 5: JC35
+12:25:04: Position 6: BE33
+12:25:04: Position 7: EM48
+12:25:04: Position 8: RQ59
+12:25:19: Message received: 123,456,4,EE75
+12:25:19: Awarded: 5 pts
+12:25:19: Team total: 5 pts
+12:25:35: Message received: 123,456,5,EE35
+12:25:35: Awarded: -5 pts
+12:25:35: Team total: 0 pts
