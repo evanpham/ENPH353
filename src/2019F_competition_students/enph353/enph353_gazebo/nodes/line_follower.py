@@ -25,9 +25,10 @@ class LineFollower:
         self.w = 0
         self.car_pic_count = 0
         self.plateCount = 0
+        self.firstLine = False
         self.pastCar = False
-        self.lastCross = time.time()
-        self.lastCar = time.time()
+        self.lastCross = rospy.get_rostime().secs
+        self.lastCar = rospy.get_rostime().secs
         self.gettinLicense = False
         self.notKillin = False
         self.initialized = False
@@ -50,7 +51,7 @@ class LineFollower:
             self.move("F")
         else:
             self.move("L")
-            time.sleep(.5)
+            rospy.sleep(.5)
             print("moved")
             self.stop()
             self.register()
@@ -102,32 +103,35 @@ class LineFollower:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
         elif self.initialized and self.plateCount >= 6:
-            if self.getBlueness() > 700000 and not self.pastCar:  # Get past car
+            if self.getBlueness() > 500000 and not self.pastCar:  # Get past car
                 self.gogogo()
                 print(self.getBlueness())
-                print("done")
-                print(self.plateCount)
             else:
                 self.pastCar = True
                 self.getToInnerRing()
         self.last = self.frame
 
     def getToInnerRing(self):
-        # Slice bw image into slices and find out where right curb is
-        state_num = 0
-        max = 0
+        if np.sum(self.line_filter()[9*self.h/10:-1, self.w/2-50:self.w/2+50]) < 100:
+            # Slice bw image into slices and find out where right curb is
+            state_num = 0
+            max = 0
 
-        for i in range(self.slice_num-1,-1, -1):
-            s = self.bw[8*self.h/10:9*self.h/10, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
-            if np.sum(s) > max:
-                state_num = i
- 
-        # # Show where curb is on frame
-        # cv2.circle(self.frame, (self.w*state_num/self.slice_num, self.h-10), 10, (0, 255, 0), -1)
-        # cv2.imshow("bl", self.frame)
-        # cv2.waitKey(25)
+            for i in range(self.slice_num-1,-1, -1):
+                s = self.bw[8*self.h/10:9*self.h/10, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+                if np.sum(s) > max:
+                    state_num = i
 
-        self.follow(state_num, "L")
+            self.follow(state_num, "L")
+        elif not self.firstLine:
+            self.move("F")
+            rospy.sleep(.2)
+            self.firstLine = True
+            print("firstline")
+        else:
+            self.stop()
+            cv2.imshow("slice", self.line_filter()[9*self.h/10:-1, self.w/2-50:self.w/2+50])
+            cv2.waitKey(25)
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is
@@ -139,23 +143,18 @@ class LineFollower:
             if np.sum(s) > max:
                 state_num = i
 
-        # # Show where curb is on frame
-        # cv2.circle(self.frame, (self.w*state_num/self.slice_num, self.h-10), 10, (0, 255, 0), -1)
-        # cv2.imshow("bl", self.frame)
-        # cv2.waitKey(25)
-
         # If at a crosswalk, stop and set notKillin boolean true
-        if ((time.time()-self.lastCross > 5) and self.atCrosswalk()):
+        if ((rospy.get_rostime().secs-self.lastCross > 5) and self.atCrosswalk()):
             self.notKillin = True
             self.stop()
-            self.lastCross = time.time()
+            self.lastCross = rospy.get_rostime().secs
         # If notKillin, dont kill
         elif self.notKillin:
             self.dontKillThePedestrian()
         # If at a car, stop and set gettinLicense boolean true
-        elif ((time.time()-self.lastCar > 5) and self.atCar()):
+        elif ((rospy.get_rostime().secs-self.lastCar > 5) and self.atCar()):
             self.gettinLicense = True
-            self.lastCar = time.time()
+            self.lastCar = rospy.get_rostime().secs
         # If gettinLicense, get license
         elif self.gettinLicense:
             self.getLicense()
@@ -168,14 +167,14 @@ class LineFollower:
             # filename = "../media/cars/" + str(time.time()) + ".png"
             # cv2.imwrite(filename, self.frame)
             self.move("L")
-            time.sleep(0.02)
+            rospy.sleep(0.02)
             self.stop()
-            time.sleep(0.1)
+            rospy.sleep(0.1)
             self.car_pub.publish(self.data)
             self.car_pic_count = self.car_pic_count + 1
         else:
             self.gettinLicense = False
-            self.lastCar = time.time()
+            self.lastCar = rospy.get_rostime().secs
             self.car_pic_count = 0
             self.plateCount = self.plateCount + 1
 
@@ -202,6 +201,14 @@ class LineFollower:
         # define range of blue color in HSV
         lower_red = np.array([0, 150, 0])
         upper_red = np.array([5, 255, 255])
+        mask = cv2.inRange(self.hsv, lower_red, upper_red)
+
+        return mask
+
+    def line_filter(self):
+        # define range of blue color in HSV
+        lower_red = np.array([60, 0, 0])
+        upper_red = np.array([80, 255, 255])
         mask = cv2.inRange(self.hsv, lower_red, upper_red)
 
         return mask
@@ -251,7 +258,7 @@ class LineFollower:
             self.stop()
         else:
             self.notKillin = False
-        self.lastCross = time.time()
+        self.lastCross = rospy.get_rostime().secs
 
     def atCrosswalk(self):
         red = self.red_filter()
