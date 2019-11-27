@@ -213,7 +213,7 @@ class LineFollower:
         elif self.notKillin:
             self.dontKillThePedestrian()
         # If at a car, stop and set gettinLicense boolean true
-        elif ((rospy.get_rostime().secs-self.lastCar > 5) and self.atCar()):
+        elif ((rospy.get_rostime().secs-self.lastCar > 4) and self.atCar()):
             self.gettinLicense = True
             self.lastCar = rospy.get_rostime().secs
         # If gettinLicense, get license

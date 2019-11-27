@@ -1,0 +1,24 @@
+20:38:53: Position 1: TD31
+20:38:53: Position 2: JE84
+20:38:53: Position 3: FD72
+20:38:53: Position 4: BU23
+20:38:53: Position 5: HT51
+20:38:53: Position 6: FU75
+20:38:53: Position 7: AD56
+20:38:53: Position 8: MK05
+20:39:04: Message received: 123,456,0,AB12
+20:39:20: Message received: 123,456,2,JE84
+20:39:20: Awarded: 5 pts
+20:39:20: Team total: 5 pts
+20:39:29: Message received: 123,456,3,FD72
+20:39:29: Awarded: 5 pts
+20:39:29: Team total: 10 pts
+20:39:53: Message received: 123,456,4,BU23
+20:39:53: Awarded: 5 pts
+20:39:53: Team total: 15 pts
+20:40:06: Message received: 123,456,5,HI51
+20:40:06: Awarded: -5 pts
+20:40:06: Team total: 10 pts
+20:40:40: Message received: 123,456,6,ID31
+20:40:40: Awarded: -5 pts
+20:40:40: Team total: 5 pts
