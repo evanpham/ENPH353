@@ -63,8 +63,8 @@ def roi(image1, orig):
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
 
 
-    cv2.imshow('plateBnBox', gray)
-    cv2.waitKey(25)
+    # cv2.imshow('plateBnBox', gray)
+    # cv2.waitKey(25)
     return imgs
 
 
@@ -127,13 +127,11 @@ def getSpotChars(image1):
     dict['33'] = 'x'
     dict['34'] = 'y'
     dict['35'] = 'z'
-    cv2.imshow('gray', image1) 
-    cv2.waitKey(25) 
+    # cv2.imshow('gray', image1) 
+    # cv2.waitKey(25) 
     height = image1.shape[0]
     width = image1.shape[1]
     half = 9*height/10
-    print(height)
-    print(half)
     for h in range(height-half):
         for w in range(width):
             image1[h,w] = [0,0,0]
