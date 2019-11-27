@@ -1,0 +1,15 @@
+13:27:06: Position 1: NN73
+13:27:06: Position 2: ZO21
+13:27:06: Position 3: RA20
+13:27:06: Position 4: EX73
+13:27:06: Position 5: II16
+13:27:06: Position 6: XY98
+13:27:06: Position 7: KW06
+13:27:06: Position 8: KR90
+13:27:31: Message received: 123,456,0,AB12
+13:27:50: Message received: 123,456,2,ZA21
+13:27:50: Awarded: -5 pts
+13:27:50: Team total: -5 pts
+13:28:02: Message received: 123,456,3,RA20
+13:28:02: Awarded: 5 pts
+13:28:02: Team total: 0 pts

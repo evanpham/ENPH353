@@ -1,0 +1,30 @@
+13:11:44: Position 1: KR35
+13:11:44: Position 2: AY29
+13:11:44: Position 3: TM97
+13:11:44: Position 4: CO30
+13:11:44: Position 5: UB30
+13:11:44: Position 6: SX55
+13:11:44: Position 7: XB57
+13:11:44: Position 8: VF50
+13:11:54: Message received: 123,456,0,AB12
+13:12:10: Message received: 123,456,2,AY29
+13:12:10: Awarded: 5 pts
+13:12:10: Team total: 5 pts
+13:12:20: Message received: 123,456,3,IM97
+13:12:20: Awarded: -5 pts
+13:12:20: Team total: 0 pts
+13:12:53: Message received: 123,456,4,CA30
+13:12:53: Awarded: -5 pts
+13:12:53: Team total: -5 pts
+13:13:10: Message received: 123,456,5,UB30
+13:13:10: Awarded: 5 pts
+13:13:10: Team total: 0 pts
+13:13:26: Message received: 123,456,6,SX55
+13:13:26: Awarded: 5 pts
+13:13:26: Team total: 5 pts
+13:14:00: Message received: 123,456,1,KR35
+13:14:00: Awarded: 5 pts
+13:14:00: Team total: 10 pts
+13:14:19: Message received: 123,456,7,AY29
+13:14:19: Awarded: -5 pts
+13:14:19: Team total: 5 pts

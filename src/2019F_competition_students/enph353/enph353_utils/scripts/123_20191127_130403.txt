@@ -1,0 +1,27 @@
+13:04:01: Position 1: RS46
+13:04:01: Position 2: DQ65
+13:04:01: Position 3: LI35
+13:04:01: Position 4: QJ92
+13:04:01: Position 5: SD69
+13:04:01: Position 6: IF63
+13:04:01: Position 7: CO55
+13:04:01: Position 8: LW78
+13:04:03: Message received: 123,456,0,AB12
+13:04:42: Message received: 123,456,2,LI35
+13:04:42: Awarded: -5 pts
+13:04:42: Team total: -5 pts
+13:05:15: Message received: 123,456,3,QJ92
+13:05:15: Awarded: -5 pts
+13:05:15: Team total: -10 pts
+13:05:30: Message received: 123,456,4,SD69
+13:05:30: Awarded: -5 pts
+13:05:30: Team total: -15 pts
+13:05:47: Message received: 123,456,5,IF63
+13:05:47: Awarded: -5 pts
+13:05:47: Team total: -20 pts
+13:06:19: Message received: 123,456,6,BS46
+13:06:19: Awarded: -5 pts
+13:06:19: Team total: -25 pts
+13:06:33: Message received: 123,456,1,DQ65
+13:06:33: Awarded: -5 pts
+13:06:33: Team total: -30 pts

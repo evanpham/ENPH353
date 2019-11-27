@@ -77,8 +77,11 @@ def return_characters(chars, dict):
     labels = []
     if (len(chars) == 4):
         for index in range(0,2):
-            letters = chars[index][10:36]
-            labels.append(dict[str(np.argmax(letters)+10)])
+            if (np.argmax(chars[index]) == 0):
+                labels.append('o') 
+            else:
+                letters = chars[index][10:36]
+                labels.append(dict[str(np.argmax(letters)+10)])
         for index in range(2,4):
             numbers = chars[index][0:10]
             labels.append(dict[str(np.argmax(numbers))])
