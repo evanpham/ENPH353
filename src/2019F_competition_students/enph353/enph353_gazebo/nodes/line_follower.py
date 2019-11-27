@@ -64,7 +64,7 @@ class LineFollower:
             self.stop()
         elif not self.truckPassed:
             self.truckPassed = True
-        elif self.truckPassed and np.sum(self.bw[8*self.h/10:9*self.h/10, :]) < 5000000:
+        elif self.truckPassed and np.sum(self.bw[8*self.h/10:9*self.h/10, self.w/2-50:self.w/2+50]) < 4000:
             self.move("F")
         else:
             print("WE HERE")
@@ -173,7 +173,7 @@ class LineFollower:
             self.move("F")
 
     def getToInnerRing(self):
-        if np.sum(self.line_filter()[9*self.h/10:-1, self.w/2-50:self.w/2+50]) < 100:
+        if np.sum(self.line_filter()[14*self.h/15:-1, self.w/2-50:self.w/2+50]) < 100:
             # Slice bw image into slices and find out where right curb is
             state_num = 0
             max = 0
