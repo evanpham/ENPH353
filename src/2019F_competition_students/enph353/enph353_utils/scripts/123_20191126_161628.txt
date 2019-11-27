@@ -1,0 +1,18 @@
+16:13:16: Position 1: RW04
+16:13:16: Position 2: WH10
+16:13:16: Position 3: EN10
+16:13:16: Position 4: YP15
+16:13:16: Position 5: JI84
+16:13:16: Position 6: YW82
+16:13:16: Position 7: RG17
+16:13:16: Position 8: IP00
+16:13:47: Message received: 123,456,2,WH10
+16:13:47: Awarded: 5 pts
+16:13:47: Team total: 5 pts
+16:14:06: Message received: 123,456,3,EN10
+16:14:06: Awarded: 5 pts
+16:14:06: Team total: 10 pts
+16:14:53: Message received: 123,456,4,YP15
+16:14:53: Awarded: 5 pts
+16:14:53: Team total: 15 pts
+16:16:28: Message received: 123,456,0,RW04

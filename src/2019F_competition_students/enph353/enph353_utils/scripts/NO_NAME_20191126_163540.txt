@@ -1,0 +1,17 @@
+16:35:40: Position 1: CE36
+16:35:40: Position 2: WX63
+16:35:40: Position 3: DO21
+16:35:40: Position 4: TZ46
+16:35:40: Position 5: TM13
+16:35:40: Position 6: PK74
+16:35:40: Position 7: HQ74
+16:35:40: Position 8: DP10
+16:36:32: Message received: 123,456,4,IZ46
+16:36:32: Awarded: -5 pts
+16:36:32: Team total: -5 pts
+16:37:24: Message received: 123,456,5,PK74
+16:37:24: Awarded: -5 pts
+16:37:24: Team total: -10 pts
+16:38:16: Message received: 123,456,1,CE36
+16:38:16: Awarded: 5 pts
+16:38:16: Team total: -5 pts

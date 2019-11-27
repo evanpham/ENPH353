@@ -1,0 +1,24 @@
+16:19:08: Position 1: HU11
+16:19:08: Position 2: ZW78
+16:19:08: Position 3: EV69
+16:19:08: Position 4: BD13
+16:19:08: Position 5: WM21
+16:19:08: Position 6: QF62
+16:19:08: Position 7: CK95
+16:19:08: Position 8: WK50
+16:19:11: Message received: 123,456,0,AB12
+16:19:45: Message received: 123,456,2,ZW78
+16:19:45: Awarded: 5 pts
+16:19:45: Team total: 5 pts
+16:20:21: Message received: 123,456,3,EV69
+16:20:21: Awarded: 5 pts
+16:20:21: Team total: 10 pts
+16:20:42: Message received: 123,456,4,BD13
+16:20:42: Awarded: 5 pts
+16:20:42: Team total: 15 pts
+16:21:03: Message received: 123,456,5,QF62
+16:21:03: Awarded: -5 pts
+16:21:03: Team total: 10 pts
+16:21:54: Message received: 123,456,6,QF62
+16:21:54: Awarded: 5 pts
+16:21:54: Team total: 15 pts
