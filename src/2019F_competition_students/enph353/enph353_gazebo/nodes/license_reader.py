@@ -68,8 +68,8 @@ def roi(image, orig):
             # cv2.imshow('segment no:', roi)
             # cv2.waitKey(25)
 
-    cv2.imshow('plateBBox', gray)
-    cv2.waitKey(25)
+    # cv2.imshow('plateBBox', gray)
+    # cv2.waitKey(25)
     return imgs
 
 

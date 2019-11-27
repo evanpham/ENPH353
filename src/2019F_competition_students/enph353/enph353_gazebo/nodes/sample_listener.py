@@ -36,8 +36,8 @@ def callback(data):
     current_spot = getSpotChars(img)
     img1 = img
     chars = getPlateChars(img1)
-    cv2.imshow('frefre',img)
-    cv2.waitKey(25) 
+    # cv2.imshow('frefre',img)
+    # cv2.waitKey(25) 
     spotReadings[frameCount % pics_per_car, 0] = current_spot
     # Add character guesses to plateReadings array
     for i in range(4):
