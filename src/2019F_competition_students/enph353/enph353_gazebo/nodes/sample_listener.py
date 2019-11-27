@@ -19,6 +19,7 @@ initialized = False
 plateReadings = np.empty((5, 4), dtype=str)
 spotReadings = np.empty((5, 1), dtype=str)
 spot = 2
+pics_per_car = 5
 
 
 def callback(data):
@@ -34,17 +35,17 @@ def callback(data):
     chars = getPlateChars(img)
 
     current_spot = getSpotChars(img)
-    spotReadings[frameCount % 5, 0] = current_spot
+    spotReadings[frameCount % pics_per_car, 0] = current_spot
     # Add character guesses to plateReadings array
     for i in range(4):
-        plateReadings[frameCount % 5, i] = chars[i]
+        plateReadings[frameCount % pics_per_car, i] = chars[i]
         
 
     # After 5 frames, get modal guess for each character
     if (frameCount % 5 == 0):
         goodRows = []
         goodSpots = []
-        for i in range(4, -1, -1):
+        for i in range(pics_per_car-1, -1, -1):
             if not (plateReadings[i] == ['0', '0', '0', '0']).all():
                 goodRows.append(i)
         for i in range(len(spotReadings)):

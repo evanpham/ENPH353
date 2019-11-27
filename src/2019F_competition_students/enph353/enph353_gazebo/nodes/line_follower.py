@@ -24,6 +24,7 @@ class LineFollower:
         self.h = 0
         self.w = 0
         self.car_pic_count = 0
+        self.pics_per_car = 5
         self.plateCount = 0
         self.firstLine = False
         self.pastCar = False
@@ -220,7 +221,7 @@ class LineFollower:
             self.follow(state_num)
 
     def getLicense(self):
-        if self.car_pic_count < 5:
+        if self.car_pic_count < self.pics_per_car:
             # filename = "../media/cars/" + str(time.time()) + ".png"
             # cv2.imwrite(filename, self.frame)
             self.move("L")
@@ -243,6 +244,7 @@ class LineFollower:
         blueness = self.getBlueness()
 
         if blueness > 6000000:
+            print("atCar")
             return True
         return False
 
