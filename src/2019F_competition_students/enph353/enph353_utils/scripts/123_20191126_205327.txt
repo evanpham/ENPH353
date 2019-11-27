@@ -1,0 +1,27 @@
+20:53:16: Position 1: XF09
+20:53:16: Position 2: VM15
+20:53:16: Position 3: HL89
+20:53:16: Position 4: IL94
+20:53:16: Position 5: GS21
+20:53:16: Position 6: AG48
+20:53:16: Position 7: YG88
+20:53:16: Position 8: ZJ53
+20:53:27: Message received: 123,456,0,AB12
+20:53:41: Message received: 123,456,2,WM10
+20:53:41: Awarded: -5 pts
+20:53:41: Team total: -5 pts
+20:53:49: Message received: 123,456,3,HL88
+20:53:49: Awarded: -5 pts
+20:53:49: Team total: -10 pts
+20:54:12: Message received: 123,456,4,XL98
+20:54:12: Awarded: -5 pts
+20:54:12: Team total: -15 pts
+20:54:24: Message received: 123,456,5,GS21
+20:54:24: Awarded: 5 pts
+20:54:24: Team total: -10 pts
+20:54:37: Message received: 123,456,6,AG48
+20:54:37: Awarded: 5 pts
+20:54:37: Team total: -5 pts
+20:55:11: Message received: 123,456,8,WM15
+20:55:11: Awarded: -5 pts
+20:55:11: Team total: -10 pts

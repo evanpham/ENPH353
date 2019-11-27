@@ -179,7 +179,7 @@ class LineFollower:
             max = 0
 
             for i in range(self.slice_num-1,-1, -1):
-                s = self.bw[8*self.h/10:9*self.h/10, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+                s = self.bw[14*self.h/15:-1, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
                 if np.sum(s) > max:
                     state_num = i
 
@@ -228,7 +228,7 @@ class LineFollower:
             # filename = "../media/cars/" + str(time.time()) + ".png"
             # cv2.imwrite(filename, self.frame)
             self.move("L")
-            rospy.sleep(0.02)
+            rospy.sleep(0.04)
             self.stop()
             rospy.sleep(0.1)
             self.car_pub.publish(self.data)

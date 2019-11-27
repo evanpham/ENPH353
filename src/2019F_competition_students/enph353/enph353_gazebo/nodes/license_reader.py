@@ -14,7 +14,7 @@ import keras
 
 
 def roi(image, orig):
-    border = 1
+    border = 5
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
     # cv2.imshow('gray', gray) 
     # cv2.waitKey(0) 

@@ -53,8 +53,9 @@ def callback(data):
             print(plateReadings[goodRows, :])
             print(bestGuess)
             submitPlate(bestGuess)
-        except IndexError:
+        except:
             print("Could not read plate")
+            spot = spot + 1
 
 
 def submitPlate(plate):

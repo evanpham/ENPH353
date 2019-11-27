@@ -1,0 +1,27 @@
+20:56:20: Position 1: UE94
+20:56:20: Position 2: PB20
+20:56:21: Position 3: PW57
+20:56:21: Position 4: ZK58
+20:56:21: Position 5: GE52
+20:56:21: Position 6: CE58
+20:56:21: Position 7: EG00
+20:56:21: Position 8: KR02
+20:56:29: Message received: 123,456,0,AB12
+20:56:44: Message received: 123,456,2,PB20
+20:56:44: Awarded: 5 pts
+20:56:44: Team total: 5 pts
+20:56:52: Message received: 123,456,3,PW57
+20:56:52: Awarded: 5 pts
+20:56:52: Team total: 10 pts
+20:57:20: Message received: 123,456,4,ZK58
+20:57:20: Awarded: 5 pts
+20:57:20: Team total: 15 pts
+20:57:32: Message received: 123,456,5,EA52
+20:57:32: Awarded: -5 pts
+20:57:32: Team total: 10 pts
+20:57:44: Message received: 123,456,6,EE58
+20:57:44: Awarded: -5 pts
+20:57:44: Team total: 5 pts
+20:59:34: Message received: 123,456,1,WE94
+20:59:34: Awarded: -5 pts
+20:59:34: Team total: 0 pts
