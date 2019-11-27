@@ -1,0 +1,11 @@
+15:31:57: Position 1: AC05
+15:31:57: Position 2: KV21
+15:31:57: Position 3: GX31
+15:31:57: Position 4: TK00
+15:31:57: Position 5: PX23
+15:31:57: Position 6: OZ63
+15:31:57: Position 7: KH36
+15:31:57: Position 8: DL47
+15:32:37: Message received: 123,456,3,OV
+15:32:37: Awarded: -5 pts
+15:32:37: Team total: -5 pts

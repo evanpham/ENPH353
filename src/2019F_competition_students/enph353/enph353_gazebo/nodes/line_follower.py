@@ -82,6 +82,24 @@ class LineFollower:
         
         return boxCount > 0
 
+    def get_state_inner(self):
+        road = self.road_filter()[2*self.h/3:-1, :]
+
+        m = cv2.moments(road, True)
+        # calculate x,y coordinate of center
+        try:
+            cX = int(m["m10"] / m["m00"])
+            cY = int(m["m01"] / m["m00"])
+            
+            # put text and highlight the center
+            cv2.circle(self.frame, (cX, self.h/2), 5, (0, 255, 255), -1)
+        except:
+            print("NAH")
+        cv2.imshow(".", self.frame)
+        cv2.waitKey(25)
+        return cX
+
+
     def move(self, action):
         vel_cmd = Twist()
         if action == "F":  # FORWARD
@@ -127,9 +145,11 @@ class LineFollower:
         # If at inner ring and not initialized run initial inner ring procedure
         elif self.innerRing and not self.innerInit:
             self.inner_initial_moves()
+        elif self.innerInit:
+            self.gogogoInner()
         elif self.initialized and self.plateCount < 6:
             # Follow road, avoid pedestrians, mark cars
-            self.gogogo()
+            self.gogogoInner()
         elif self.initialized and self.plateCount >= 6:
             if self.getBlueness() > 500000 and not self.pastCar:  # Get past car
                 self.gogogo()
@@ -139,8 +159,17 @@ class LineFollower:
                 self.getToInnerRing()
         self.last = self.frame
 
+    def gogogoInner(self):
+        state = self.get_state_inner()
+        if state > self.w/2 + 20:
+            self.move("R")
+        elif state < self.w/2 - 20:
+            self.move("L")
+        else:
+            self.move("F")
+
     def getToInnerRing(self):
-        if np.sum(self.line_filter()[19*self.h/20:-1, self.w/2-50:self.w/2+50]) < 100:
+        if np.sum(self.line_filter()[9*self.h/10:-1, self.w/2-50:self.w/2+50]) < 100:
             # Slice bw image into slices and find out where right curb is
             state_num = 0
             max = 0
@@ -153,7 +182,7 @@ class LineFollower:
             self.follow(state_num, "L")
         elif not self.firstLine:
             self.move("F")
-            rospy.sleep(.1)
+            rospy.sleep(.2)
             self.firstLine = True
             print("firstline")
         else:
@@ -225,6 +254,14 @@ class LineFollower:
 
         return mask
 
+    def road_filter(self):
+        # define range of road color in HSV
+        lower_blue = np.array([0, 0, 0])
+        upper_blue = np.array([30, 255, 255])
+        mask = cv2.inRange(self.hsv, lower_blue, upper_blue)
+
+        return mask
+
     def red_filter(self):
         # define range of blue color in HSV
         lower_red = np.array([0, 150, 0])
@@ -234,7 +271,7 @@ class LineFollower:
         return mask
 
     def line_filter(self):
-        # define range of blue color in HSV
+        # define range of line color in HSV
         lower_red = np.array([60, 0, 0])
         upper_red = np.array([80, 255, 255])
         mask = cv2.inRange(self.hsv, lower_red, upper_red)

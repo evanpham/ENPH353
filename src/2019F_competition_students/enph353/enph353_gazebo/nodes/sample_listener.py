@@ -33,8 +33,8 @@ def callback(data):
         print(e)
     chars = getPlateChars(img)
 
-    spot = getSpotChars(img)
-    spotReadings[frameCount % 5, 0] = spot
+    current_spot = getSpotChars(img)
+    spotReadings[frameCount % 5, 0] = current_spot
     # Add character guesses to plateReadings array
     for i in range(4):
         plateReadings[frameCount % 5, i] = chars[i]
@@ -49,7 +49,12 @@ def callback(data):
                 goodRows.append(i)
         for i in range(len(spotReadings)):
             if not (spotReadings[i] == 'x' ):
+                if (spotReadings[i] == 'z' ):
+                    print('Spot changed')
+                    print(spot)
+                    spotReadings[i] = str(int(spot)+1)
                 goodSpots.append(i)
+
 
         try:
             bestGuess = ''.join(mode(plateReadings[goodRows, :])[0][0])
@@ -57,9 +62,10 @@ def callback(data):
             print(plateReadings)
             print(plateReadings[goodRows, :])
             print(bestGuess)
-            print("Spot is P")
             print(spotReadings[goodSpots, :])
             print(bestSpotGuess)
+            if (bestSpotGuess == '0'):
+                bestSpotGuess == '1'
             spot = bestSpotGuess
             submitPlate(bestGuess)
         except IndexError:

@@ -1,0 +1,18 @@
+15:40:16: Position 1: VT43
+15:40:16: Position 2: LX60
+15:40:16: Position 3: UW76
+15:40:16: Position 4: AI05
+15:40:16: Position 5: TR23
+15:40:16: Position 6: YS53
+15:40:16: Position 7: KD22
+15:40:16: Position 8: TZ86
+15:40:23: Message received: 123,456,0,AB12
+15:40:54: Message received: 123,456,2,LX60
+15:40:54: Awarded: 5 pts
+15:40:54: Team total: 5 pts
+15:41:21: Message received: 123,456,3,AI05
+15:41:21: Awarded: -5 pts
+15:41:21: Team total: 0 pts
+15:41:37: Message received: 123,456,4,AI05
+15:41:37: Awarded: 5 pts
+15:41:37: Team total: 5 pts
