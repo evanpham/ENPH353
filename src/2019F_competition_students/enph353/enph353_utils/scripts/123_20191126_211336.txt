@@ -1,0 +1,27 @@
+21:13:26: Position 1: KE40
+21:13:26: Position 2: DE11
+21:13:26: Position 3: AG26
+21:13:26: Position 4: FC76
+21:13:26: Position 5: WI33
+21:13:26: Position 6: RP88
+21:13:26: Position 7: SK88
+21:13:26: Position 8: PU92
+21:13:36: Message received: 123,456,0,AB12
+21:13:51: Message received: 123,456,2,DE11
+21:13:51: Awarded: 5 pts
+21:13:51: Team total: 5 pts
+21:14:00: Message received: 123,456,3,AG26
+21:14:00: Awarded: 5 pts
+21:14:00: Team total: 10 pts
+21:14:28: Message received: 123,456,4,FS76
+21:14:28: Awarded: -5 pts
+21:14:28: Team total: 5 pts
+21:14:40: Message received: 123,456,5,WI33
+21:14:40: Awarded: 5 pts
+21:14:40: Team total: 10 pts
+21:14:53: Message received: 123,456,6,RP88
+21:14:53: Awarded: 5 pts
+21:14:53: Team total: 15 pts
+21:15:16: Message received: 123,456,1,KE40
+21:15:16: Awarded: 5 pts
+21:15:16: Team total: 20 pts

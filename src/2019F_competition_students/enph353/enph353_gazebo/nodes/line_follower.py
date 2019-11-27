@@ -84,7 +84,7 @@ class LineFollower:
         return boxCount > 0
 
     def get_state_inner(self):
-        road = self.road_filter()[self.h/2:3*self.h/4, :]
+        road = self.road_filter()[2*self.h/3:3*self.h/4, :]
 
         m = cv2.moments(road, True)
         # calculate x,y coordinate of center
@@ -164,13 +164,23 @@ class LineFollower:
         self.last = self.frame
 
     def gogogoInner(self):
-        state = self.get_state_inner()
-        if state > self.w/2 + 35:
-            self.move("R")
-        elif state < self.w/2 - 35:
-            self.move("L")
+        # If at a car, stop and set gettinLicense boolean true
+        if ((rospy.get_rostime().secs-self.lastCar > 4) and self.atCar()):
+            self.gettinLicense = True
+            self.lastCar = rospy.get_rostime().secs
+        # If gettinLicense, get license
+        elif self.gettinLicense:
+            self.getLicense("R")
         else:
-            self.move("F")
+            state = self.get_state_inner()
+            if state > self.w/2 - 10:
+                self.move("R")
+            elif state < self.w/2 - 80: # Favors hugging right side
+                self.move("L")
+            else:
+                self.move("F")
+            cv2.imshow("inner", self.frame)
+            cv2.waitKey(25)
 
     def getToInnerRing(self):
         if np.sum(self.line_filter()[14*self.h/15:-1, self.w/2-50:self.w/2+50]) < 100:
@@ -223,11 +233,14 @@ class LineFollower:
         else:
             self.follow(state_num)
 
-    def getLicense(self):
+    def getLicense(self, side="L"):
         if self.car_pic_count < self.pics_per_car:
             # filename = "../media/cars/" + str(time.time()) + ".png"
             # cv2.imwrite(filename, self.frame)
-            self.move("L")
+            if side == "L":
+                self.move("L")
+            else:
+                self.move("R")
             rospy.sleep(0.04)
             self.stop()
             rospy.sleep(0.1)

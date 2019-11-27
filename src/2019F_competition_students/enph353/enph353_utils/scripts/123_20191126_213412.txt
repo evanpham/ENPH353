@@ -1,0 +1,21 @@
+21:34:04: Position 1: LQ22
+21:34:04: Position 2: MB64
+21:34:04: Position 3: OH58
+21:34:04: Position 4: SM17
+21:34:04: Position 5: PS81
+21:34:04: Position 6: DP66
+21:34:04: Position 7: ON74
+21:34:04: Position 8: FB34
+21:34:12: Message received: 123,456,0,AB12
+21:34:54: Message received: 123,456,4,SM17
+21:34:54: Awarded: 5 pts
+21:34:54: Team total: 5 pts
+21:35:05: Message received: 123,456,5,PS81
+21:35:05: Awarded: 5 pts
+21:35:05: Team total: 10 pts
+21:35:17: Message received: 123,456,6,DP66
+21:35:17: Awarded: 5 pts
+21:35:17: Team total: 15 pts
+21:35:39: Message received: 123,456,1,LQ22
+21:35:39: Awarded: 5 pts
+21:35:39: Team total: 20 pts

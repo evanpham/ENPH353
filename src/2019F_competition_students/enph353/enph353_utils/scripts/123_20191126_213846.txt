@@ -1,0 +1,31 @@
+21:38:37: Position 1: HH64
+21:38:37: Position 2: OA82
+21:38:37: Position 3: LR85
+21:38:37: Position 4: EM25
+21:38:37: Position 5: QB43
+21:38:37: Position 6: ST55
+21:38:37: Position 7: XR80
+21:38:37: Position 8: WZ78
+21:38:46: Message received: 123,456,0,AB12
+21:39:01: Message received: 123,456,2,AA82
+21:39:01: Awarded: -5 pts
+21:39:01: Team total: -5 pts
+21:39:12: Message received: 123,456,3,LR85
+21:39:12: Awarded: 5 pts
+21:39:12: Team total: 0 pts
+21:39:35: Message received: 123,456,4,EM25
+21:39:35: Awarded: 5 pts
+21:39:35: Team total: 5 pts
+21:39:46: Message received: 123,456,5,AX43
+21:39:46: Awarded: -5 pts
+21:39:46: Team total: 0 pts
+21:39:58: Message received: 123,456,6,ST55
+21:39:58: Awarded: 5 pts
+21:39:58: Team total: 5 pts
+21:40:23: Message received: 123,456,1,HH64
+21:40:23: Awarded: 5 pts
+21:40:23: Team total: 10 pts
+21:41:16: Message received: 123,456,10,XR80
+21:41:16: Invalid plate location: 10
+21:43:29: Message received: 123,456,13,WZ78
+21:43:29: Invalid plate location: 13
