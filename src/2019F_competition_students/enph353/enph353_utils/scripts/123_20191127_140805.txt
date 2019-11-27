@@ -1,0 +1,27 @@
+14:07:55: Position 1: YI29
+14:07:55: Position 2: HJ20
+14:07:55: Position 3: IJ20
+14:07:55: Position 4: HM95
+14:07:55: Position 5: AU13
+14:07:55: Position 6: VH92
+14:07:55: Position 7: KF42
+14:07:55: Position 8: LB25
+14:08:05: Message received: 123,456,0,AB12
+14:08:14: Message received: 123,456,2,HJ20
+14:08:14: Awarded: 5 pts
+14:08:14: Team total: 5 pts
+14:08:19: Message received: 123,456,3,IA20
+14:08:19: Awarded: -5 pts
+14:08:19: Team total: 0 pts
+14:08:32: Message received: 123,456,4,HM95
+14:08:32: Awarded: 5 pts
+14:08:32: Team total: 5 pts
+14:08:37: Message received: 123,456,5,AU13
+14:08:37: Awarded: 5 pts
+14:08:37: Team total: 10 pts
+14:08:56: Message received: 123,456,1,YI29
+14:08:56: Awarded: 5 pts
+14:08:56: Team total: 15 pts
+14:09:02: Message received: 123,456,7,HJ20
+14:09:02: Awarded: -5 pts
+14:09:02: Team total: 10 pts

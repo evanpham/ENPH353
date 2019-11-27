@@ -1,0 +1,27 @@
+14:10:11: Position 1: CK98
+14:10:11: Position 2: DJ13
+14:10:11: Position 3: SP74
+14:10:11: Position 4: VU91
+14:10:11: Position 5: PL76
+14:10:11: Position 6: KL72
+14:10:11: Position 7: JZ06
+14:10:11: Position 8: SZ44
+14:10:26: Message received: 123,456,0,AB12
+14:10:35: Message received: 123,456,2,DJ13
+14:10:35: Awarded: 5 pts
+14:10:35: Team total: 5 pts
+14:10:39: Message received: 123,456,3,SP74
+14:10:39: Awarded: 5 pts
+14:10:39: Team total: 10 pts
+14:11:03: Message received: 123,456,5,PL76
+14:11:03: Awarded: 5 pts
+14:11:03: Team total: 15 pts
+14:11:09: Message received: 123,456,6,KL72
+14:11:09: Awarded: 5 pts
+14:11:09: Team total: 20 pts
+14:11:25: Message received: 123,456,1,CK98
+14:11:25: Awarded: 5 pts
+14:11:25: Team total: 25 pts
+14:11:32: Message received: 123,456,7,DJ13
+14:11:32: Awarded: -5 pts
+14:11:32: Team total: 20 pts

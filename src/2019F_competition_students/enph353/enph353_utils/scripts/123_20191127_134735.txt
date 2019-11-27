@@ -1,0 +1,21 @@
+13:47:24: Position 1: YY74
+13:47:24: Position 2: SH55
+13:47:24: Position 3: XY21
+13:47:24: Position 4: SG86
+13:47:24: Position 5: DB39
+13:47:24: Position 6: VY55
+13:47:24: Position 7: DB17
+13:47:24: Position 8: PW79
+13:47:35: Message received: 123,456,0,AB12
+13:47:44: Message received: 123,456,2,SH55
+13:47:44: Awarded: 5 pts
+13:47:44: Team total: 5 pts
+13:47:49: Message received: 123,456,3,XY21
+13:47:49: Awarded: 5 pts
+13:47:49: Team total: 10 pts
+13:48:00: Message received: 123,456,4,SG86
+13:48:00: Awarded: 5 pts
+13:48:00: Team total: 15 pts
+13:48:06: Message received: 123,456,5,DB39
+13:48:06: Awarded: 5 pts
+13:48:06: Team total: 20 pts

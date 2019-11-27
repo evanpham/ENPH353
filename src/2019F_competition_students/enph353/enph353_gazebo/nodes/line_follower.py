@@ -155,7 +155,7 @@ class LineFollower:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
         elif self.initialized and self.plateCount >= 6:
-            if self.getBlueness() > 400000 and not self.pastCar:  # Get past car
+            if self.getBlueness() > 200000 and not self.pastCar:  # Get past car
                 self.gogogo()
             else:
                 self.pastCar = True
@@ -202,7 +202,7 @@ class LineFollower:
             self.secondLine = True
             print("secondlind")
         elif self.secondLine:
-            print(np.sum(self.bw[9*self.h/10:-1, 2*self.w/8:3*self.w/8]))
+            print(np.sum(self.bw[9*self.h/10:-1, 1*self.w/8:2*self.w/8]))
             if np.sum(self.bw[9*self.h/10:-1, 3*self.w/8:self.w/2]) > 1000:
                 self.innerRing = True
                 self.stop()
@@ -260,6 +260,7 @@ class LineFollower:
             self.lastCar = rospy.get_rostime().secs
             self.car_pic_count = 0
             self.plateCount = self.plateCount + 1
+            print(self.plateCount)
 
     def getBlueness(self, side="L"):
         if side == "L":

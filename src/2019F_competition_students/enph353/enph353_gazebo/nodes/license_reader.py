@@ -52,15 +52,17 @@ def roi(image, orig):
         x, y, w, h = cv2.boundingRect(ctr)
         # Getting ROI
 
-        x = x-border
-        y = y-border
+        x = x-border if x - border > 0 else 0
+        y = y-border if y - border > 0 else 0
         w = w+border*2
         h = h+border*2
 
         # show ROI
         if (w*h > 150 and w*h < 2000 and (w/h > .5 and w/h < 2)):
             roi = thresh[y:y + h, x:x + w]
+
             roi = cv2.resize(roi, (20, 30))
+
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             roi = np.expand_dims(roi,axis=2)
             imgs.append(roi)

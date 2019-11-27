@@ -1,0 +1,27 @@
+13:51:30: Position 1: LI60
+13:51:30: Position 2: RH30
+13:51:30: Position 3: SK90
+13:51:30: Position 4: TL78
+13:51:30: Position 5: QH80
+13:51:30: Position 6: GF74
+13:51:30: Position 7: SV43
+13:51:30: Position 8: EF32
+13:51:40: Message received: 123,456,0,AB12
+13:51:49: Message received: 123,456,2,RH30
+13:51:49: Awarded: 5 pts
+13:51:49: Team total: 5 pts
+13:51:54: Message received: 123,456,3,SK90
+13:51:54: Awarded: 5 pts
+13:51:54: Team total: 10 pts
+13:52:08: Message received: 123,456,4,IL78
+13:52:08: Awarded: -5 pts
+13:52:08: Team total: 5 pts
+13:52:15: Message received: 123,456,5,AX80
+13:52:15: Awarded: -5 pts
+13:52:15: Team total: 0 pts
+13:52:22: Message received: 123,456,6,GF74
+13:52:22: Awarded: 5 pts
+13:52:22: Team total: 5 pts
+13:52:33: Message received: 123,456,1,LI60
+13:52:33: Awarded: 5 pts
+13:52:33: Team total: 10 pts

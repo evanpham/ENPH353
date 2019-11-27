@@ -1,0 +1,30 @@
+13:53:49: Position 1: CW63
+13:53:49: Position 2: KB93
+13:53:49: Position 3: IX34
+13:53:49: Position 4: AZ61
+13:53:49: Position 5: ZJ81
+13:53:49: Position 6: FM72
+13:53:49: Position 7: IV54
+13:53:49: Position 8: HQ00
+13:54:04: Message received: 123,456,0,AB12
+13:54:14: Message received: 123,456,2,KB93
+13:54:14: Awarded: 5 pts
+13:54:14: Team total: 5 pts
+13:54:19: Message received: 123,456,3,IX84
+13:54:19: Awarded: -5 pts
+13:54:19: Team total: 0 pts
+13:54:31: Message received: 123,456,4,AZ61
+13:54:31: Awarded: 5 pts
+13:54:31: Team total: 5 pts
+13:54:38: Message received: 123,456,5,ZJ81
+13:54:38: Awarded: 5 pts
+13:54:38: Team total: 10 pts
+13:54:44: Message received: 123,456,6,FM72
+13:54:44: Awarded: 5 pts
+13:54:44: Team total: 15 pts
+13:54:55: Message received: 123,456,1,CW63
+13:54:55: Awarded: 5 pts
+13:54:55: Team total: 20 pts
+13:55:01: Message received: 123,456,7,KB93
+13:55:01: Awarded: -5 pts
+13:55:01: Team total: 15 pts

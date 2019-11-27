@@ -1,0 +1,27 @@
+14:05:06: Position 1: DL20
+14:05:06: Position 2: OV27
+14:05:06: Position 3: RE09
+14:05:06: Position 4: UU97
+14:05:06: Position 5: XK97
+14:05:06: Position 6: AJ89
+14:05:06: Position 7: NY69
+14:05:06: Position 8: OD59
+14:05:16: Message received: 123,456,0,AB12
+14:05:27: Message received: 123,456,2,OV27
+14:05:27: Awarded: 5 pts
+14:05:27: Team total: 5 pts
+14:05:31: Message received: 123,456,3,RE09
+14:05:31: Awarded: 5 pts
+14:05:31: Team total: 10 pts
+14:05:45: Message received: 123,456,4,UB97
+14:05:45: Awarded: -5 pts
+14:05:45: Team total: 5 pts
+14:05:52: Message received: 123,456,5,XK97
+14:05:52: Awarded: 5 pts
+14:05:52: Team total: 10 pts
+14:05:59: Message received: 123,456,6,AJ89
+14:05:59: Awarded: 5 pts
+14:05:59: Team total: 15 pts
+14:06:11: Message received: 123,456,1,DL20
+14:06:11: Awarded: 5 pts
+14:06:11: Team total: 20 pts

@@ -1,0 +1,21 @@
+13:44:19: Position 1: IW24
+13:44:19: Position 2: BM95
+13:44:19: Position 3: UX97
+13:44:19: Position 4: DF91
+13:44:19: Position 5: WB99
+13:44:19: Position 6: LF99
+13:44:19: Position 7: IH51
+13:44:19: Position 8: GE81
+13:44:29: Message received: 123,456,0,AB12
+13:44:43: Message received: 123,456,2,UX97
+13:44:43: Awarded: -5 pts
+13:44:43: Team total: -5 pts
+13:44:56: Message received: 123,456,3,UX97
+13:44:56: Awarded: 5 pts
+13:44:56: Team total: 0 pts
+13:45:07: Message received: 123,456,5,LF99
+13:45:07: Awarded: -5 pts
+13:45:07: Team total: -5 pts
+13:45:21: Message received: 123,456,6,IW24
+13:45:21: Awarded: -5 pts
+13:45:21: Team total: -10 pts
