@@ -1,0 +1,17 @@
+14:21:48: Position 1: KC66
+14:21:48: Position 2: YQ92
+14:21:48: Position 3: FY08
+14:21:48: Position 4: WL32
+14:21:48: Position 5: FM79
+14:21:48: Position 6: VR01
+14:21:48: Position 7: BD65
+14:21:48: Position 8: FW88
+14:21:55: Message received: 123,456,6,VR01
+14:21:55: Awarded: 5 pts
+14:21:55: Team total: 5 pts
+14:22:45: Message received: 123,456,1,KC66
+14:22:45: Awarded: 5 pts
+14:22:45: Team total: 10 pts
+14:23:08: Message received: 123,456,7,YQ92
+14:23:08: Awarded: -5 pts
+14:23:08: Team total: 5 pts

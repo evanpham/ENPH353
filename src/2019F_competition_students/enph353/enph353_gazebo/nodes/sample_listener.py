@@ -54,23 +54,24 @@ def callback(data):
             print(bestGuess)
             submitPlate(bestGuess)
         except:
-            print("Could not read plate")
             spot = spot + 1
+            print("Could not read plate1")
+
 
 
 def submitPlate(plate):
     global spot
     if spot == 7:
         plate_pub.publish("123,456,1," + plate.upper())
-    elif spot == 8:
+    elif spot > 7 and spot % 2 == 0:
         plate_pub.publish("123,456,7," + plate.upper())
-    elif spot == 9:
+    elif spot > 7 and spot % 2 == 1:
         plate_pub.publish("123,456,8," + plate.upper())
     else:
         plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
 
     spot = spot + 1
-
+    print("here!")
 
 if __name__ == '__main__':
     rospy.init_node('image_processor', anonymous=True)
