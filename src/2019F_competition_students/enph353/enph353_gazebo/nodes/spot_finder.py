@@ -14,9 +14,9 @@ import keras
 from scipy.stats import mode
 
 
-def roi(image, orig):
+def roi(image1, orig):
     border = 1
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
+    gray = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY) 
     # cv2.imshow('gray', gray) 
     # cv2.waitKey(0) 
 
@@ -144,7 +144,7 @@ def getSpotChars(image1):
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
 
-    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
+    gray = cv2.cvtColor(image1, cv2.COLOR_BGR2GRAY) 
 
 
     #binary 
