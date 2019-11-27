@@ -165,7 +165,7 @@ class LineFollower:
 
     def gogogoInner(self):
         # If at a car, stop and set gettinLicense boolean true
-        if ((rospy.get_rostime().secs-self.lastCar > 4) and self.atCar()):
+        if ((rospy.get_rostime().secs-self.lastCar > 4) and self.atCar("R")):
             self.gettinLicense = True
             self.lastCar = rospy.get_rostime().secs
         # If gettinLicense, get license
@@ -252,12 +252,18 @@ class LineFollower:
             self.car_pic_count = 0
             self.plateCount = self.plateCount + 1
 
-    def getBlueness(self):
-        blue = self.blue_filter()
+    def getBlueness(self, side="L"):
+        if side == "L":
+            blue = self.blue_filter()
+        else:
+            blue = self.blue_filter()[:, self.w/2:-1]  # Right side of blue_filter frame
         return np.sum(blue)
 
-    def atCar(self):
-        blueness = self.getBlueness()
+    def atCar(self, side="L"):
+        if side == "L":
+            blueness = self.getBlueness()
+        else:
+            blueness = self.getBlueness("R")  # Blueness of right half
         print(blueness)
         if blueness > 6000000:
             print("atCar")
