@@ -245,7 +245,7 @@ class LineFollower:
 
     def atCar(self):
         blueness = self.getBlueness()
-
+        print(blueness)
         if blueness > 6000000:
             print("atCar")
             return True
