@@ -96,8 +96,8 @@ class LineFollower:
             cv2.circle(self.frame, (cX, self.h/2), 5, (0, 255, 255), -1)
         except:
             print("NAH")
-        cv2.imshow(".", self.frame)
-        cv2.waitKey(25)
+        # cv2.imshow(".", self.frame)
+        # cv2.waitKey(25)
         return cX
 
 
@@ -125,6 +125,10 @@ class LineFollower:
 
     def callback(self, data):
         self.data = data
+        try:
+            self.frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
+        except CvBridgeError as e:
+            print(e)
         try:
             self.frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
         except CvBridgeError as e:
@@ -305,8 +309,8 @@ class LineFollower:
             if (h > 40):
                 cv2.rectangle(image, (x, y), (x + w, y + h), (255, i*10, 0), 2)
                 boxCount = 1 + boxCount
-        cv2.imshow("roi", image)
-        cv2.waitKey(25)
+        # cv2.imshow("roi", image)
+        # cv2.waitKey(25)
 
         return boxCount
 

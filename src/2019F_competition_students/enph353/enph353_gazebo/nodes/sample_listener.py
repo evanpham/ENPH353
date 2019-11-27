@@ -16,10 +16,11 @@ fontColor = (255, 255, 255)
 lineType = 2
 textLocation = (10, 200)
 initialized = False
-plateReadings = np.empty((5, 4), dtype=str)
-spotReadings = np.empty((5, 1), dtype=str)
-spot = 2
 pics_per_car = 5
+plateReadings = np.empty((pics_per_car, 4), dtype=str)
+spotReadings = np.empty((pics_per_car, 1), dtype=str)
+spot = 2
+
 
 
 def callback(data):
@@ -32,9 +33,11 @@ def callback(data):
         img = bridge.imgmsg_to_cv2(data, "bgr8")
     except CvBridgeError as e:
         print(e)
-    chars = getPlateChars(img)
-
     current_spot = getSpotChars(img)
+    img1 = img
+    chars = getPlateChars(img1)
+    cv2.imshow('frefre',img)
+    cv2.waitKey(25) 
     spotReadings[frameCount % pics_per_car, 0] = current_spot
     # Add character guesses to plateReadings array
     for i in range(4):
@@ -42,7 +45,7 @@ def callback(data):
         
 
     # After 5 frames, get modal guess for each character
-    if (frameCount % 5 == 0):
+    if (frameCount % pics_per_car == 0):
         goodRows = []
         goodSpots = []
         for i in range(pics_per_car-1, -1, -1):

@@ -15,7 +15,7 @@ from scipy.stats import mode
 
 
 def roi(image, orig):
-    border = 5
+    border = 1
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
     # cv2.imshow('gray', gray) 
     # cv2.waitKey(0) 
@@ -63,8 +63,8 @@ def roi(image, orig):
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
 
 
-    # cv2.imshow('plateBBox', gray)
-    # cv2.waitKey()
+    cv2.imshow('plateBnBox', gray)
+    cv2.waitKey(25)
     return imgs
 
 
@@ -84,7 +84,7 @@ model = keras.initializers.Initializer()
 loaded = False
 
 
-def getSpotChars(image):
+def getSpotChars(image1):
     global model, loaded
     if not loaded:
         model = load_model('modelbin_7.h5')
@@ -127,24 +127,25 @@ def getSpotChars(image):
     dict['33'] = 'x'
     dict['34'] = 'y'
     dict['35'] = 'z'
-
-    height = image.shape[0]
-    width = image.shape[1]
-    half = 2*image.shape[0]/5
-
+    cv2.imshow('gray', image1) 
+    cv2.waitKey(25) 
+    height = image1.shape[0]
+    width = image1.shape[1]
+    half = 9*height/10
+    print(height)
+    print(half)
     for h in range(height-half):
         for w in range(width):
-            image[h,w] = [0,0,0]
+            image1[h,w] = [0,0,0]
 
-    orig = image
-    frame = image
+    orig = image1
+    frame = image1
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
 
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) 
-    # cv2.imshow('gray', gray) 
-    # cv2.waitKey(0) 
+
 
     #binary 
     ret, thresh = cv2.threshold(gray, 15, 255, cv2.THRESH_BINARY_INV) 
