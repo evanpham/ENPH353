@@ -84,7 +84,7 @@ class LineFollower:
         return boxCount > 0
 
     def get_state_inner(self):
-        road = self.road_filter()[2*self.h/3:3*self.h/4, :]
+        road = self.road_filter()[6*self.h/8:7*self.h/8, :]
 
         m = cv2.moments(road, True)
         # calculate x,y coordinate of center
@@ -165,7 +165,7 @@ class LineFollower:
 
     def gogogoInner(self):
         # If at a car, stop and set gettinLicense boolean true
-        if ((rospy.get_rostime().secs-self.lastCar > 4) and self.atCar("R")):
+        if ((rospy.get_rostime().secs-self.lastCar > 10) and self.atCar("R")):
             self.gettinLicense = True
             self.lastCar = rospy.get_rostime().secs
         # If gettinLicense, get license

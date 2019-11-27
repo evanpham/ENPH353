@@ -1,0 +1,24 @@
+21:59:16: Position 1: JY24
+21:59:16: Position 2: BU27
+21:59:16: Position 3: VM50
+21:59:16: Position 4: PY61
+21:59:16: Position 5: NK17
+21:59:16: Position 6: VM89
+21:59:16: Position 7: BS65
+21:59:16: Position 8: DN38
+21:59:29: Message received: 123,456,0,AB12
+21:59:54: Message received: 123,456,3,VM50
+21:59:54: Awarded: 5 pts
+21:59:54: Team total: 5 pts
+22:00:15: Message received: 123,456,4,PY61
+22:00:15: Awarded: 5 pts
+22:00:15: Team total: 10 pts
+22:00:27: Message received: 123,456,5,KA17
+22:00:27: Awarded: -5 pts
+22:00:27: Team total: 5 pts
+22:00:39: Message received: 123,456,6,VM89
+22:00:39: Awarded: 5 pts
+22:00:39: Team total: 10 pts
+22:01:01: Message received: 123,456,1,JY24
+22:01:01: Awarded: 5 pts
+22:01:01: Team total: 15 pts

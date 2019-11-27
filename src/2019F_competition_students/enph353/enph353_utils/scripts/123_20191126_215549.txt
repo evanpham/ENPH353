@@ -1,0 +1,24 @@
+21:55:37: Position 1: WR06
+21:55:37: Position 2: JT63
+21:55:37: Position 3: HT09
+21:55:37: Position 4: QT58
+21:55:37: Position 5: OA43
+21:55:37: Position 6: II01
+21:55:37: Position 7: XE75
+21:55:37: Position 8: OP84
+21:55:49: Message received: 123,456,0,AB12
+21:56:03: Message received: 123,456,2,JI63
+21:56:03: Awarded: -5 pts
+21:56:03: Team total: -5 pts
+21:56:12: Message received: 123,456,3,HT09
+21:56:12: Awarded: 5 pts
+21:56:12: Team total: 0 pts
+21:56:31: Message received: 123,456,4,RI08
+21:56:31: Awarded: -5 pts
+21:56:31: Team total: -5 pts
+21:56:57: Message received: 123,456,6,II01
+21:56:57: Awarded: 5 pts
+21:56:57: Team total: 0 pts
+21:57:17: Message received: 123,456,1,WR06
+21:57:17: Awarded: 5 pts
+21:57:17: Team total: 5 pts
