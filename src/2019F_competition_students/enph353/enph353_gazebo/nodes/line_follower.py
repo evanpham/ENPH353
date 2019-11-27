@@ -155,11 +155,7 @@ class LineFollower:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
         elif self.initialized and self.plateCount >= 6:
-            if self.getBlueness() > 200000 and not self.pastCar:  # Get past car
-                self.gogogo()
-            else:
-                self.pastCar = True
-                self.getToInnerRing()
+            self.getToInnerRing()
         self.last = self.frame
 
     def gogogoInner(self):
@@ -182,17 +178,21 @@ class LineFollower:
             cv2.waitKey(25)
 
     def getToInnerRing(self):
-        if np.sum(self.line_filter()[29*self.h/30:-1, self.w/2-20:self.w/2+20]) < 20000 and not self.secondLine:
-            # Slice bw image into slices and find out where right curb is
-            state_num = 0
-            max = 0
+        if np.sum(self.line_filter()[29*self.h/30:-1, self.w/2-20:self.w/2+20]) < 1000:
+            if not self.firstLine:
+                self.gogogo()
+                print("noFIRST")
+            elif not self.secondLine:
+                # Slice bw image into slices and find out where right curb is
+                state_num = 0
+                max = 0
 
-            for i in range(self.slice_num-1,-1, -1):
-                s = self.bw[14*self.h/15:-1, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
-                if np.sum(s) > max:
-                    state_num = i
+                for i in range(self.slice_num-1,-1, -1):
+                    s = self.bw[14*self.h/15:-1, i*self.w/self.slice_num:(i+1)*self.w/self.slice_num]
+                    if np.sum(s) > max:
+                        state_num = i
 
-            self.follow(state_num, "L")
+                self.follow(state_num, "L")
         elif not self.firstLine:
             self.move("F")
             rospy.sleep(.2)
@@ -200,18 +200,15 @@ class LineFollower:
             print("firstline")
         elif not self.secondLine:
             self.secondLine = True
-            print("secondlind")
+            print("secondline")
         elif self.secondLine:
-            print(np.sum(self.bw[9*self.h/10:-1, 1*self.w/8:2*self.w/8]))
-            if np.sum(self.bw[9*self.h/10:-1, 3*self.w/8:self.w/2]) > 1000:
+            print(np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]))
+            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]) > 1000:
                 self.innerRing = True
                 self.stop()
                 print("INNER")
             else:
                 self.move("L")
-            cv2.imshow("bw", self.bw)
-            cv2.waitKey(25)
-
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is

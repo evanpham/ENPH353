@@ -1,0 +1,30 @@
+14:23:28: Position 1: KU59
+14:23:28: Position 2: PT08
+14:23:28: Position 3: OV61
+14:23:28: Position 4: LV01
+14:23:28: Position 5: TI18
+14:23:28: Position 6: XF36
+14:23:28: Position 7: BU65
+14:23:28: Position 8: EI53
+14:23:39: Message received: 123,456,0,AB12
+14:23:49: Message received: 123,456,2,PI08
+14:23:49: Awarded: -5 pts
+14:23:49: Team total: -5 pts
+14:23:53: Message received: 123,456,3,OM61
+14:23:53: Awarded: -5 pts
+14:23:53: Team total: -10 pts
+14:24:05: Message received: 123,456,4,LV01
+14:24:05: Awarded: 5 pts
+14:24:05: Team total: -5 pts
+14:24:10: Message received: 123,456,5,II18
+14:24:10: Awarded: -5 pts
+14:24:10: Team total: -10 pts
+14:24:16: Message received: 123,456,6,XF36
+14:24:16: Awarded: 5 pts
+14:24:16: Team total: -5 pts
+14:24:29: Message received: 123,456,1,KU59
+14:24:29: Awarded: 5 pts
+14:24:29: Team total: 0 pts
+14:25:12: Message received: 123,456,8,EX00
+14:25:12: Awarded: -5 pts
+14:25:12: Team total: -5 pts

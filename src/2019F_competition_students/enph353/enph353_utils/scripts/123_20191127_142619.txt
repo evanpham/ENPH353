@@ -1,0 +1,21 @@
+14:26:08: Position 1: GH70
+14:26:08: Position 2: TN40
+14:26:08: Position 3: SH63
+14:26:08: Position 4: AP27
+14:26:08: Position 5: KA63
+14:26:08: Position 6: EO52
+14:26:08: Position 7: YR26
+14:26:08: Position 8: DA23
+14:26:19: Message received: 123,456,0,AB12
+14:26:28: Message received: 123,456,2,IN40
+14:26:28: Awarded: -5 pts
+14:26:28: Team total: -5 pts
+14:26:32: Message received: 123,456,3,SM68
+14:26:32: Awarded: -5 pts
+14:26:32: Team total: -10 pts
+14:26:57: Message received: 123,456,6,EO52
+14:26:57: Awarded: 5 pts
+14:26:57: Team total: -5 pts
+14:27:07: Message received: 123,456,1,GH70
+14:27:07: Awarded: 5 pts
+14:27:07: Team total: 0 pts

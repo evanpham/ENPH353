@@ -1,0 +1,24 @@
+14:19:46: Position 1: KU27
+14:19:46: Position 2: AV91
+14:19:46: Position 3: TO84
+14:19:46: Position 4: KP83
+14:19:46: Position 5: XR78
+14:19:46: Position 6: DV27
+14:19:46: Position 7: QX07
+14:19:46: Position 8: DL28
+14:19:56: Message received: 123,456,0,AB12
+14:20:04: Message received: 123,456,2,AV91
+14:20:04: Awarded: 5 pts
+14:20:04: Team total: 5 pts
+14:20:10: Message received: 123,456,3,IO84
+14:20:10: Awarded: -5 pts
+14:20:10: Team total: 0 pts
+14:20:23: Message received: 123,456,4,KP83
+14:20:23: Awarded: 5 pts
+14:20:23: Team total: 5 pts
+14:20:28: Message received: 123,456,5,XR78
+14:20:28: Awarded: 5 pts
+14:20:28: Team total: 10 pts
+14:20:33: Message received: 123,456,6,DV27
+14:20:33: Awarded: 5 pts
+14:20:33: Team total: 15 pts

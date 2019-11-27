@@ -1,0 +1,27 @@
+14:34:19: Position 1: SY52
+14:34:19: Position 2: YL96
+14:34:19: Position 3: YZ09
+14:34:19: Position 4: HB62
+14:34:19: Position 5: RU38
+14:34:19: Position 6: WZ03
+14:34:19: Position 7: SK76
+14:34:19: Position 8: RH71
+14:34:29: Message received: 123,456,0,AB12
+14:34:39: Message received: 123,456,2,YL96
+14:34:39: Awarded: 5 pts
+14:34:39: Team total: 5 pts
+14:34:44: Message received: 123,456,3,YZ09
+14:34:44: Awarded: 5 pts
+14:34:44: Team total: 10 pts
+14:34:56: Message received: 123,456,4,HB62
+14:34:56: Awarded: 5 pts
+14:34:56: Team total: 15 pts
+14:35:01: Message received: 123,456,5,RU38
+14:35:01: Awarded: 5 pts
+14:35:01: Team total: 20 pts
+14:35:08: Message received: 123,456,6,WZ08
+14:35:08: Awarded: -5 pts
+14:35:08: Team total: 15 pts
+14:35:19: Message received: 123,456,1,SY52
+14:35:19: Awarded: 5 pts
+14:35:19: Team total: 20 pts

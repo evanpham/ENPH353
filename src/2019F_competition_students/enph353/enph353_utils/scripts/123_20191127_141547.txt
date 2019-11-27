@@ -1,0 +1,30 @@
+14:15:34: Position 1: OA42
+14:15:34: Position 2: YL98
+14:15:34: Position 3: PV46
+14:15:34: Position 4: FP91
+14:15:34: Position 5: VA68
+14:15:34: Position 6: UU93
+14:15:34: Position 7: BI98
+14:15:34: Position 8: CY10
+14:15:47: Message received: 123,456,0,AB12
+14:15:57: Message received: 123,456,2,YL98
+14:15:57: Awarded: 5 pts
+14:15:57: Team total: 5 pts
+14:16:02: Message received: 123,456,3,PV46
+14:16:02: Awarded: 5 pts
+14:16:02: Team total: 10 pts
+14:16:16: Message received: 123,456,4,FP91
+14:16:16: Awarded: 5 pts
+14:16:16: Team total: 15 pts
+14:16:21: Message received: 123,456,5,VA68
+14:16:21: Awarded: 5 pts
+14:16:21: Team total: 20 pts
+14:16:28: Message received: 123,456,6,UU93
+14:16:28: Awarded: 5 pts
+14:16:28: Team total: 25 pts
+14:16:40: Message received: 123,456,1,OA42
+14:16:40: Awarded: 5 pts
+14:16:40: Team total: 30 pts
+14:16:45: Message received: 123,456,7,YL98
+14:16:45: Awarded: -5 pts
+14:16:45: Team total: 25 pts

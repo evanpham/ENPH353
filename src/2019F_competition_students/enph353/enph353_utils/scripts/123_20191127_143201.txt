@@ -1,0 +1,27 @@
+14:31:49: Position 1: WZ91
+14:31:49: Position 2: DC18
+14:31:49: Position 3: OK70
+14:31:49: Position 4: FI58
+14:31:49: Position 5: FS13
+14:31:49: Position 6: WP62
+14:31:49: Position 7: TL67
+14:31:49: Position 8: UP22
+14:32:01: Message received: 123,456,0,AB12
+14:32:10: Message received: 123,456,2,DC18
+14:32:10: Awarded: 5 pts
+14:32:10: Team total: 5 pts
+14:32:15: Message received: 123,456,3,OK70
+14:32:15: Awarded: 5 pts
+14:32:15: Team total: 10 pts
+14:32:26: Message received: 123,456,4,FI58
+14:32:26: Awarded: 5 pts
+14:32:26: Team total: 15 pts
+14:32:32: Message received: 123,456,5,FS13
+14:32:32: Awarded: 5 pts
+14:32:32: Team total: 20 pts
+14:32:39: Message received: 123,456,6,WP62
+14:32:39: Awarded: 5 pts
+14:32:39: Team total: 25 pts
+14:32:51: Message received: 123,456,1,WZ91
+14:32:51: Awarded: 5 pts
+14:32:51: Team total: 30 pts

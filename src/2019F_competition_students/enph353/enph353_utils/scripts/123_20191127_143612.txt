@@ -1,0 +1,30 @@
+14:35:58: Position 1: IS68
+14:35:58: Position 2: PH03
+14:35:58: Position 3: CP05
+14:35:58: Position 4: KZ57
+14:35:58: Position 5: XC01
+14:35:58: Position 6: BZ00
+14:35:58: Position 7: PZ71
+14:35:58: Position 8: MC98
+14:36:12: Message received: 123,456,0,AB12
+14:36:28: Message received: 123,456,3,CP05
+14:36:28: Awarded: 5 pts
+14:36:28: Team total: 5 pts
+14:36:38: Message received: 123,456,4,KZ57
+14:36:38: Awarded: 5 pts
+14:36:38: Team total: 10 pts
+14:36:44: Message received: 123,456,5,XC01
+14:36:44: Awarded: 5 pts
+14:36:44: Team total: 15 pts
+14:36:50: Message received: 123,456,6,BZ00
+14:36:50: Awarded: 5 pts
+14:36:50: Team total: 20 pts
+14:37:01: Message received: 123,456,1,IS68
+14:37:01: Awarded: 5 pts
+14:37:01: Team total: 25 pts
+14:37:21: Message received: 123,456,7,PZ71
+14:37:21: Awarded: 5 pts
+14:37:21: Team total: 30 pts
+14:37:45: Message received: 123,456,8,MC98
+14:37:45: Awarded: 5 pts
+14:37:45: Team total: 35 pts

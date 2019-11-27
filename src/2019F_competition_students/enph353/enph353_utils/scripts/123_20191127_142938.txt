@@ -1,0 +1,21 @@
+14:29:28: Position 1: JW54
+14:29:28: Position 2: VH12
+14:29:28: Position 3: GQ61
+14:29:28: Position 4: HB59
+14:29:28: Position 5: CU02
+14:29:28: Position 6: DP98
+14:29:28: Position 7: BG33
+14:29:28: Position 8: IJ29
+14:29:38: Message received: 123,456,0,AB12
+14:29:57: Message received: 123,456,3,HB59
+14:29:57: Awarded: -5 pts
+14:29:57: Team total: -5 pts
+14:30:03: Message received: 123,456,4,HB59
+14:30:03: Awarded: 5 pts
+14:30:03: Team total: 0 pts
+14:30:09: Message received: 123,456,5,CU02
+14:30:09: Awarded: 5 pts
+14:30:09: Team total: 5 pts
+14:30:22: Message received: 123,456,6,DP98
+14:30:22: Awarded: 5 pts
+14:30:22: Team total: 10 pts
