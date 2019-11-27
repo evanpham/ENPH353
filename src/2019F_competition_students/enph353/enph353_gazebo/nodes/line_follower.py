@@ -84,16 +84,15 @@ class LineFollower:
         return boxCount > 0
 
     def get_state_inner(self):
-        road = self.road_filter()[2*self.h/3:-1, :]
+        road = self.road_filter()[self.h/2:3*self.h/4, :]
 
         m = cv2.moments(road, True)
         # calculate x,y coordinate of center
         try:
             cX = int(m["m10"] / m["m00"])
-            cY = int(m["m01"] / m["m00"])
             
             # put text and highlight the center
-            cv2.circle(self.frame, (cX, self.h/2), 5, (0, 255, 255), -1)
+            cv2.circle(self.frame, (cX, 3*self.h/4), 5, (0, 255, 255), -1)
         except:
             print("NAH")
         # cv2.imshow(".", self.frame)
