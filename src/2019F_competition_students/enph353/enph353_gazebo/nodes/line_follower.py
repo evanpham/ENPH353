@@ -149,7 +149,7 @@ class LineFollower:
             self.gogogoInner()
         elif self.initialized and self.plateCount < 6:
             # Follow road, avoid pedestrians, mark cars
-            self.gogogoInner()
+            self.gogogo()
         elif self.initialized and self.plateCount >= 6:
             if self.getBlueness() > 500000 and not self.pastCar:  # Get past car
                 self.gogogo()
@@ -161,9 +161,9 @@ class LineFollower:
 
     def gogogoInner(self):
         state = self.get_state_inner()
-        if state > self.w/2 + 20:
+        if state > self.w/2 + 35:
             self.move("R")
-        elif state < self.w/2 - 20:
+        elif state < self.w/2 - 35:
             self.move("L")
         else:
             self.move("F")
