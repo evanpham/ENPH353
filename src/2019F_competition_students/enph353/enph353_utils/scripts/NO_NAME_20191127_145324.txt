@@ -1,0 +1,26 @@
+14:53:24: Position 1: HW13
+14:53:24: Position 2: CI24
+14:53:24: Position 3: FW06
+14:53:24: Position 4: LJ20
+14:53:24: Position 5: YP98
+14:53:24: Position 6: BF19
+14:53:24: Position 7: QE03
+14:53:24: Position 8: VE88
+14:54:01: Message received: 123,456,2,OE00
+14:54:01: Awarded: -5 pts
+14:54:01: Team total: -5 pts
+14:54:19: Message received: 123,456,3,VE88
+14:54:19: Awarded: -5 pts
+14:54:19: Team total: -10 pts
+14:54:37: Message received: 123,456,4,QE03
+14:54:37: Awarded: -5 pts
+14:54:37: Team total: -15 pts
+14:54:58: Message received: 123,456,5,VE88
+14:54:58: Awarded: -5 pts
+14:54:58: Team total: -20 pts
+14:55:20: Message received: 123,456,6,QE03
+14:55:20: Awarded: -5 pts
+14:55:20: Team total: -25 pts
+14:55:40: Message received: 123,456,1,VE88
+14:55:40: Awarded: -5 pts
+14:55:40: Team total: -30 pts

@@ -1,0 +1,30 @@
+14:50:30: Position 1: DJ26
+14:50:30: Position 2: HL71
+14:50:30: Position 3: WS62
+14:50:30: Position 4: ML75
+14:50:30: Position 5: PE52
+14:50:30: Position 6: FA80
+14:50:30: Position 7: VE03
+14:50:30: Position 8: JT08
+14:50:42: Message received: 123,456,0,AB12
+14:50:52: Message received: 123,456,2,HL71
+14:50:52: Awarded: 5 pts
+14:50:52: Team total: 5 pts
+14:50:56: Message received: 123,456,3,WS62
+14:50:56: Awarded: 5 pts
+14:50:56: Team total: 10 pts
+14:51:07: Message received: 123,456,4,ML75
+14:51:07: Awarded: 5 pts
+14:51:07: Team total: 15 pts
+14:51:13: Message received: 123,456,5,PE52
+14:51:13: Awarded: 5 pts
+14:51:13: Team total: 20 pts
+14:51:20: Message received: 123,456,6,FA80
+14:51:20: Awarded: 5 pts
+14:51:20: Team total: 25 pts
+14:51:31: Message received: 123,456,1,DJ26
+14:51:31: Awarded: 5 pts
+14:51:31: Team total: 30 pts
+14:51:54: Message received: 123,456,7,ME08
+14:51:54: Awarded: -5 pts
+14:51:54: Team total: 25 pts

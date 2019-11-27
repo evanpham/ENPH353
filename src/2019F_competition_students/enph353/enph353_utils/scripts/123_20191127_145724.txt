@@ -1,0 +1,30 @@
+14:57:09: Position 1: LJ65
+14:57:09: Position 2: NV33
+14:57:09: Position 3: LO36
+14:57:09: Position 4: MH06
+14:57:09: Position 5: GE83
+14:57:09: Position 6: WI61
+14:57:09: Position 7: HI42
+14:57:09: Position 8: GK61
+14:57:24: Message received: 123,456,0,AB12
+14:57:34: Message received: 123,456,2,NV33
+14:57:34: Awarded: 5 pts
+14:57:34: Team total: 5 pts
+14:57:38: Message received: 123,456,3,LO88
+14:57:38: Awarded: -5 pts
+14:57:38: Team total: 0 pts
+14:57:56: Message received: 123,456,5,AE83
+14:57:56: Awarded: -5 pts
+14:57:56: Team total: -5 pts
+14:58:03: Message received: 123,456,6,WI61
+14:58:03: Awarded: 5 pts
+14:58:03: Team total: 0 pts
+14:58:16: Message received: 123,456,1,LJ65
+14:58:16: Awarded: 5 pts
+14:58:16: Team total: 5 pts
+14:58:43: Message received: 123,456,7,MI42
+14:58:43: Awarded: -5 pts
+14:58:43: Team total: 0 pts
+14:59:04: Message received: 123,456,8,GK61
+14:59:04: Awarded: 5 pts
+14:59:04: Team total: 5 pts
