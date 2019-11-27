@@ -1,0 +1,24 @@
+12:06:21: Position 1: DL11
+12:06:21: Position 2: WX09
+12:06:21: Position 3: LX61
+12:06:21: Position 4: XV91
+12:06:21: Position 5: IQ48
+12:06:21: Position 6: IM36
+12:06:21: Position 7: LJ15
+12:06:21: Position 8: XR96
+12:06:32: Message received: 123,456,0,AB12
+12:06:42: Message received: 123,456,2,WX09
+12:06:42: Awarded: 5 pts
+12:06:42: Team total: 5 pts
+12:06:59: Message received: 123,456,3,XM91
+12:06:59: Awarded: -5 pts
+12:06:59: Team total: 0 pts
+12:07:05: Message received: 123,456,4,IQ48
+12:07:05: Awarded: -5 pts
+12:07:05: Team total: -5 pts
+12:07:11: Message received: 123,456,5,IM36
+12:07:11: Awarded: -5 pts
+12:07:11: Team total: -10 pts
+12:07:25: Message received: 123,456,6,DL11
+12:07:25: Awarded: -5 pts
+12:07:25: Team total: -15 pts

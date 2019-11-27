@@ -1,0 +1,24 @@
+12:47:43: Position 1: WC45
+12:47:43: Position 2: CM42
+12:47:43: Position 3: NI29
+12:47:43: Position 4: PY47
+12:47:43: Position 5: NM21
+12:47:43: Position 6: IL07
+12:47:43: Position 7: OE04
+12:47:43: Position 8: VA43
+12:47:56: Message received: 123,456,0,AB12
+12:48:05: Message received: 123,456,2,CM42
+12:48:05: Awarded: 5 pts
+12:48:05: Team total: 5 pts
+12:48:10: Message received: 123,456,3,NI29
+12:48:10: Awarded: 5 pts
+12:48:10: Team total: 10 pts
+12:48:22: Message received: 123,456,4,PY47
+12:48:22: Awarded: 5 pts
+12:48:22: Team total: 15 pts
+12:48:34: Message received: 123,456,6,IL07
+12:48:34: Awarded: 5 pts
+12:48:34: Team total: 20 pts
+12:48:45: Message received: 123,456,1,WC45
+12:48:45: Awarded: 5 pts
+12:48:45: Team total: 25 pts

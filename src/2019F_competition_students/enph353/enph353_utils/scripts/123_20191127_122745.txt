@@ -1,0 +1,27 @@
+12:27:38: Position 1: QK50
+12:27:38: Position 2: WS76
+12:27:38: Position 3: IU14
+12:27:38: Position 4: DL46
+12:27:38: Position 5: AE35
+12:27:38: Position 6: QX43
+12:27:38: Position 7: NR61
+12:27:38: Position 8: YS56
+12:27:45: Message received: 123,456,0,AB12
+12:27:54: Message received: 123,456,2,WS76
+12:27:54: Awarded: 5 pts
+12:27:54: Team total: 5 pts
+12:27:59: Message received: 123,456,3,IU14
+12:27:59: Awarded: 5 pts
+12:27:59: Team total: 10 pts
+12:28:13: Message received: 123,456,4,DL46
+12:28:13: Awarded: 5 pts
+12:28:13: Team total: 15 pts
+12:28:19: Message received: 123,456,5,AE35
+12:28:19: Awarded: 5 pts
+12:28:19: Team total: 20 pts
+12:28:25: Message received: 123,456,6,QX43
+12:28:25: Awarded: 5 pts
+12:28:25: Team total: 25 pts
+12:28:37: Message received: 123,456,1,QK50
+12:28:37: Awarded: 5 pts
+12:28:37: Team total: 30 pts

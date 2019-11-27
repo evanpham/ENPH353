@@ -1,0 +1,24 @@
+12:29:45: Position 1: AH25
+12:29:45: Position 2: ZW34
+12:29:45: Position 3: AR81
+12:29:45: Position 4: TA58
+12:29:45: Position 5: LV14
+12:29:45: Position 6: VN38
+12:29:45: Position 7: YF20
+12:29:45: Position 8: MM14
+12:29:51: Message received: 123,456,0,AB12
+12:30:00: Message received: 123,456,2,ZW34
+12:30:00: Awarded: 5 pts
+12:30:00: Team total: 5 pts
+12:30:05: Message received: 123,456,3,AR81
+12:30:05: Awarded: 5 pts
+12:30:05: Team total: 10 pts
+12:30:17: Message received: 123,456,4,IA58
+12:30:17: Awarded: -5 pts
+12:30:17: Team total: 5 pts
+12:30:24: Message received: 123,456,5,LV14
+12:30:24: Awarded: 5 pts
+12:30:24: Team total: 10 pts
+12:30:30: Message received: 123,456,6,VN38
+12:30:30: Awarded: 5 pts
+12:30:30: Team total: 15 pts

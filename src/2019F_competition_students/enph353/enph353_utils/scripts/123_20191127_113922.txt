@@ -1,0 +1,24 @@
+11:39:16: Position 1: JJ92
+11:39:16: Position 2: BF43
+11:39:16: Position 3: RI73
+11:39:16: Position 4: CV79
+11:39:16: Position 5: UF68
+11:39:16: Position 6: QJ77
+11:39:16: Position 7: MI22
+11:39:16: Position 8: VK74
+11:39:22: Message received: 123,456,0,AB12
+11:39:32: Message received: 123,456,2,BF43
+11:39:32: Awarded: 5 pts
+11:39:32: Team total: 5 pts
+11:39:52: Message received: 123,456,3,CV79
+11:39:52: Awarded: -5 pts
+11:39:52: Team total: 0 pts
+11:39:59: Message received: 123,456,4,UF68
+11:39:59: Awarded: -5 pts
+11:39:59: Team total: -5 pts
+11:40:07: Message received: 123,456,5,QJ77
+11:40:07: Awarded: -5 pts
+11:40:07: Team total: -10 pts
+11:40:21: Message received: 123,456,6,JJ92
+11:40:21: Awarded: -5 pts
+11:40:21: Team total: -15 pts

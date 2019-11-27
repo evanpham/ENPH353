@@ -1,0 +1,27 @@
+11:33:08: Position 1: WQ81
+11:33:08: Position 2: MK91
+11:33:08: Position 3: XT36
+11:33:08: Position 4: IT88
+11:33:08: Position 5: QH35
+11:33:08: Position 6: WJ72
+11:33:08: Position 7: QC03
+11:33:08: Position 8: YV35
+11:33:16: Message received: 123,456,0,AB12
+11:33:25: Message received: 123,456,2,MK91
+11:33:25: Awarded: 5 pts
+11:33:25: Team total: 5 pts
+11:33:31: Message received: 123,456,3,XT36
+11:33:31: Awarded: 5 pts
+11:33:31: Team total: 10 pts
+11:33:47: Message received: 123,456,4,II88
+11:33:47: Awarded: -5 pts
+11:33:47: Team total: 5 pts
+11:33:54: Message received: 123,456,5,AA35
+11:33:54: Awarded: -5 pts
+11:33:54: Team total: 0 pts
+11:34:02: Message received: 123,456,6,WJ72
+11:34:02: Awarded: 5 pts
+11:34:02: Team total: 5 pts
+11:34:15: Message received: 123,456,1,WQ81
+11:34:15: Awarded: 5 pts
+11:34:15: Team total: 10 pts

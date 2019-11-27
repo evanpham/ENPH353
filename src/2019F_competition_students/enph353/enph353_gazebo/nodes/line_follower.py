@@ -27,6 +27,7 @@ class LineFollower:
         self.pics_per_car = 5
         self.plateCount = 0
         self.firstLine = False
+        self.secondLine = False
         self.pastCar = False
         self.lastCross = rospy.get_rostime().secs
         self.lastCar = rospy.get_rostime().secs
@@ -99,7 +100,6 @@ class LineFollower:
         # cv2.waitKey(25)
         return cX
 
-
     def move(self, action):
         vel_cmd = Twist()
         if action == "F":  # FORWARD
@@ -155,9 +155,8 @@ class LineFollower:
             # Follow road, avoid pedestrians, mark cars
             self.gogogo()
         elif self.initialized and self.plateCount >= 6:
-            if self.getBlueness() > 500000 and not self.pastCar:  # Get past car
+            if self.getBlueness() > 400000 and not self.pastCar:  # Get past car
                 self.gogogo()
-                print(self.getBlueness())
             else:
                 self.pastCar = True
                 self.getToInnerRing()
@@ -165,7 +164,7 @@ class LineFollower:
 
     def gogogoInner(self):
         # If at a car, stop and set gettinLicense boolean true
-        if ((rospy.get_rostime().secs-self.lastCar > 10) and self.atCar("R")):
+        if ((rospy.get_rostime().secs-self.lastCar > 10) and self.atCar("R", thresh=7000000)):
             self.gettinLicense = True
             self.lastCar = rospy.get_rostime().secs
         # If gettinLicense, get license
@@ -175,7 +174,7 @@ class LineFollower:
             state = self.get_state_inner()
             if state > self.w/2 - 10:
                 self.move("R")
-            elif state < self.w/2 - 80: # Favors hugging right side
+            elif state < self.w/2 - 80:  # Favors hugging right side
                 self.move("L")
             else:
                 self.move("F")
@@ -183,7 +182,7 @@ class LineFollower:
             cv2.waitKey(25)
 
     def getToInnerRing(self):
-        if np.sum(self.line_filter()[14*self.h/15:-1, self.w/2-50:self.w/2+50]) < 100:
+        if np.sum(self.line_filter()[29*self.h/30:-1, self.w/2-20:self.w/2+20]) < 20000 and not self.secondLine:
             # Slice bw image into slices and find out where right curb is
             state_num = 0
             max = 0
@@ -199,10 +198,20 @@ class LineFollower:
             rospy.sleep(.2)
             self.firstLine = True
             print("firstline")
-        else:
-            self.move("L")
-            rospy.sleep(.1)
-            self.innerRing = True
+        elif not self.secondLine:
+            self.secondLine = True
+            print("secondlind")
+        elif self.secondLine:
+            print(np.sum(self.bw[9*self.h/10:-1, 2*self.w/8:3*self.w/8]))
+            if np.sum(self.bw[9*self.h/10:-1, 3*self.w/8:self.w/2]) > 1000:
+                self.innerRing = True
+                self.stop()
+                print("INNER")
+            else:
+                self.move("L")
+            cv2.imshow("bw", self.bw)
+            cv2.waitKey(25)
+
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is
@@ -259,13 +268,12 @@ class LineFollower:
             blue = self.blue_filter()[:, self.w/2:-1]  # Right side of blue_filter frame
         return np.sum(blue)
 
-    def atCar(self, side="L"):
+    def atCar(self, side="L", thresh=6000000):
         if side == "L":
             blueness = self.getBlueness()
         else:
             blueness = self.getBlueness("R")  # Blueness of right half
-        print(blueness)
-        if blueness > 6000000:
+        if blueness > thresh:
             print("atCar")
             return True
         return False

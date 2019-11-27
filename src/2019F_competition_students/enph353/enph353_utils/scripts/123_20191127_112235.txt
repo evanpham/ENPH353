@@ -1,0 +1,27 @@
+11:22:21: Position 1: PC74
+11:22:21: Position 2: OJ23
+11:22:21: Position 3: YC35
+11:22:21: Position 4: KC98
+11:22:21: Position 5: ZE73
+11:22:21: Position 6: IT21
+11:22:21: Position 7: IL08
+11:22:21: Position 8: TP14
+11:22:35: Message received: 123,456,0,AB12
+11:22:48: Message received: 123,456,2,AJ23
+11:22:48: Awarded: -5 pts
+11:22:48: Team total: -5 pts
+11:22:55: Message received: 123,456,3,YC35
+11:22:55: Awarded: 5 pts
+11:22:55: Team total: 0 pts
+11:23:21: Message received: 123,456,4,KC98
+11:23:21: Awarded: 5 pts
+11:23:21: Team total: 5 pts
+11:23:30: Message received: 123,456,5,ZE73
+11:23:30: Awarded: 5 pts
+11:23:30: Team total: 10 pts
+11:23:40: Message received: 123,456,6,II21
+11:23:40: Awarded: -5 pts
+11:23:40: Team total: 5 pts
+11:23:57: Message received: 123,456,1,PC74
+11:23:57: Awarded: 5 pts
+11:23:57: Team total: 10 pts

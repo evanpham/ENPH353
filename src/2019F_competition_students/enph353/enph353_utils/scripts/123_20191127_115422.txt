@@ -1,0 +1,27 @@
+11:54:14: Position 1: VT40
+11:54:14: Position 2: NY28
+11:54:14: Position 3: WU79
+11:54:14: Position 4: PK91
+11:54:14: Position 5: QU26
+11:54:14: Position 6: IQ40
+11:54:14: Position 7: OW27
+11:54:14: Position 8: FI05
+11:54:22: Message received: 123,456,0,AB12
+11:54:33: Message received: 123,456,2,NY28
+11:54:33: Awarded: 5 pts
+11:54:33: Team total: 5 pts
+11:54:38: Message received: 123,456,3,WU79
+11:54:38: Awarded: 5 pts
+11:54:38: Team total: 10 pts
+11:54:51: Message received: 123,456,4,PK91
+11:54:51: Awarded: 5 pts
+11:54:51: Team total: 15 pts
+11:54:57: Message received: 123,456,5,AX26
+11:54:57: Awarded: -5 pts
+11:54:57: Team total: 10 pts
+11:55:05: Message received: 123,456,6,IQ40
+11:55:05: Awarded: 5 pts
+11:55:05: Team total: 15 pts
+11:55:21: Message received: 123,456,1,VI40
+11:55:21: Awarded: -5 pts
+11:55:21: Team total: 10 pts

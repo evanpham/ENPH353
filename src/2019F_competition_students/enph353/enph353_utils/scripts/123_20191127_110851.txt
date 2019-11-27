@@ -1,0 +1,30 @@
+11:08:43: Position 1: SG24
+11:08:43: Position 2: YC46
+11:08:43: Position 3: XE07
+11:08:43: Position 4: YD06
+11:08:43: Position 5: IB76
+11:08:43: Position 6: ZZ90
+11:08:43: Position 7: UZ44
+11:08:43: Position 8: QZ20
+11:08:51: Message received: 123,456,0,AB12
+11:09:05: Message received: 123,456,2,YC46
+11:09:05: Awarded: 5 pts
+11:09:05: Team total: 5 pts
+11:09:12: Message received: 123,456,3,XE07
+11:09:12: Awarded: 5 pts
+11:09:12: Team total: 10 pts
+11:09:33: Message received: 123,456,4,YD06
+11:09:33: Awarded: 5 pts
+11:09:33: Team total: 15 pts
+11:09:43: Message received: 123,456,5,IB76
+11:09:43: Awarded: 5 pts
+11:09:43: Team total: 20 pts
+11:09:54: Message received: 123,456,6,ZZ90
+11:09:54: Awarded: 5 pts
+11:09:54: Team total: 25 pts
+11:10:13: Message received: 123,456,1,SG24
+11:10:13: Awarded: 5 pts
+11:10:13: Team total: 30 pts
+11:10:31: Message received: 123,456,7,XA90
+11:10:31: Awarded: -5 pts
+11:10:31: Team total: 25 pts

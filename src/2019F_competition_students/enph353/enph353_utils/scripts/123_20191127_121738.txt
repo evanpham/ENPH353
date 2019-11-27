@@ -1,0 +1,27 @@
+12:17:29: Position 1: XU12
+12:17:29: Position 2: DD44
+12:17:29: Position 3: BS98
+12:17:29: Position 4: MH21
+12:17:29: Position 5: OF77
+12:17:29: Position 6: YE03
+12:17:29: Position 7: OM14
+12:17:29: Position 8: VI83
+12:17:38: Message received: 123,456,0,AB12
+12:17:47: Message received: 123,456,2,DD44
+12:17:47: Awarded: 5 pts
+12:17:47: Team total: 5 pts
+12:17:52: Message received: 123,456,3,BS98
+12:17:52: Awarded: 5 pts
+12:17:52: Team total: 10 pts
+12:18:04: Message received: 123,456,4,MH21
+12:18:04: Awarded: 5 pts
+12:18:04: Team total: 15 pts
+12:18:10: Message received: 123,456,5,AF77
+12:18:10: Awarded: -5 pts
+12:18:10: Team total: 10 pts
+12:18:17: Message received: 123,456,6,YE03
+12:18:17: Awarded: 5 pts
+12:18:17: Team total: 15 pts
+12:18:27: Message received: 123,456,1,XU12
+12:18:27: Awarded: 5 pts
+12:18:27: Team total: 20 pts
