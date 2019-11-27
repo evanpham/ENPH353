@@ -168,9 +168,9 @@ class LineFollower:
             self.getLicense("R")
         else:
             state = self.get_state_inner()
-            if state > self.w/2 - 10:
+            if state > self.w/2 - 20:
                 self.move("R")
-            elif state < self.w/2 - 80:  # Favors hugging right side
+            elif state < self.w/2 - 60:  # Favors hugging right side
                 self.move("L")
             else:
                 self.move("F")
