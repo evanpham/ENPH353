@@ -1,0 +1,24 @@
+15:36:00: Position 1: VE93
+15:36:00: Position 2: UR94
+15:36:00: Position 3: GA62
+15:36:00: Position 4: ZV49
+15:36:00: Position 5: CY10
+15:36:00: Position 6: NX88
+15:36:00: Position 7: VQ34
+15:36:00: Position 8: WP96
+15:36:10: Message received: 20,456,0,AB12
+15:36:19: Message received: 123,456,2,UR94
+15:36:19: Awarded: 5 pts
+15:36:19: Team total: 5 pts
+15:36:23: Message received: 123,456,3,GA62
+15:36:23: Awarded: 5 pts
+15:36:23: Team total: 10 pts
+15:36:34: Message received: 123,456,4,ZV48
+15:36:34: Awarded: -5 pts
+15:36:34: Team total: 5 pts
+15:36:46: Message received: 123,456,6,NX88
+15:36:46: Awarded: 5 pts
+15:36:46: Team total: 10 pts
+15:36:58: Message received: 123,456,1,VE93
+15:36:58: Awarded: 5 pts
+15:36:58: Team total: 15 pts

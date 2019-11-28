@@ -1,0 +1,42 @@
+15:02:03: Position 1: PY54
+15:02:03: Position 2: EZ37
+15:02:03: Position 3: KA94
+15:02:03: Position 4: FT31
+15:02:03: Position 5: OY34
+15:02:03: Position 6: RW89
+15:02:03: Position 7: MO79
+15:02:03: Position 8: UI06
+15:02:14: Message received: 123,456,0,AB12
+15:02:23: Message received: 123,456,2,EZ37
+15:02:23: Awarded: 5 pts
+15:02:23: Team total: 5 pts
+15:02:28: Message received: 123,456,3,AX94
+15:02:28: Awarded: -5 pts
+15:02:28: Team total: 0 pts
+15:02:39: Message received: 123,456,4,FI31
+15:02:39: Awarded: -5 pts
+15:02:39: Team total: -5 pts
+15:02:45: Message received: 123,456,5,DY34
+15:02:45: Awarded: -5 pts
+15:02:45: Team total: -10 pts
+15:02:51: Message received: 123,456,6,RW89
+15:02:51: Awarded: 5 pts
+15:02:51: Team total: -5 pts
+15:03:03: Message received: 123,456,1,PY54
+15:03:03: Awarded: 5 pts
+15:03:03: Team total: 0 pts
+15:03:43: Message received: 123,456,8,UI06
+15:03:43: Awarded: 5 pts
+15:03:43: Team total: 5 pts
+15:04:24: Message received: 123,456,8,UI06
+15:04:24: Awarded: 5 pts
+15:04:24: Team total: 5 pts
+15:04:45: Message received: 123,456,7,MO43
+15:04:45: Awarded: -5 pts
+15:04:45: Team total: 0 pts
+15:05:05: Message received: 123,456,8,UI06
+15:05:05: Awarded: 5 pts
+15:05:05: Team total: 0 pts
+15:06:25: Message received: 123,456,7,MO79
+15:06:25: Awarded: 5 pts
+15:06:25: Team total: 10 pts

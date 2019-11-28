@@ -1,0 +1,24 @@
+15:24:28: Position 1: ZW93
+15:24:28: Position 2: SL85
+15:24:28: Position 3: SJ49
+15:24:28: Position 4: AA62
+15:24:28: Position 5: QK48
+15:24:28: Position 6: VJ03
+15:24:28: Position 7: JP71
+15:24:28: Position 8: NM85
+15:24:41: Message received: 20,456,0,AB12
+15:24:50: Message received: 123,456,2,SL85
+15:24:50: Awarded: 5 pts
+15:24:50: Team total: 5 pts
+15:24:55: Message received: 123,456,3,SJ49
+15:24:55: Awarded: 5 pts
+15:24:55: Team total: 10 pts
+15:25:17: Message received: 123,456,5,QK48
+15:25:17: Awarded: 5 pts
+15:25:17: Team total: 15 pts
+15:25:24: Message received: 123,456,6,VJ03
+15:25:24: Awarded: 5 pts
+15:25:24: Team total: 20 pts
+15:25:34: Message received: 123,456,1,ZW93
+15:25:34: Awarded: 5 pts
+15:25:34: Team total: 25 pts

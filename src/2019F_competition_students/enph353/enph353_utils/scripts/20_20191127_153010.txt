@@ -1,0 +1,24 @@
+15:30:00: Position 1: AP30
+15:30:00: Position 2: SU66
+15:30:00: Position 3: SN16
+15:30:00: Position 4: CN64
+15:30:00: Position 5: TI19
+15:30:00: Position 6: UN61
+15:30:00: Position 7: XL67
+15:30:00: Position 8: OO10
+15:30:10: Message received: 20,456,0,AB12
+15:30:19: Message received: 123,456,2,AU66
+15:30:19: Awarded: -5 pts
+15:30:19: Team total: -5 pts
+15:30:23: Message received: 123,456,3,AN18
+15:30:23: Awarded: -5 pts
+15:30:24: Team total: -10 pts
+15:30:45: Message received: 123,456,5,II18
+15:30:45: Awarded: -5 pts
+15:30:45: Team total: -15 pts
+15:30:52: Message received: 123,456,6,UN81
+15:30:52: Awarded: -5 pts
+15:30:52: Team total: -20 pts
+15:31:04: Message received: 123,456,1,AP38
+15:31:04: Awarded: -5 pts
+15:31:04: Team total: -25 pts

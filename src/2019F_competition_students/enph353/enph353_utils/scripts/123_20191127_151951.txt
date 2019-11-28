@@ -1,0 +1,27 @@
+15:19:41: Position 1: DM46
+15:19:41: Position 2: LA62
+15:19:41: Position 3: EC81
+15:19:41: Position 4: PQ76
+15:19:41: Position 5: UE06
+15:19:41: Position 6: LT74
+15:19:41: Position 7: DE77
+15:19:41: Position 8: JB06
+15:19:51: Message received: 123,456,0,AB12
+15:20:00: Message received: 123,456,2,LA62
+15:20:00: Awarded: 5 pts
+15:20:00: Team total: 5 pts
+15:20:05: Message received: 123,456,3,EC81
+15:20:05: Awarded: 5 pts
+15:20:05: Team total: 10 pts
+15:20:16: Message received: 123,456,4,PQ76
+15:20:16: Awarded: 5 pts
+15:20:16: Team total: 15 pts
+15:20:22: Message received: 123,456,5,UE06
+15:20:22: Awarded: 5 pts
+15:20:22: Team total: 20 pts
+15:20:28: Message received: 123,456,6,LI74
+15:20:28: Awarded: -5 pts
+15:20:28: Team total: 15 pts
+15:20:40: Message received: 123,456,1,DM46
+15:20:40: Awarded: 5 pts
+15:20:40: Team total: 20 pts

@@ -1,0 +1,27 @@
+15:40:54: Position 1: ZT86
+15:40:54: Position 2: YP25
+15:40:54: Position 3: HF00
+15:40:54: Position 4: EZ14
+15:40:54: Position 5: FH47
+15:40:54: Position 6: KD27
+15:40:54: Position 7: FN79
+15:40:54: Position 8: UL52
+15:41:04: Message received: 20,456,0,AB12
+15:41:14: Message received: 123,456,2,YP25
+15:41:14: Awarded: 5 pts
+15:41:14: Team total: 5 pts
+15:41:18: Message received: 123,456,3,HF88
+15:41:18: Awarded: -5 pts
+15:41:18: Team total: 0 pts
+15:41:32: Message received: 123,456,4,EL14
+15:41:32: Awarded: -5 pts
+15:41:32: Team total: -5 pts
+15:41:38: Message received: 123,456,5,FM47
+15:41:38: Awarded: -5 pts
+15:41:38: Team total: -10 pts
+15:41:44: Message received: 123,456,6,KD27
+15:41:44: Awarded: 5 pts
+15:41:44: Team total: -5 pts
+15:41:56: Message received: 123,456,1,ZT86
+15:41:56: Awarded: 5 pts
+15:41:56: Team total: 0 pts

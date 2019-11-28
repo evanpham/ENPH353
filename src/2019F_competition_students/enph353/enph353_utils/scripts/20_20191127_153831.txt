@@ -1,0 +1,27 @@
+15:38:20: Position 1: NC13
+15:38:20: Position 2: AU09
+15:38:20: Position 3: DJ18
+15:38:20: Position 4: IU41
+15:38:20: Position 5: HI74
+15:38:20: Position 6: RW93
+15:38:20: Position 7: VA20
+15:38:20: Position 8: NG13
+15:38:31: Message received: 20,456,0,AB12
+15:38:41: Message received: 123,456,2,AU09
+15:38:41: Awarded: 5 pts
+15:38:41: Team total: 5 pts
+15:38:45: Message received: 123,456,3,DJ18
+15:38:45: Awarded: 5 pts
+15:38:45: Team total: 10 pts
+15:38:57: Message received: 123,456,4,IU41
+15:38:57: Awarded: 5 pts
+15:38:57: Team total: 15 pts
+15:39:04: Message received: 123,456,5,HI74
+15:39:04: Awarded: 5 pts
+15:39:04: Team total: 20 pts
+15:39:11: Message received: 123,456,6,RW93
+15:39:11: Awarded: 5 pts
+15:39:11: Team total: 25 pts
+15:39:22: Message received: 123,456,1,NC13
+15:39:22: Awarded: 5 pts
+15:39:22: Team total: 30 pts

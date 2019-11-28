@@ -1,0 +1,27 @@
+15:21:38: Position 1: QF17
+15:21:38: Position 2: DY76
+15:21:38: Position 3: HQ98
+15:21:38: Position 4: QS20
+15:21:38: Position 5: RG46
+15:21:38: Position 6: UH37
+15:21:38: Position 7: TC75
+15:21:38: Position 8: SP84
+15:21:46: Message received: 123,456,0,AB12
+15:21:56: Message received: 123,456,2,DY76
+15:21:56: Awarded: 5 pts
+15:21:56: Team total: 5 pts
+15:22:00: Message received: 123,456,3,HQ98
+15:22:00: Awarded: 5 pts
+15:22:00: Team total: 10 pts
+15:22:10: Message received: 123,456,4,QS20
+15:22:10: Awarded: 5 pts
+15:22:10: Team total: 15 pts
+15:22:15: Message received: 123,456,5,RG46
+15:22:15: Awarded: 5 pts
+15:22:15: Team total: 20 pts
+15:22:21: Message received: 123,456,6,UH37
+15:22:21: Awarded: 5 pts
+15:22:21: Team total: 25 pts
+15:22:32: Message received: 123,456,1,QF17
+15:22:32: Awarded: 5 pts
+15:22:32: Team total: 30 pts

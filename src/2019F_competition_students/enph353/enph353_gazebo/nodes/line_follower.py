@@ -14,7 +14,7 @@ import numpy as np
 class LineFollower:
 
     def __init__(self):
-        self.teamAndPass = "123,456"
+        self.teamAndPass = "20,456"
         self.cam_path = '/R1/pi_camera/image_raw'
         self.vel_pub = rospy.Publisher('/R1/cmd_vel', Twist, queue_size=1)
         self.plate_pub = rospy.Publisher('/license_plate', String, queue_size=1)
@@ -81,7 +81,7 @@ class LineFollower:
         bw = cv2.threshold(gray, 50, 255, cv2.THRESH_BINARY)[1]
         bw = cv2.medianBlur(bw, 13)
         boxCount = self.roi(bw)
-        
+
         return boxCount > 0
 
     def get_state_inner(self):
@@ -91,7 +91,7 @@ class LineFollower:
         # calculate x,y coordinate of center
         try:
             cX = int(m["m10"] / m["m00"])
-            
+
             # put text and highlight the center
             cv2.circle(self.frame, (cX, 3*self.h/4), 5, (0, 255, 255), -1)
         except:
@@ -178,7 +178,15 @@ class LineFollower:
             cv2.waitKey(25)
 
     def getToInnerRing(self):
-        if np.sum(self.line_filter()[29*self.h/30:-1, self.w/2-20:self.w/2+20]) < 1000:
+        if self.secondLine:
+            print(np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]))
+            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]) > 1000:
+                self.innerRing = True
+                self.stop()
+                print("TRND")
+            else:
+                self.move("L")
+        elif np.sum(self.line_filter()[19*self.h/20:-1, self.w/2-20:self.w/2+20]) < 500:
             if not self.firstLine:
                 self.gogogo()
                 print("noFIRST")
@@ -201,14 +209,6 @@ class LineFollower:
         elif not self.secondLine:
             self.secondLine = True
             print("secondline")
-        elif self.secondLine:
-            print(np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]))
-            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]) > 1000:
-                self.innerRing = True
-                self.stop()
-                print("INNER")
-            else:
-                self.move("L")
 
     def gogogo(self):
         # Slice bw image into slices and find out where right curb is

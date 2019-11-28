@@ -1,0 +1,27 @@
+15:17:39: Position 1: NX04
+15:17:39: Position 2: NV10
+15:17:39: Position 3: BY56
+15:17:39: Position 4: FM25
+15:17:39: Position 5: RP49
+15:17:39: Position 6: KP82
+15:17:39: Position 7: RK85
+15:17:39: Position 8: PJ36
+15:17:48: Message received: 123,456,0,AB12
+15:18:01: Message received: 123,456,2,NM10
+15:18:01: Awarded: -5 pts
+15:18:01: Team total: -5 pts
+15:18:09: Message received: 123,456,3,BY56
+15:18:09: Awarded: 5 pts
+15:18:09: Team total: 0 pts
+15:18:23: Message received: 123,456,4,FM25
+15:18:23: Awarded: 5 pts
+15:18:23: Team total: 5 pts
+15:18:28: Message received: 123,456,5,RP49
+15:18:28: Awarded: 5 pts
+15:18:28: Team total: 10 pts
+15:18:35: Message received: 123,456,6,KP82
+15:18:35: Awarded: 5 pts
+15:18:35: Team total: 15 pts
+15:18:47: Message received: 123,456,1,NX04
+15:18:47: Awarded: 5 pts
+15:18:47: Team total: 20 pts
