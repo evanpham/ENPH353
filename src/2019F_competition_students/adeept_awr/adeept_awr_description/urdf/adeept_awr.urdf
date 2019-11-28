@@ -5,8 +5,9 @@
     <origin xyz = "0.0 0.0 0.055"/>
     <visual>
       <geometry>
-        <box size = "0.13 0.12 0.08"/>
+        <mesh filename="package://adeept_awr_description/baby.obj" scale="0.01 0.01 0.01"/>
       </geometry>
+		<origin rpy="0 0 1.57" xyz="0 0 0"/>
     </visual>
     <collision>
       <geometry>
@@ -33,12 +34,7 @@
       </geometry>
     </collision>
 
-    <visual>
-      <origin xyz="0.07 0.0 0.03" rpy="0 0 0"/>
-      <geometry>
-    	<box size="1e-6 1e-6 1e-6"/>
-      </geometry>
-    </visual>
+  
 
     <inertial>
       <mass value="1e-6" />
@@ -50,11 +46,7 @@
   <!-- Battery -->
   <link name="battery">
     <origin xyz = "0.0 0.0 0.0"/>
-    <visual>
-      <geometry>
-        <box size = "0.145 0.065 0.015"/>
-      </geometry>
-    </visual>
+   
     <collision>
       <geometry>
         <box size = "0.145 0.065 0.015"/>
@@ -67,12 +59,7 @@
     </inertial>
   </link>
   <link name="front_left_wheel">
-    <visual>
-      <origin xyz="0.0 0.0125 0.0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.0325" length="0.025"/>
-      </geometry>
-    </visual>
+ 
     <collision>
       <origin xyz="0.0 0.0125 0.0" rpy="1.5708 0 0"/>
       <geometry>
@@ -86,12 +73,7 @@
     </inertial>
   </link>
   <link name="front_right_wheel">
-    <visual>
-      <origin xyz="0.0 -0.0125 0.0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.0325" length="0.025"/>
-      </geometry>
-    </visual>
+   
     <collision>
       <origin xyz="0.0 -0.0125 0.0" rpy="1.5708 0 0"/>
       <geometry>
@@ -105,12 +87,7 @@
     </inertial>
   </link>
   <link name="rear_left_wheel">
-    <visual>
-      <origin xyz="0.0 0.0125 0.0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.0325" length="0.025"/>
-      </geometry>
-    </visual>
+   
     <collision>
       <origin xyz="0.0 0.0125 0.0" rpy="1.5708 0 0"/>
       <geometry>
@@ -124,12 +101,7 @@
     </inertial>
   </link>
   <link name="rear_right_wheel">
-    <visual>
-      <origin xyz="0.0 -0.0125 0.0" rpy="1.5708 0 0"/>
-      <geometry>
-        <cylinder radius="0.0325" length="0.025"/>
-      </geometry>
-    </visual>
+  
     <collision>
       <origin xyz="0.0 -0.0125 0.0" rpy="1.5708 0 0"/>
       <geometry>
