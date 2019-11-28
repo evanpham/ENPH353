@@ -1,0 +1,33 @@
+16:03:44: Position 1: PF99
+16:03:44: Position 2: WS40
+16:03:44: Position 3: ZW25
+16:03:44: Position 4: IN83
+16:03:44: Position 5: DF23
+16:03:44: Position 6: NS52
+16:03:44: Position 7: SD92
+16:03:44: Position 8: SZ50
+16:03:58: Message received: 20,456,0,AB12
+16:04:08: Message received: 123,456,2,WS40
+16:04:08: Awarded: 5 pts
+16:04:08: Team total: 5 pts
+16:04:13: Message received: 123,456,3,ZW25
+16:04:13: Awarded: 5 pts
+16:04:13: Team total: 10 pts
+16:04:26: Message received: 123,456,4,IN83
+16:04:26: Awarded: 5 pts
+16:04:26: Team total: 15 pts
+16:04:30: Message received: 123,456,5,DF23
+16:04:30: Awarded: 5 pts
+16:04:30: Team total: 20 pts
+16:04:38: Message received: 123,456,6,NS52
+16:04:38: Awarded: 5 pts
+16:04:38: Team total: 25 pts
+16:04:52: Message received: 123,456,1,PF99
+16:04:52: Awarded: 5 pts
+16:04:52: Team total: 30 pts
+16:05:09: Message received: 123,456,7,SD92
+16:05:09: Awarded: 5 pts
+16:05:09: Team total: 35 pts
+16:05:29: Message received: 123,456,8,SZ50
+16:05:29: Awarded: 5 pts
+16:05:29: Team total: 40 pts
