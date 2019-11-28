@@ -181,7 +181,3 @@ def getPlateChars(image):
                     labels[i] = 't'
         return labels
     return ['0', '0', '0', '0']
-
-
-t = cv2.imread("ii.png")
-print(getPlateChars(t))
