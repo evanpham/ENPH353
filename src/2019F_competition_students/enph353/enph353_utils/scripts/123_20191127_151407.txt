@@ -1,0 +1,48 @@
+15:13:55: Position 1: EF41
+15:13:55: Position 2: TQ10
+15:13:55: Position 3: GH91
+15:13:55: Position 4: KS64
+15:13:55: Position 5: KL31
+15:13:55: Position 6: NW61
+15:13:55: Position 7: HO58
+15:13:55: Position 8: XH89
+15:14:07: Message received: 123,456,0,AB12
+15:14:31: Message received: 123,456,2,IQ10
+15:14:31: Awarded: -5 pts
+15:14:31: Team total: -5 pts
+15:15:34: Message received: 123,456,3,KS64
+15:15:34: Awarded: -5 pts
+15:15:34: Team total: -10 pts
+15:15:34: Message received: 123,456,4,KS64
+15:15:34: Awarded: 5 pts
+15:15:34: Team total: -5 pts
+15:15:54: Message received: 123,456,5,KL31
+15:15:54: Awarded: 5 pts
+15:15:54: Team total: 0 pts
+15:15:54: Message received: 123,456,4,KL31
+15:15:54: Awarded: -5 pts
+15:15:54: Team total: -10 pts
+15:16:15: Message received: 123,456,6,NW61
+15:16:15: Awarded: 5 pts
+15:16:15: Team total: -5 pts
+15:16:16: Message received: 123,456,5,NW61
+15:16:16: Awarded: -5 pts
+15:16:16: Team total: -15 pts
+15:16:56: Message received: 123,456,6,EF41
+15:16:56: Awarded: -5 pts
+15:16:56: Team total: -25 pts
+15:16:56: Message received: 123,456,1,EF41
+15:16:56: Awarded: 5 pts
+15:16:56: Team total: -20 pts
+15:18:14: Message received: 123,456,7,XH89
+15:18:14: Awarded: -5 pts
+15:18:14: Team total: -25 pts
+15:18:15: Message received: 123,456,8,XH89
+15:18:15: Awarded: 5 pts
+15:18:15: Team total: -20 pts
+15:18:52: Message received: 123,456,7,HO58
+15:18:52: Awarded: 5 pts
+15:18:52: Team total: -10 pts
+15:18:53: Message received: 123,456,8,HO58
+15:18:53: Awarded: -5 pts
+15:18:53: Team total: -20 pts
