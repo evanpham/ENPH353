@@ -62,13 +62,13 @@ def callback(data):
 def submitPlate(plate):
     global spot
     if spot == 7:
-        plate_pub.publish("123,456,1," + plate.upper())
+        plate_pub.publish("20,456,1," + plate.upper())
     elif spot > 7 and spot % 2 == 0:
-        plate_pub.publish("123,456,7," + plate.upper())
+        plate_pub.publish("20,456,7," + plate.upper())
     elif spot > 7 and spot % 2 == 1:
-        plate_pub.publish("123,456,8," + plate.upper())
+        plate_pub.publish("20,456,8," + plate.upper())
     else:
-        plate_pub.publish("123,456," + str(spot) + "," + plate.upper())
+        plate_pub.publish("20,456," + str(spot) + "," + plate.upper())
 
     spot = spot + 1
     print("here!")
