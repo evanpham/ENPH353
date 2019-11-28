@@ -22,7 +22,8 @@ with open(path + "plates.csv", 'w') as plates_file:
         # Pick two random letters
         plate_alpha = ""
 
-        plate_alpha += "TI"
+		for _ in range(0, 2):
+			plate_alpha += (random.choice(string.ascii_uppercase))
         num = randint(0, 99)
 
         # Pick two random numbers
