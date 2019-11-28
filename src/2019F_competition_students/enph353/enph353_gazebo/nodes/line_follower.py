@@ -180,7 +180,7 @@ class LineFollower:
     def getToInnerRing(self):
         if self.secondLine:
             print(np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]))
-            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]) > 1000:
+            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/9:3*self.w/9]) > 1000:
                 self.innerRing = True
                 self.stop()
                 print("TRND")

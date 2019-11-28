@@ -1,0 +1,15 @@
+16:38:16: Position 1: TI90
+16:38:16: Position 2: TI86
+16:38:16: Position 3: TI74
+16:38:16: Position 4: TI27
+16:38:16: Position 5: TI58
+16:38:16: Position 6: TI42
+16:38:16: Position 7: TI50
+16:38:16: Position 8: TI82
+16:38:29: Message received: 20,456,0,AB12
+16:38:39: Message received: 20,456,2,FI86
+16:38:39: Awarded: -5 pts
+16:38:39: Team total: -5 pts
+16:38:44: Message received: 20,456,3,II74
+16:38:44: Awarded: -5 pts
+16:38:44: Team total: -10 pts

@@ -1,0 +1,27 @@
+16:48:33: Position 1: TI23
+16:48:33: Position 2: TI18
+16:48:33: Position 3: TI55
+16:48:33: Position 4: TI95
+16:48:33: Position 5: TI34
+16:48:33: Position 6: TI55
+16:48:33: Position 7: TI17
+16:48:33: Position 8: TI22
+16:48:43: Message received: 20,456,0,AB12
+16:48:53: Message received: 20,456,2,TI18
+16:48:53: Awarded: 5 pts
+16:48:53: Team total: 5 pts
+16:48:57: Message received: 20,456,3,TI55
+16:48:57: Awarded: 5 pts
+16:48:57: Team total: 10 pts
+16:49:10: Message received: 20,456,4,TI95
+16:49:10: Awarded: 5 pts
+16:49:10: Team total: 15 pts
+16:49:16: Message received: 20,456,5,II34
+16:49:16: Awarded: -5 pts
+16:49:16: Team total: 10 pts
+16:49:23: Message received: 20,456,6,TI55
+16:49:23: Awarded: 5 pts
+16:49:23: Team total: 15 pts
+16:49:35: Message received: 20,456,1,TI23
+16:49:35: Awarded: 5 pts
+16:49:35: Team total: 20 pts
