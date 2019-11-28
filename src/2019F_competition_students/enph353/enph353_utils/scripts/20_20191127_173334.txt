@@ -1,0 +1,33 @@
+17:33:25: Position 1: NH29
+17:33:25: Position 2: TV62
+17:33:25: Position 3: DC57
+17:33:25: Position 4: PG04
+17:33:25: Position 5: KP92
+17:33:25: Position 6: KT39
+17:33:25: Position 7: FN48
+17:33:25: Position 8: HY42
+17:33:34: Message received: 20,456,0,AB12
+17:33:44: Message received: 20,456,2,TV62
+17:33:44: Awarded: 5 pts
+17:33:44: Team total: 5 pts
+17:33:49: Message received: 20,456,3,DC57
+17:33:49: Awarded: 5 pts
+17:33:49: Team total: 10 pts
+17:34:03: Message received: 20,456,4,PG04
+17:34:03: Awarded: 5 pts
+17:34:03: Team total: 15 pts
+17:34:10: Message received: 20,456,5,KP92
+17:34:10: Awarded: 5 pts
+17:34:10: Team total: 20 pts
+17:34:15: Message received: 20,456,6,KT39
+17:34:15: Awarded: 5 pts
+17:34:15: Team total: 25 pts
+17:34:28: Message received: 20,456,1,NH29
+17:34:28: Awarded: 5 pts
+17:34:28: Team total: 30 pts
+17:34:42: Message received: 20,456,7,FN48
+17:34:42: Awarded: 5 pts
+17:34:42: Team total: 35 pts
+17:34:55: Message received: 20,456,8,HY42
+17:34:55: Awarded: 5 pts
+17:34:55: Team total: 40 pts
