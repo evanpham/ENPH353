@@ -1,0 +1,27 @@
+17:16:29: Position 1: VW35
+17:16:29: Position 2: CV76
+17:16:29: Position 3: FV32
+17:16:29: Position 4: BQ19
+17:16:29: Position 5: ZF08
+17:16:29: Position 6: MP10
+17:16:29: Position 7: ZY28
+17:16:29: Position 8: SZ89
+17:16:42: Message received: 20,456,0,AB12
+17:16:51: Message received: 20,456,2,CV76
+17:16:51: Awarded: 5 pts
+17:16:51: Team total: 5 pts
+17:16:57: Message received: 20,456,3,FV32
+17:16:57: Awarded: 5 pts
+17:16:57: Team total: 10 pts
+17:17:10: Message received: 20,456,4,BQ19
+17:17:10: Awarded: 5 pts
+17:17:10: Team total: 15 pts
+17:17:17: Message received: 20,456,5,ZF08
+17:17:17: Awarded: 5 pts
+17:17:17: Team total: 20 pts
+17:17:23: Message received: 20,456,6,MP10
+17:17:23: Awarded: 5 pts
+17:17:23: Team total: 25 pts
+17:17:35: Message received: 20,456,1,MW35
+17:17:35: Awarded: -5 pts
+17:17:35: Team total: 20 pts

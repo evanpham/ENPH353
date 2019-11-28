@@ -151,7 +151,6 @@ def getPlateChars(image):
             frame[h,w] = [0,0,0]
 
     orig = image
-    
 
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)

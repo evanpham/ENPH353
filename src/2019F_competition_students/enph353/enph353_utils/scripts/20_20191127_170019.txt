@@ -1,0 +1,27 @@
+17:00:07: Position 1: VM65
+17:00:07: Position 2: SV37
+17:00:07: Position 3: PW77
+17:00:07: Position 4: RM30
+17:00:07: Position 5: SJ92
+17:00:07: Position 6: DJ89
+17:00:07: Position 7: GN65
+17:00:07: Position 8: OM93
+17:00:19: Message received: 20,456,0,AB12
+17:00:28: Message received: 20,456,2,SV37
+17:00:28: Awarded: 5 pts
+17:00:28: Team total: 5 pts
+17:00:33: Message received: 20,456,3,PW77
+17:00:33: Awarded: 5 pts
+17:00:33: Team total: 10 pts
+17:00:45: Message received: 20,456,4,RM30
+17:00:45: Awarded: 5 pts
+17:00:45: Team total: 15 pts
+17:00:50: Message received: 20,456,5,SJ92
+17:00:50: Awarded: 5 pts
+17:00:50: Team total: 20 pts
+17:00:57: Message received: 20,456,6,BJ89
+17:00:57: Awarded: -5 pts
+17:00:57: Team total: 15 pts
+17:01:09: Message received: 20,456,1,VM65
+17:01:09: Awarded: 5 pts
+17:01:09: Team total: 20 pts

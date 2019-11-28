@@ -1,0 +1,33 @@
+17:20:11: Position 1: FJ31
+17:20:11: Position 2: AW86
+17:20:11: Position 3: TX65
+17:20:11: Position 4: JU50
+17:20:11: Position 5: UG23
+17:20:11: Position 6: CE30
+17:20:11: Position 7: IQ94
+17:20:11: Position 8: EW71
+17:20:20: Message received: 20,456,0,AB12
+17:20:30: Message received: 20,456,2,AW86
+17:20:30: Awarded: 5 pts
+17:20:30: Team total: 5 pts
+17:20:34: Message received: 20,456,3,TX65
+17:20:34: Awarded: 5 pts
+17:20:34: Team total: 10 pts
+17:20:48: Message received: 20,456,4,JU50
+17:20:48: Awarded: 5 pts
+17:20:48: Team total: 15 pts
+17:20:54: Message received: 20,456,5,AY23
+17:20:54: Awarded: -5 pts
+17:20:54: Team total: 10 pts
+17:21:01: Message received: 20,456,6,CE30
+17:21:01: Awarded: 5 pts
+17:21:01: Team total: 15 pts
+17:21:16: Message received: 20,456,1,FJ31
+17:21:16: Awarded: 5 pts
+17:21:16: Team total: 20 pts
+17:21:30: Message received: 20,456,7,IQ94
+17:21:30: Awarded: 5 pts
+17:21:30: Team total: 25 pts
+17:21:43: Message received: 20,456,8,EW71
+17:21:43: Awarded: 5 pts
+17:21:43: Team total: 30 pts

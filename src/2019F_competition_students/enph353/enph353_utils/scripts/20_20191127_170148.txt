@@ -1,0 +1,27 @@
+17:01:40: Position 1: OR92
+17:01:40: Position 2: QN34
+17:01:40: Position 3: RM13
+17:01:40: Position 4: UO52
+17:01:40: Position 5: PG09
+17:01:40: Position 6: EK09
+17:01:40: Position 7: QN78
+17:01:40: Position 8: SR84
+17:01:48: Message received: 20,456,0,AB12
+17:01:58: Message received: 20,456,2,QN34
+17:01:58: Awarded: 5 pts
+17:01:58: Team total: 5 pts
+17:02:03: Message received: 20,456,3,RM13
+17:02:03: Awarded: 5 pts
+17:02:03: Team total: 10 pts
+17:02:18: Message received: 20,456,4,DA52
+17:02:18: Awarded: -5 pts
+17:02:18: Team total: 5 pts
+17:02:25: Message received: 20,456,5,PG09
+17:02:25: Awarded: 5 pts
+17:02:25: Team total: 10 pts
+17:02:33: Message received: 20,456,6,EK09
+17:02:33: Awarded: 5 pts
+17:02:33: Team total: 15 pts
+17:02:45: Message received: 20,456,1,OR92
+17:02:45: Awarded: 5 pts
+17:02:45: Team total: 20 pts

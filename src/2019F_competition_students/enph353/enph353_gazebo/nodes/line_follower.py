@@ -31,6 +31,7 @@ class LineFollower:
         self.pastCar = False
         self.lastCross = rospy.get_rostime().secs
         self.lastCar = rospy.get_rostime().secs
+        self.firstTime = rospy.get_rostime().secs
         self.gettinLicense = False
         self.notKillin = False
         self.initialized = False
@@ -174,19 +175,19 @@ class LineFollower:
                 self.move("L")
             else:
                 self.move("F")
-            cv2.imshow("inner", self.frame)
-            cv2.waitKey(25)
+            # cv2.imshow("inner", self.frame)
+            # cv2.waitKey(25)
 
     def getToInnerRing(self):
         if self.secondLine:
-            print(np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]))
-            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/8:3*self.w/8]) > 1000:
+            print(np.sum(self.bw[8*self.h/10:-1, 2*self.w/9:3*self.w/9]))
+            if np.sum(self.bw[8*self.h/10:-1, 2*self.w/9:3*self.w/9]) > 1000:
                 self.innerRing = True
                 self.stop()
                 print("TRND")
             else:
                 self.move("L")
-        elif np.sum(self.line_filter()[19*self.h/20:-1, self.w/2-20:self.w/2+20]) < 500:
+        elif np.sum(self.line_filter()[9*self.h/10:-1, self.w/2-20:self.w/2+20]) < 500:
             if not self.firstLine:
                 self.gogogo()
                 print("noFIRST")
@@ -204,9 +205,10 @@ class LineFollower:
         elif not self.firstLine:
             self.move("F")
             rospy.sleep(.2)
+            self.firstTime = rospy.get_rostime().secs
             self.firstLine = True
             print("firstline")
-        elif not self.secondLine:
+        elif not self.secondLine and rospy.get_rostime().secs - self.firstTime > 1:
             self.secondLine = True
             print("secondline")
 

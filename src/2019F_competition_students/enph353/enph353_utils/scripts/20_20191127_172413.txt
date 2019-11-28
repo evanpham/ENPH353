@@ -1,0 +1,30 @@
+17:24:01: Position 1: LQ80
+17:24:01: Position 2: GX83
+17:24:01: Position 3: QF64
+17:24:01: Position 4: HB79
+17:24:01: Position 5: MW71
+17:24:01: Position 6: FD02
+17:24:01: Position 7: UV12
+17:24:01: Position 8: YY54
+17:24:13: Message received: 20,456,0,AB12
+17:24:22: Message received: 20,456,2,GX83
+17:24:22: Awarded: 5 pts
+17:24:22: Team total: 5 pts
+17:24:42: Message received: 20,456,4,HB79
+17:24:42: Awarded: 5 pts
+17:24:42: Team total: 10 pts
+17:24:48: Message received: 20,456,5,MW71
+17:24:48: Awarded: 5 pts
+17:24:48: Team total: 15 pts
+17:24:55: Message received: 20,456,6,FD02
+17:24:55: Awarded: 5 pts
+17:24:55: Team total: 20 pts
+17:25:06: Message received: 20,456,1,LQ80
+17:25:06: Awarded: 5 pts
+17:25:06: Team total: 25 pts
+17:25:20: Message received: 20,456,7,UV12
+17:25:20: Awarded: 5 pts
+17:25:20: Team total: 30 pts
+17:25:35: Message received: 20,456,8,YY54
+17:25:35: Awarded: 5 pts
+17:25:35: Team total: 35 pts

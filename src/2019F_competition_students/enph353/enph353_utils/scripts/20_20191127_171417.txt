@@ -1,0 +1,30 @@
+17:14:05: Position 1: VT43
+17:14:05: Position 2: TV83
+17:14:05: Position 3: TR73
+17:14:05: Position 4: TG76
+17:14:05: Position 5: HW55
+17:14:05: Position 6: HU81
+17:14:05: Position 7: UZ62
+17:14:05: Position 8: NA06
+17:14:17: Message received: 20,456,0,AB12
+17:14:26: Message received: 20,456,2,TV83
+17:14:26: Awarded: 5 pts
+17:14:26: Team total: 5 pts
+17:14:31: Message received: 20,456,3,IR73
+17:14:31: Awarded: -5 pts
+17:14:31: Team total: 0 pts
+17:14:42: Message received: 20,456,4,IO76
+17:14:42: Awarded: -5 pts
+17:14:42: Team total: -5 pts
+17:14:49: Message received: 20,456,5,HW55
+17:14:49: Awarded: 5 pts
+17:14:49: Team total: 0 pts
+17:14:56: Message received: 20,456,6,HU81
+17:14:56: Awarded: 5 pts
+17:14:56: Team total: 5 pts
+17:15:41: Message received: 20,456,7,UZ62
+17:15:41: Awarded: 5 pts
+17:15:41: Team total: 10 pts
+17:16:00: Message received: 20,456,8,NA06
+17:16:00: Awarded: 5 pts
+17:16:00: Team total: 15 pts
