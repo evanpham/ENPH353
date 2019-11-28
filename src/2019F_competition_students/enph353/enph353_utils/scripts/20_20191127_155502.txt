@@ -1,0 +1,24 @@
+15:54:48: Position 1: JM62
+15:54:48: Position 2: ZL95
+15:54:48: Position 3: IN77
+15:54:48: Position 4: BF84
+15:54:48: Position 5: SE07
+15:54:48: Position 6: PC43
+15:54:48: Position 7: XR49
+15:54:48: Position 8: WO86
+15:55:02: Message received: 20,456,0,AB12
+15:55:11: Message received: 123,456,2,ZL85
+15:55:11: Awarded: -5 pts
+15:55:11: Team total: -5 pts
+15:55:16: Message received: 123,456,3,IN77
+15:55:16: Awarded: 5 pts
+15:55:16: Team total: 0 pts
+15:55:35: Message received: 123,456,5,AE87
+15:55:35: Awarded: -5 pts
+15:55:35: Team total: -5 pts
+15:55:42: Message received: 123,456,6,PC43
+15:55:42: Awarded: 5 pts
+15:55:42: Team total: 0 pts
+15:55:56: Message received: 123,456,1,JM62
+15:55:56: Awarded: 5 pts
+15:55:56: Team total: 5 pts

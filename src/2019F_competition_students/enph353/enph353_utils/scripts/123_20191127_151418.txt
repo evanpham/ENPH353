@@ -1,0 +1,27 @@
+15:14:07: Position 1: ZI58
+15:14:07: Position 2: HJ49
+15:14:07: Position 3: EQ99
+15:14:07: Position 4: HK76
+15:14:07: Position 5: XE63
+15:14:07: Position 6: AO25
+15:14:07: Position 7: ZQ11
+15:14:07: Position 8: KN41
+15:14:18: Message received: 123,456,0,AB12
+15:14:28: Message received: 123,456,2,HJ49
+15:14:28: Awarded: 5 pts
+15:14:28: Team total: 5 pts
+15:14:33: Message received: 123,456,3,EQ99
+15:14:33: Awarded: 5 pts
+15:14:33: Team total: 10 pts
+15:14:44: Message received: 123,456,4,HK76
+15:14:44: Awarded: 5 pts
+15:14:44: Team total: 15 pts
+15:14:50: Message received: 123,456,5,XE63
+15:14:50: Awarded: 5 pts
+15:14:50: Team total: 20 pts
+15:14:56: Message received: 123,456,6,AO25
+15:14:56: Awarded: 5 pts
+15:14:56: Team total: 25 pts
+15:15:09: Message received: 123,456,1,ZI58
+15:15:09: Awarded: 5 pts
+15:15:09: Team total: 30 pts

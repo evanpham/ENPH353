@@ -1,0 +1,24 @@
+15:33:16: Position 1: LA23
+15:33:16: Position 2: NY83
+15:33:16: Position 3: QW20
+15:33:16: Position 4: NZ08
+15:33:16: Position 5: KG01
+15:33:16: Position 6: LB49
+15:33:16: Position 7: LB69
+15:33:16: Position 8: YQ93
+15:33:28: Message received: 20,456,0,AB12
+15:33:38: Message received: 123,456,2,NY83
+15:33:38: Awarded: 5 pts
+15:33:38: Team total: 5 pts
+15:33:55: Message received: 123,456,4,NZ88
+15:33:55: Awarded: -5 pts
+15:33:55: Team total: 0 pts
+15:34:02: Message received: 123,456,5,KG81
+15:34:02: Awarded: -5 pts
+15:34:02: Team total: -5 pts
+15:34:08: Message received: 123,456,6,LA49
+15:34:08: Awarded: -5 pts
+15:34:08: Team total: -10 pts
+15:34:20: Message received: 123,456,1,LA23
+15:34:20: Awarded: 5 pts
+15:34:20: Team total: -5 pts

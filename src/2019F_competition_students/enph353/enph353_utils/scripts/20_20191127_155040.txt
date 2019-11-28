@@ -1,0 +1,33 @@
+15:50:33: Position 1: SH28
+15:50:33: Position 2: IT22
+15:50:33: Position 3: AM01
+15:50:33: Position 4: CL92
+15:50:33: Position 5: QH80
+15:50:33: Position 6: VH60
+15:50:33: Position 7: RS47
+15:50:33: Position 8: JV98
+15:50:40: Message received: 20,456,0,AB12
+15:50:49: Message received: 123,456,2,II22
+15:50:49: Awarded: -5 pts
+15:50:49: Team total: -5 pts
+15:51:05: Message received: 123,456,4,CL82
+15:51:05: Awarded: -5 pts
+15:51:05: Team total: -10 pts
+15:51:29: Message received: 123,456,1,SH28
+15:51:29: Awarded: 5 pts
+15:51:29: Team total: -5 pts
+15:51:47: Message received: 123,456,7,RA04
+15:51:47: Awarded: -5 pts
+15:51:47: Team total: -10 pts
+15:52:08: Message received: 123,456,8,JV88
+15:52:08: Awarded: -5 pts
+15:52:08: Team total: -15 pts
+15:52:28: Message received: 123,456,7,RA47
+15:52:28: Awarded: -5 pts
+15:52:28: Team total: -15 pts
+15:52:49: Message received: 123,456,8,JV88
+15:52:49: Awarded: -5 pts
+15:52:49: Team total: -15 pts
+15:54:00: Message received: 123,456,7,AA47
+15:54:00: Awarded: -5 pts
+15:54:00: Team total: -15 pts

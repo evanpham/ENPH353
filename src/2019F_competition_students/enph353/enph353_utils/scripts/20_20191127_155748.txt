@@ -1,0 +1,33 @@
+15:57:36: Position 1: ZX52
+15:57:36: Position 2: GE33
+15:57:36: Position 3: WL43
+15:57:36: Position 4: UV85
+15:57:36: Position 5: HX24
+15:57:36: Position 6: LW04
+15:57:36: Position 7: MG68
+15:57:36: Position 8: IY83
+15:57:48: Message received: 20,456,0,AB12
+15:57:59: Message received: 123,456,2,GE33
+15:57:59: Awarded: 5 pts
+15:57:59: Team total: 5 pts
+15:58:04: Message received: 123,456,3,WL43
+15:58:04: Awarded: 5 pts
+15:58:04: Team total: 10 pts
+15:58:15: Message received: 123,456,4,NA85
+15:58:15: Awarded: -5 pts
+15:58:15: Team total: 5 pts
+15:58:27: Message received: 123,456,6,LW04
+15:58:27: Awarded: 5 pts
+15:58:27: Team total: 10 pts
+15:58:40: Message received: 123,456,1,ZX52
+15:58:40: Awarded: 5 pts
+15:58:40: Team total: 15 pts
+15:59:20: Message received: 123,456,8,IY83
+15:59:20: Awarded: 5 pts
+15:59:20: Team total: 20 pts
+16:00:02: Message received: 123,456,8,IY83
+16:00:02: Awarded: 5 pts
+16:00:02: Team total: 20 pts
+16:00:23: Message received: 123,456,7,MG68
+16:00:23: Awarded: 5 pts
+16:00:23: Team total: 25 pts

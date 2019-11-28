@@ -1,0 +1,27 @@
+15:48:00: Position 1: SG07
+15:48:00: Position 2: LI58
+15:48:00: Position 3: RJ54
+15:48:00: Position 4: UG09
+15:48:00: Position 5: SO11
+15:48:00: Position 6: TM28
+15:48:00: Position 7: WZ92
+15:48:00: Position 8: TG29
+15:48:10: Message received: 20,456,0,AB12
+15:48:20: Message received: 123,456,2,LI58
+15:48:20: Awarded: 5 pts
+15:48:20: Team total: 5 pts
+15:48:24: Message received: 123,456,3,RJ54
+15:48:24: Awarded: 5 pts
+15:48:24: Team total: 10 pts
+15:48:38: Message received: 123,456,4,UA88
+15:48:38: Awarded: -5 pts
+15:48:38: Team total: 5 pts
+15:48:44: Message received: 123,456,5,AO11
+15:48:44: Awarded: -5 pts
+15:48:44: Team total: 0 pts
+15:48:50: Message received: 123,456,6,TM28
+15:48:50: Awarded: 5 pts
+15:48:50: Team total: 5 pts
+15:49:03: Message received: 123,456,1,AG87
+15:49:03: Awarded: -5 pts
+15:49:03: Team total: 0 pts

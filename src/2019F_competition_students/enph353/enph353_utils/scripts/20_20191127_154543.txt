@@ -1,0 +1,24 @@
+15:45:31: Position 1: LN35
+15:45:31: Position 2: HG85
+15:45:31: Position 3: GO04
+15:45:31: Position 4: SJ44
+15:45:31: Position 5: PX21
+15:45:31: Position 6: VU32
+15:45:31: Position 7: PF39
+15:45:31: Position 8: TI79
+15:45:43: Message received: 20,456,0,AB12
+15:45:53: Message received: 123,456,2,HG85
+15:45:53: Awarded: 5 pts
+15:45:53: Team total: 5 pts
+15:45:57: Message received: 123,456,3,GO84
+15:45:57: Awarded: -5 pts
+15:45:57: Team total: 0 pts
+15:46:08: Message received: 123,456,4,SJ44
+15:46:08: Awarded: 5 pts
+15:46:08: Team total: 5 pts
+15:46:21: Message received: 123,456,6,VU32
+15:46:21: Awarded: 5 pts
+15:46:21: Team total: 10 pts
+15:46:34: Message received: 123,456,1,LN35
+15:46:34: Awarded: 5 pts
+15:46:34: Team total: 15 pts
