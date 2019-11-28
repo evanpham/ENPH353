@@ -1,0 +1,105 @@
+15:22:20: Position 1: RE23
+15:22:20: Position 2: ZR10
+15:22:20: Position 3: TT46
+15:22:20: Position 4: VX34
+15:22:20: Position 5: FT12
+15:22:20: Position 6: ML85
+15:22:20: Position 7: UT07
+15:22:20: Position 8: NY64
+15:22:27: Message received: 123,456,2,ZR10
+15:22:27: Awarded: 5 pts
+15:22:27: Team total: 5 pts
+15:22:42: Message received: 123,456,3,II46
+15:22:42: Awarded: -5 pts
+15:22:42: Team total: 0 pts
+15:23:36: Message received: 123,456,5,FI12
+15:23:36: Awarded: -5 pts
+15:23:36: Team total: -5 pts
+15:23:53: Message received: 123,456,6,ML80
+15:23:53: Awarded: -5 pts
+15:23:53: Team total: -10 pts
+15:24:24: Message received: 123,456,1,RE23
+15:24:24: Awarded: 5 pts
+15:24:24: Team total: -5 pts
+15:25:16: Message received: 123,456,7,NY64
+15:25:16: Awarded: -5 pts
+15:25:16: Team total: -10 pts
+15:25:55: Message received: 123,456,8,UI07
+15:25:55: Awarded: -5 pts
+15:25:55: Team total: -15 pts
+15:26:05: Penalty: pedestrian collision: -10 pts
+15:26:05: Team total: -25 pts
+15:26:06: Penalty: pedestrian collision: -10 pts
+15:26:06: Team total: -35 pts
+15:26:06: Penalty: pedestrian collision: -10 pts
+15:26:06: Team total: -45 pts
+15:26:06: Penalty: pedestrian collision: -10 pts
+15:26:06: Team total: -55 pts
+15:26:06: Penalty: pedestrian collision: -10 pts
+15:26:06: Team total: -65 pts
+15:26:07: Penalty: pedestrian collision: -10 pts
+15:26:07: Team total: -75 pts
+15:26:07: Penalty: pedestrian collision: -10 pts
+15:26:07: Team total: -85 pts
+15:26:07: Penalty: pedestrian collision: -10 pts
+15:26:07: Team total: -95 pts
+15:26:07: Penalty: pedestrian collision: -10 pts
+15:26:07: Team total: -105 pts
+15:26:07: Penalty: pedestrian collision: -10 pts
+15:26:07: Team total: -115 pts
+15:26:07: Penalty: pedestrian collision: -10 pts
+15:26:08: Team total: -125 pts
+15:26:08: Penalty: pedestrian collision: -10 pts
+15:26:08: Team total: -135 pts
+15:26:08: Penalty: pedestrian collision: -10 pts
+15:26:08: Team total: -145 pts
+15:26:08: Penalty: pedestrian collision: -10 pts
+15:26:08: Team total: -155 pts
+15:26:09: Penalty: pedestrian collision: -10 pts
+15:26:09: Team total: -165 pts
+15:26:09: Penalty: pedestrian collision: -10 pts
+15:26:09: Team total: -175 pts
+15:26:09: Penalty: pedestrian collision: -10 pts
+15:26:09: Team total: -185 pts
+15:26:09: Penalty: pedestrian collision: -10 pts
+15:26:09: Team total: -195 pts
+15:26:09: Penalty: pedestrian collision: -10 pts
+15:26:09: Team total: -205 pts
+15:26:10: Penalty: pedestrian collision: -10 pts
+15:26:10: Team total: -215 pts
+15:26:10: Penalty: pedestrian collision: -10 pts
+15:26:10: Team total: -225 pts
+15:26:10: Penalty: pedestrian collision: -10 pts
+15:26:10: Team total: -235 pts
+15:26:10: Penalty: pedestrian collision: -10 pts
+15:26:10: Team total: -245 pts
+15:26:10: Penalty: pedestrian collision: -10 pts
+15:26:10: Team total: -255 pts
+15:26:13: Timer started.
+15:26:14: Timer started.
+15:26:16: Timer started.
+15:26:16: Timer started.
+15:26:16: Timer started.
+15:26:17: Timer started.
+15:26:17: Timer started.
+15:26:17: Timer started.
+15:26:18: Penalty: vehicle collision: -5 pts
+15:26:18: Team total: -260 pts
+15:26:18: Penalty: vehicle collision: -5 pts
+15:26:18: Team total: -265 pts
+15:26:18: Penalty: vehicle collision: -5 pts
+15:26:18: Team total: -270 pts
+15:26:18: Penalty: vehicle collision: -5 pts
+15:26:18: Team total: -275 pts
+15:26:18: Penalty: vehicle collision: -5 pts
+15:26:18: Team total: -280 pts
+15:26:20: Penalty: track limit: -2 pts
+15:26:20: Team total: -282 pts
+15:26:20: Penalty: track limit: -2 pts
+15:26:20: Team total: -284 pts
+15:26:20: Penalty: track limit: -2 pts
+15:26:20: Team total: -286 pts
+15:26:21: Penalty: track limit: -2 pts
+15:26:21: Team total: -288 pts
+15:26:21: Penalty: track limit: -2 pts
+15:26:21: Team total: -290 pts

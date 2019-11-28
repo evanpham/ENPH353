@@ -1,0 +1,21 @@
+15:08:20: Position 1: VB53
+15:08:20: Position 2: GH71
+15:08:20: Position 3: OV77
+15:08:20: Position 4: HN22
+15:08:20: Position 5: WP37
+15:08:20: Position 6: FJ42
+15:08:20: Position 7: IV21
+15:08:20: Position 8: YO48
+15:08:45: Message received: 123,456,0,AB12
+15:09:16: Message received: 123,456,2,GH71
+15:09:16: Awarded: 5 pts
+15:09:16: Team total: 5 pts
+15:09:35: Message received: 123,456,3,ON77
+15:09:35: Awarded: -5 pts
+15:09:35: Team total: 0 pts
+15:10:33: Message received: 123,456,5,WP37
+15:10:33: Awarded: 5 pts
+15:10:33: Team total: 5 pts
+15:10:57: Message received: 123,456,6,FJ42
+15:10:57: Awarded: 5 pts
+15:10:57: Team total: 10 pts

@@ -44,7 +44,7 @@ def roi(image, orig):
     # print(len(sorted_ctrs))
     # orig = cv2.cvtColor(orig,cv2.COLOR_BGR2RGB)
     imgs = []
-
+    mass = []
     for i, ctr in enumerate(sorted_ctrs):
         # Get bounding box
         w = 0
@@ -60,19 +60,20 @@ def roi(image, orig):
         # show ROI
         if (w*h > 150 and w*h < 2000 and (w/h > .5 and w/h < 2)):
             roi = thresh[y:y + h, x:x + w]
-
             roi = cv2.resize(roi, (20, 30))
 
             cv2.rectangle(gray, (x, y), (x + w, y + h), (255, i*10, 0), 2)
             roi = np.expand_dims(roi,axis=2)
             imgs.append(roi)
-
+            m = cv2.moments(roi, True)
+            mass.append(int(m["m00"]))
+            # print(mass)
             # cv2.imshow('segment no:', roi)
-            # cv2.waitKey(25)
+            # cv2.waitKey()
 
     # cv2.imshow('plateBBox', gray)
     # cv2.waitKey(25)
-    return imgs
+    return imgs,mass
 
 
 def return_characters(chars, dict):
@@ -167,11 +168,20 @@ def getPlateChars(image):
 
     hued = cv2.cvtColor(res, cv2.COLOR_BGR2HSV)
     imgs = []
-    imgs = roi(hued, orig)
+    (imgs, mass) = roi(hued, orig)
 
     if len(imgs) == 4:
         yp = np.array(imgs)
         predictions = model.predict(yp)
         labels = return_characters(predictions, dict)
+        for i in range(len(labels)):
+            if labels[i] == 'i':
+                # print(mass[i])
+                if mass[i]<130:
+                    labels[i] = 't'
         return labels
     return ['0', '0', '0', '0']
+
+
+t = cv2.imread("ii.png")
+print(getPlateChars(t))
