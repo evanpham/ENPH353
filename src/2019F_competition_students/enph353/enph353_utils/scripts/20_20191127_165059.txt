@@ -1,0 +1,39 @@
+16:50:48: Position 1: HU29
+16:50:48: Position 2: NH82
+16:50:48: Position 3: KV52
+16:50:48: Position 4: RC50
+16:50:48: Position 5: ZD42
+16:50:48: Position 6: FS77
+16:50:48: Position 7: KS95
+16:50:48: Position 8: XC59
+16:50:59: Message received: 20,456,0,AB12
+16:51:08: Message received: 20,456,2,NH82
+16:51:08: Awarded: 5 pts
+16:51:08: Team total: 5 pts
+16:51:13: Message received: 20,456,3,KV52
+16:51:13: Awarded: 5 pts
+16:51:13: Team total: 10 pts
+16:51:25: Message received: 20,456,4,EA50
+16:51:25: Awarded: -5 pts
+16:51:25: Team total: 5 pts
+16:51:31: Message received: 20,456,5,ZB42
+16:51:31: Awarded: -5 pts
+16:51:31: Team total: 0 pts
+16:51:39: Message received: 20,456,6,FS77
+16:51:39: Awarded: 5 pts
+16:51:39: Team total: 5 pts
+16:51:50: Message received: 20,456,1,HU29
+16:51:50: Awarded: 5 pts
+16:51:50: Team total: 10 pts
+16:52:07: Message received: 20,456,7,KS90
+16:52:07: Awarded: -5 pts
+16:52:07: Team total: 5 pts
+16:52:33: Message received: 20,456,8,XC09
+16:52:33: Awarded: -5 pts
+16:52:33: Team total: 0 pts
+16:52:52: Message received: 20,456,7,KS95
+16:52:52: Awarded: 5 pts
+16:52:52: Team total: 10 pts
+16:53:11: Message received: 20,456,8,XC59
+16:53:11: Awarded: 5 pts
+16:53:11: Team total: 20 pts

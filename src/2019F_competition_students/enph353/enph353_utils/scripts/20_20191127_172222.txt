@@ -1,0 +1,33 @@
+17:22:08: Position 1: IK87
+17:22:08: Position 2: EV82
+17:22:08: Position 3: JS70
+17:22:08: Position 4: EI31
+17:22:08: Position 5: WN36
+17:22:08: Position 6: XY95
+17:22:08: Position 7: HK27
+17:22:08: Position 8: WD91
+17:22:22: Message received: 20,456,0,AB12
+17:22:31: Message received: 20,456,2,EV82
+17:22:31: Awarded: 5 pts
+17:22:31: Team total: 5 pts
+17:22:35: Message received: 20,456,3,AA70
+17:22:35: Awarded: -5 pts
+17:22:35: Team total: 0 pts
+17:22:52: Message received: 20,456,4,EI31
+17:22:52: Awarded: 5 pts
+17:22:52: Team total: 5 pts
+17:22:57: Message received: 20,456,5,WN36
+17:22:57: Awarded: 5 pts
+17:22:57: Team total: 10 pts
+17:23:04: Message received: 20,456,6,XY95
+17:23:04: Awarded: 5 pts
+17:23:04: Team total: 15 pts
+17:23:16: Message received: 20,456,1,IK87
+17:23:16: Awarded: 5 pts
+17:23:16: Team total: 20 pts
+17:23:32: Message received: 20,456,7,HK27
+17:23:32: Awarded: 5 pts
+17:23:32: Team total: 25 pts
+17:23:46: Message received: 20,456,8,WD90
+17:23:46: Awarded: -5 pts
+17:23:46: Team total: 20 pts

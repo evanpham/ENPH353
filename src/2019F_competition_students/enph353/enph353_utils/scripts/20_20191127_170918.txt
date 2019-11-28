@@ -1,0 +1,33 @@
+17:09:06: Position 1: QP77
+17:09:06: Position 2: OF19
+17:09:06: Position 3: WU71
+17:09:06: Position 4: CD27
+17:09:06: Position 5: UY55
+17:09:06: Position 6: TW11
+17:09:06: Position 7: UI18
+17:09:06: Position 8: TF38
+17:09:18: Message received: 20,456,0,AB12
+17:09:28: Message received: 20,456,2,OF19
+17:09:28: Awarded: 5 pts
+17:09:28: Team total: 5 pts
+17:09:33: Message received: 20,456,3,WU71
+17:09:33: Awarded: 5 pts
+17:09:33: Team total: 10 pts
+17:09:44: Message received: 20,456,4,CD27
+17:09:44: Awarded: 5 pts
+17:09:44: Team total: 15 pts
+17:09:49: Message received: 20,456,5,UY55
+17:09:49: Awarded: 5 pts
+17:09:49: Team total: 20 pts
+17:09:56: Message received: 20,456,6,IW11
+17:09:56: Awarded: -5 pts
+17:09:56: Team total: 15 pts
+17:10:09: Message received: 20,456,1,RP77
+17:10:09: Awarded: -5 pts
+17:10:09: Team total: 10 pts
+17:10:29: Message received: 20,456,7,UI18
+17:10:29: Awarded: 5 pts
+17:10:29: Team total: 15 pts
+17:10:50: Message received: 20,456,8,TF38
+17:10:50: Awarded: 5 pts
+17:10:50: Team total: 20 pts

@@ -1,0 +1,42 @@
+16:53:42: Position 1: XF07
+16:53:42: Position 2: LM85
+16:53:42: Position 3: CV02
+16:53:42: Position 4: JA33
+16:53:42: Position 5: KV31
+16:53:42: Position 6: PB61
+16:53:42: Position 7: XG16
+16:53:42: Position 8: QF99
+16:53:52: Message received: 20,456,0,AB12
+16:54:01: Message received: 20,456,2,LM85
+16:54:01: Awarded: 5 pts
+16:54:01: Team total: 5 pts
+16:54:05: Message received: 20,456,3,CV02
+16:54:05: Awarded: 5 pts
+16:54:05: Team total: 10 pts
+16:54:19: Message received: 20,456,4,JA33
+16:54:19: Awarded: 5 pts
+16:54:19: Team total: 15 pts
+16:54:25: Message received: 20,456,5,KV31
+16:54:25: Awarded: 5 pts
+16:54:25: Team total: 20 pts
+16:54:33: Message received: 20,456,6,PB61
+16:54:33: Awarded: 5 pts
+16:54:33: Team total: 25 pts
+16:54:44: Message received: 20,456,1,XF07
+16:54:44: Awarded: 5 pts
+16:54:44: Team total: 30 pts
+16:55:05: Message received: 20,456,7,XA16
+16:55:05: Awarded: -5 pts
+16:55:05: Team total: 25 pts
+16:55:23: Message received: 20,456,8,OK99
+16:55:23: Awarded: -5 pts
+16:55:23: Team total: 20 pts
+16:55:47: Message received: 20,456,7,XG03
+16:55:47: Awarded: -5 pts
+16:55:47: Team total: 20 pts
+16:56:08: Message received: 20,456,8,QF99
+16:56:08: Awarded: 5 pts
+16:56:08: Team total: 30 pts
+16:56:28: Message received: 20,456,7,XG16
+16:56:28: Awarded: 5 pts
+16:56:28: Team total: 40 pts

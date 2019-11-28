@@ -1,0 +1,27 @@
+17:03:15: Position 1: NR17
+17:03:15: Position 2: YB84
+17:03:15: Position 3: IX00
+17:03:15: Position 4: GK53
+17:03:15: Position 5: XO33
+17:03:15: Position 6: XJ38
+17:03:15: Position 7: FS00
+17:03:15: Position 8: UO63
+17:03:26: Message received: 20,456,0,AB12
+17:03:36: Message received: 20,456,2,YB84
+17:03:36: Awarded: 5 pts
+17:03:36: Team total: 5 pts
+17:03:40: Message received: 20,456,3,IX00
+17:03:40: Awarded: 5 pts
+17:03:40: Team total: 10 pts
+17:03:51: Message received: 20,456,4,GK53
+17:03:51: Awarded: 5 pts
+17:03:51: Team total: 15 pts
+17:03:57: Message received: 20,456,5,XO33
+17:03:57: Awarded: 5 pts
+17:03:57: Team total: 20 pts
+17:04:03: Message received: 20,456,6,XJ38
+17:04:03: Awarded: 5 pts
+17:04:03: Team total: 25 pts
+17:04:41: Message received: 20,456,1,NR17
+17:04:41: Awarded: 5 pts
+17:04:41: Team total: 30 pts

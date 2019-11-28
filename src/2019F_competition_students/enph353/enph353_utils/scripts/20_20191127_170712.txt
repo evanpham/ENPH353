@@ -1,0 +1,24 @@
+17:07:06: Position 1: EU80
+17:07:06: Position 2: DO11
+17:07:06: Position 3: FL83
+17:07:06: Position 4: JA64
+17:07:06: Position 5: ED16
+17:07:06: Position 6: EW08
+17:07:06: Position 7: MF72
+17:07:06: Position 8: LH90
+17:07:12: Message received: 20,456,0,AB12
+17:07:21: Message received: 20,456,2,DO11
+17:07:21: Awarded: 5 pts
+17:07:21: Team total: 5 pts
+17:07:26: Message received: 20,456,3,FL83
+17:07:26: Awarded: 5 pts
+17:07:26: Team total: 10 pts
+17:07:43: Message received: 20,456,5,ED16
+17:07:43: Awarded: 5 pts
+17:07:43: Team total: 15 pts
+17:07:48: Message received: 20,456,6,EW08
+17:07:48: Awarded: 5 pts
+17:07:48: Team total: 20 pts
+17:08:01: Message received: 20,456,1,EU80
+17:08:01: Awarded: 5 pts
+17:08:01: Team total: 25 pts
